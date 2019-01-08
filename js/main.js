@@ -94,7 +94,7 @@ function autoFitContent(){
 }
 
 //tab切换方法
-    //header的标签切换
+ /*   //header的标签切换
 function tabToggle(){
 	$("body").on('click','.tabli',function(){
 		$('.tabli').removeClass('active');
@@ -106,7 +106,7 @@ function tabToggle(){
 	})
 	//tab切换时也要做样式自适应的控制
 	autoFitContent();
-}
+}*/
     //GIS图和概要图的标签切换 
 function mapToggle(){
 	//P1tabLi

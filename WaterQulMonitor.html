@@ -22,11 +22,11 @@
 				<nav class="nav">
 					<div class="LeftNav">
 						<ul>
-							<li class="tabli  active" data-index="0">
-								<div class="TabLiContent">水环境概况</div>
+							<li class="tabli  " data-index="0">
+								<a href="index.html"> <div class="TabLiContent">水环境概况</div></a>
 							</li>
-							<li class="tabli " data-index="1">
-								<a href="WaterQulMonitor.html"> <div class="TabLiContent">水质监测</div></a>
+							<li class="tabli active" data-index="1">
+								 <div class="TabLiContent">水质监测</div>
 							</li>
 							<li class="tabli " data-index="2">
 								<a href="WaterQulAssess.html"><div class="TabLiContent">水质考核</div></a>
@@ -38,7 +38,7 @@
 							<li class="tabli" data-index="3">
 								<a href="PolluDisSituation.html"><div class="TabLiContent">排污情况</div></a>
 							</li>
-							<li class="tabli " data-index="4">
+							<li class="tabli" data-index="4">
 								<a href="LawEnfSituation.html"><div class="TabLiContent">执法情况</div></a>
 							</li>
 							<li class="tabli" style="visibility:hidden">
@@ -51,55 +51,48 @@
 
 		</header>
 		<section class="section">
-			<!-- 水环境概况   general situation  box-->
-			<div class="TabContent  GenSituation" id='GenSituation' data-index="0">
-				<div class="MapBox map1"></div>
+			<!--水质监测   water quality monitoring  box-->
+			<div class="TabContent WaterQulMonitor" id='WaterQulMonitor' data-index="1">
+				<div class="MapBox map2"></div>
 				<div class="LeftSummary">
 					<div class="LeftHeader">
-						<p class="LeftHeaderTitle">长江湖北段水环境概况</p>
+						<p class="LeftHeaderTitle">长江湖北段水环境质量</p>
 					</div>
 					<div class="XuanLine"></div>
-					<div class="LeftContent">
-						<p class="LeftConTitle">统计时间:2018</p>
-						<ul class="contentList">
+					<div class="LeftContent P2LeftContent">
+						<p class="LeftConTitle">统计时间:2018年11月</p>
+						<ul class="contentList P2ContentList">
 							<li class="contentLi">
-								<span class="GenIcon lengthIcon"></span>
-								<span class="contentLiFont">长江湖北段长度</span>
+								<span class="contentLiFont">全省手工断面</span>
 								<span class="contentLiMount">
-									<b>1060</b>千米</span>
+									<b>80</b>个
+								</span>
 							</li>
 							<li class="contentLi">
-								<span class="GenIcon waterIcon"></span>
-								<span class="contentLiFont">主要支流数量</span>
+								<span class="contentLiFont">有效监测手工断面</span>
 								<span class="contentLiMount">
-									<b>20</b>个</span>
+									<b>77</b>个</span>
+							</li>
+						</ul>
+						<div class="splitLine"></div>
+						<p class="LeftConTitle">统计时间:2018-11-10 11:00</p>
+						<ul class="contentList P2ContentList">
+							<li class="contentLi">
+								<span class="contentLiFont">全省自动监测站</span>
+								<span class="contentLiMount">
+									<b>100</b>个
+								</span>
 							</li>
 							<li class="contentLi">
-								<span class="GenIcon FlowThrIcon"></span>
-								<span class="contentLiFont">流经地市数量</span>
+								<span class="contentLiFont">全月有效监测自动监测站</span>
 								<span class="contentLiMount">
-									<b>9</b>个</span>
-							</li>
-							<li class="contentLi">
-								<span class="GenIcon ProSecIcon"></span>
-								<span class="contentLiFont">省界断面</span>
-								<span class="contentLiMount">
-									<b>4</b>个</span>
-							</li>
-							<li class="contentLi">
-								<span class="GenIcon  CitySecIcon"></span>
-								<span class="contentLiFont">市界断面</span>
-								<span class="contentLiMount">
-									<b>30</b>个</span>
+									<b>95</b>个
+								</span>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<div class="RightBox">
-					<div class="GisTabs flexBlock">
-						<div class="P1tabLi GisLeftTab active" data-map="概要">概要图</div>
-						<div class="P1tabLi GisRightTab " data-map="GIS">GIS图</div>
-					</div>
+				<div class="RightBox P2RightBox">
 					<div class="IconListBox">
 						<ul class="IconList">
 							<li class="IconLi">
@@ -113,6 +106,10 @@
 							<li class="IconLi">
 								<span class="RemarkIcon ProBouRemark"></span>
 								<span class="RemarkName">省界断面</span>
+							</li>
+							<li class="IconLi">
+								<span class="RemarkIcon CityBouRemark"></span>
+								<span class="RemarkName">市界断面</span>
 							</li>
 							<li class="IconLi">
 								<span class="RemarkIcon CityBouRemark"></span>
@@ -138,12 +135,66 @@
 								<span class="RemarkIcon NatResRemark"></span>
 								<span class="RemarkName">自然保护区</span>
 							</li>
+							<li class="IconLi">
+								<span class="RemarkIcon RivCheRemark"></span>
+								<span class="RemarkName">沿江化工企业</span>
+							</li>
+							<li class="IconLi">
+								<span class="RemarkIcon SewTreatRemark"></span>
+								<span class="RemarkName">沿江污水处理厂</span>
+							</li>
+							<li class="IconLi">
+								<span class="RemarkIcon SewOutsRemark"></span>
+								<span class="RemarkName">沿江排污口</span>
+							</li>
+							<li class="IconLi">
+								<span class="RemarkIcon ManSecRemark"></span>
+								<span class="RemarkName">手工断面</span>
+							</li>
+							<li class="IconLi">
+								<span class="RemarkIcon AutoStaRemark"></span>
+								<span class="RemarkName">自动站</span>
+							</li>
 						</ul>
 					</div>
 				</div>
-
-
+				<div class="legendBox">
+					<div class="legend">
+						<div class="LegendHeader">
+							<h4>图例</h4>
+						</div>
+						<div class="LegendContent">
+							<ol class="LegendList">
+								<li class="LegendLi">
+									<span class="WaterQulLine OneLevel"></span>
+									<span class="RemarkName">Ⅰ类水质</span>
+								</li>
+								<li class="LegendLi">
+									<span class="WaterQulLine TwoLevel"></span>
+									<span class="RemarkName">Ⅱ类水质</span>
+								</li>
+								<li class="LegendLi">
+									<span class="WaterQulLine ThreeLevel"></span>
+									<span class="RemarkName">Ⅲ类水质</span>
+								</li>
+								<li class="LegendLi">
+									<span class="WaterQulLine FourLevel"></span>
+									<span class="RemarkName">Ⅳ类水质</span>
+								</li>
+								<li class="LegendLi">
+									<span class="WaterQulLine FiveLevel"></span>
+									<span class="RemarkName">Ⅴ类水质</span>
+								</li>
+								<li class="LegendLi">
+									<span class="WaterQulLine SixLevel"></span>
+									<span class="RemarkName">劣Ⅵ类水质</span>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
 			</div>
+			
 		</section>
 	</div>
 </body>

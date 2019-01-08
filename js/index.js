@@ -4,7 +4,7 @@ $(document).ready(function () {
 		autoFit();
 		autoFitNav();
 		autoFitContent();
-		tabToggle();
+		//tabToggle();
 		mapToggle();
 	});
 });
