@@ -1,0 +1,474 @@
+/***********************    LeftSummary         start******** */
+.map1 {
+  background: url(../img/map1.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.map2 {
+  background: url(../img/map1.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.map3 {
+  background: url(../img/map1.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.map4 {
+  background: url(../img/map1.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.map5 {
+  background: url(../img/map1.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.LeftSummary {
+  position: absolute;
+  width: 20rem;
+  height: 23.5rem;
+  background: url(../img/part1_div.png) no-repeat;
+  background-size: 100% 100%;
+}
+.LeftHeader {
+  height: 2.8rem;
+  padding-top: 1.5rem;
+}
+.LeftHeader .LeftHeaderTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00e4ff;
+}
+.XuanLine {
+  width: 20rem;
+  height: 1.3rem;
+  display: block;
+  background: url(../img/xuanLine2.png) no-repeat;
+  background-size: 100% 100%;
+}
+.LeftContent {
+  text-align: left;
+  padding: 1rem  .2rem  0 1.5rem;
+}
+.LeftConTitle {
+  font-size: .75rem;
+  line-height: .75rem;
+  color: #9fb7e0;
+  margin-bottom: .6rem;
+}
+.contentList .contentLi {
+  height: 3rem;
+}
+.contentList .contentLiFont {
+  display: inline-block;
+  font-size: 1rem;
+  width: 9.5rem;
+  text-align: left;
+}
+.contentList .contentLiMount {
+  font-size: .9rem;
+}
+.contentList .contentLiMount b {
+  margin-right: .4rem;
+  color: #00d2ff;
+}
+.GenIcon {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 1rem;
+  position: relative;
+  top: .5rem;
+}
+.lengthIcon {
+  background: url(../img/icon1.png) no-repeat;
+  background-size: 100% 100%;
+}
+.waterIcon {
+  background: url(../img/icon2.png) no-repeat;
+  background-size: 100% 100%;
+}
+.FlowThrIcon {
+  background: url(../img/icon3.png) no-repeat;
+  background-size: 100% 100%;
+}
+.ProSecIcon {
+  background: url(../img/icon4.png) no-repeat;
+  background-size: 100% 100%;
+}
+.CitySecIcon {
+  background: url(../img/icon5.png) no-repeat;
+  background-size: 100% 100%;
+}
+/***********************    LeftSummary         end******** */
+/***********************    Right      start      ******** */
+.flexBlock {
+  display: flex;
+}
+.RightBox {
+  position: absolute;
+  width: 10.6rem;
+  right: 1.5rem;
+}
+.GisTabs {
+  width: 100%;
+  height: 2.1rem;
+  background: url(../img/map_tabback.png) no-repeat;
+  background-size: 100% 100%;
+}
+.P1tabLi {
+  flex: 1;
+  position: relative;
+  font-size: .75rem;
+  padding: .67rem 0;
+  cursor: pointer;
+}
+.P1tabLi.active {
+  color: #00e4ff;
+  background-color: rgba(4, 46, 79, 0.5);
+}
+.P1tabLi.active:before {
+  position: absolute;
+  content: '';
+  top: -0.45rem;
+  left: -0.5rem;
+  width: 6.45rem;
+  height: 3rem;
+  background: url(../img/map_tabback_hover.png) no-repeat;
+  background-size: 100% 100%;
+}
+.IconListBox {
+  float: right;
+  display: table;
+  margin-top: 2.5rem;
+  padding: 0 0.6rem .4rem .6rem;
+  border: 1px solid #00d2ff;
+  border-radius: 3px;
+  text-align: left;
+}
+.IconListBox .IconLi {
+  width: 100%;
+  height: 1.2rem;
+  display: block;
+}
+.RemarkIcon {
+  display: inline-block;
+  width: 1.05rem;
+  height: 0.85rem;
+  margin-right: .03rem;
+  position: relative;
+  top: 0.1rem;
+}
+.RemarkName {
+  font-size: 0.5rem;
+  color: #f4fbff;
+}
+@media only screen and (max-width: 2880px) {
+  .IconListBox {
+    margin-top: 3.75rem;
+  }
+  .IconListBox .IconLi {
+    height: 1.8rem;
+  }
+  .RemarkIcon {
+    width: 1.575rem;
+    height: 1.275rem;
+    margin-right: .05rem;
+    top: 0.4rem;
+  }
+  .RemarkName {
+    font-size: .7rem;
+  }
+}
+.RiversRemark {
+  background: url(../img/icon_remark1.png) no-repeat;
+  background-size: 100% 100%;
+}
+.LakesRemark {
+  background: url(../img/icon_remark2.png) no-repeat;
+  background-size: 100% 100%;
+}
+.ProBouRemark {
+  background: url(../img/icon_remark3.png) no-repeat;
+  background-size: 100% 100%;
+}
+.CityBouRemark {
+  background: url(../img/icon_remark4.png) no-repeat;
+  background-size: 100% 100%;
+}
+.CroBridgeRemark {
+  background: url(../img/icon_remark5.png) no-repeat;
+  background-size: 100% 100%;
+}
+.KeyProRemark {
+  background: url(../img/icon_remark6.png) no-repeat;
+  background-size: 100% 100%;
+}
+.KeyPortRemark {
+  background: url(../img/icon_remark7.png) no-repeat;
+  background-size: 100% 100%;
+}
+.RivIndRemark {
+  background: url(../img/icon_remark8.png) no-repeat;
+  background-size: 100% 100%;
+}
+.NatResRemark {
+  background: url(../img/icon_remark9.png) no-repeat;
+  background-size: 100% 100%;
+}
+.RivCheRemark {
+  background: url(../img/icon_remark10.png) no-repeat;
+  background-size: 100% 100%;
+}
+.SewTreatRemark {
+  background: url(../img/icon_remark11.png) no-repeat;
+  background-size: 100% 100%;
+}
+.SewOutsRemark {
+  background: url(../img/icon_remark12.png) no-repeat;
+  background-size: 100% 100%;
+}
+.ManSecRemark {
+  background: url(../img/icon_remark13.png) no-repeat;
+  background-size: 100% 100%;
+}
+.AutoStaRemark {
+  background: url(../img/icon_remark14.png) no-repeat;
+  background-size: 100% 100%;
+}
+/***********************    Right      end      ******** */
+/*************page2  part  start  *********************/
+.P2LeftContent {
+  padding: 0 1.4rem 0 1.5rem;
+}
+.LeftConTitle {
+  margin-top: .9rem;
+}
+.splitLine {
+  margin: .5rem 0 .6rem 0;
+  width: 100%;
+  border-bottom: 1px dashed #00d2ff;
+}
+.P2ContentList {
+  width: 100%;
+}
+.P2ContentList .contentLi {
+  clear: both;
+  height: 3rem;
+}
+.P2ContentList .contentLiFont {
+  width: 13.5rem;
+  float: left;
+  padding: 1rem 0;
+  font-size: 1rem;
+}
+.P2ContentList .contentLiMount {
+  float: right;
+  font-size: 0.9rem;
+  padding: 1.05rem 0;
+}
+.P2RightBox .IconListBox {
+  margin-top: 0;
+}
+.legendBox {
+  position: absolute;
+  display: table;
+  top: 0;
+  right: 30rem;
+  min-width: 5.75rem;
+  text-align: right;
+}
+.legend {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #00c4ff;
+  border-radius: .6rem;
+}
+.legend .LegendHeader {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #00c4ff;
+  font-size: 0.45rem;
+  padding: 0.33rem 0;
+}
+.LegendContent {
+  width: 100%;
+  text-align: left;
+  padding: .15rem .5rem .2rem .78rem;
+}
+.LegendContent .LegendLi {
+  height: 1.2rem;
+}
+.WaterQulLine {
+  display: inline-block;
+  width: .75rem;
+  height: .2rem;
+  margin-right: .48rem;
+}
+@media only screen and (max-width: 2880px) {
+  .legendBox {
+    min-width: 8.6rem;
+  }
+  .legend .LegendHeader {
+    font-size: 0.6rem;
+    padding: 0.5rem 0;
+  }
+  .LegendContent {
+    padding: .23rem .75rem .3rem 1.17rem;
+  }
+  .LegendContent .LegendLi {
+    height: 1.8rem;
+  }
+}
+.OneLevel {
+  background-color: #4ea9ff;
+}
+.TwoLevel {
+  background-color: #0067ff;
+}
+.ThreeLevel {
+  background-color: #00ff00;
+}
+.FourLevel {
+  background-color: #ffff00;
+}
+.FiveLevel {
+  background-color: #ffd700;
+}
+.SixLevel {
+  background-color: #fc0105;
+}
+/*************page2  part  end  ******************  ***/
+/*************page3  part  end  ******************  ***/
+.P3LeftSummary {
+  width: 20.225rem;
+  height: 41.15rem;
+  background: url(../img/part3_div.png) no-repeat;
+  background-size: 100% 100%;
+}
+.P3LeftContent {
+  padding: .65rem  1.43rem 0 1.45rem;
+}
+.showContent {
+  height: 7.5rem;
+  margin-bottom: 0.6rem;
+}
+.CompRateBox {
+  display: inline-block;
+  width: 7.5rem;
+  height: 100%;
+  background: url(../img/szjc_bing.png) no-repeat;
+  background-size: 100% 100%;
+}
+.rightBox {
+  display: inline-block;
+  float: right;
+  width: 9rem;
+  height: 100%;
+}
+.rightBox .LeftConTitle {
+  text-align: right;
+  font-size: 0.73rem;
+  margin-top: 0.28rem;
+  margin-bottom: 2.23rem;
+}
+.RArrow {
+  display: inline-block;
+  width: 2.05rem;
+  height: .45rem;
+  background: url(../img/szjc_arrow.png) no-repeat;
+  background-size: 100% 100%;
+}
+.KeyBox {
+  height: 1.05rem;
+}
+.keyWord {
+  font-size: 1.05rem;
+  float: right;
+}
+.P3ContentList {
+  width: 100%;
+}
+.P3ContentList .contentLi {
+  clear: both;
+  height: 2rem;
+}
+.P3ContentList .contentLiFont {
+  width: 12rem;
+  float: left;
+  padding: .5rem 0;
+  font-size: 1rem;
+}
+.P3ContentList .contentLiMount {
+  float: right;
+  font-size: 0.9rem;
+  padding: .55rem 0;
+}
+.unstandSecList {
+  /*滚动条样式*/
+}
+.unstandSecList .ListTitle {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+.unstandSecList .table {
+  min-width: 100%;
+  margin-top: 0.08rem;
+}
+.unstandSecList .table td {
+  white-space: nowrap;
+}
+.unstandSecList .theadTr {
+  font-size: 0.8rem;
+  color: #00d2ff;
+  height: 1.3rem;
+  text-align: left;
+}
+.unstandSecList .theadTr {
+  font-size: 0.8rem;
+  color: #00d2ff;
+  height: 1.3rem;
+}
+.unstandSecList .theadTr > td:nth-child(3) {
+  text-align: center;
+}
+.unstandSecList .theadTr > td:nth-child(4) {
+  text-align: right;
+}
+.unstandSecList .tbodyTr {
+  height: 1.8rem;
+  font-size: 0.8rem;
+  text-align: left;
+}
+.unstandSecList .tbodyTr > td:nth-child(1) {
+  padding-left: .13rem;
+  width: 3.75rem;
+}
+.unstandSecList .tbodyTr > td:nth-child(3),
+.unstandSecList .tbodyTr > td:nth-child(4) {
+  font-size: 0.8rem;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.unstandSecList .tableContanier::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 4px;
+  background: transparent;
+}
+.unstandSecList .tableContanier::-webkit-scrollbar-thumb {
+  /*滚动条里面轨道 */
+  border-radius: 6px;
+  /*  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+  background: yellow;
+  /*color:#2ebdff;*/
+}
+.unstandSecList .tableContanier::-webkit-scrollbar-track {
+  /*滚动条里面滑块*/
+  /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+  border-radius: 3px;
+  background: transparent;
+}
+/*************page3  part  end  ******************  ***/

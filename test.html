@@ -1,0 +1,23 @@
+<html>
+    <body>
+    <style type="text/css">
+    #s{
+        display:inline-block;
+        height:100px;
+        width:400px;
+        border:1px solid red;
+    }
+    </style>
+    <div id="s" style="width:400px;"></div>
+    <button onclick="getMaxValueOfSelect('s')">111111</button>
+    </body>
+</html>
+<script type="text/javascript" src="http://cdn.gbtags.com/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    //传入选择器
+    function getMaxValueOfSelect(selector){
+        var d = document.getElementById(selector);
+        var w = !d.style.width ? 0 : d.style.width.substring(0,d.style.width.length -2);
+        d.style.width = (parseInt(w,10) + 1 )+'px';
+    }
+</script>
