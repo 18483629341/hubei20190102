@@ -1,9 +1,9 @@
 /*********************   main.html 的所有样式 start******************/
 body {
-	background: url(../img/body_back.png) no-repeat;
-	background-size: 100% 100%;
+	
 	color: #fff;
 	text-align: center;
+	overflow-y: scroll;
 }
 a,a:hover,a:link{
 	color: #fff;
@@ -11,8 +11,10 @@ a,a:hover,a:link{
 }
 .contanier{
 	height:100%;
+	min-height: 100%;
 	padding: 0 1.7% 1% 1.7%;
-	
+	background: url(../img/body_back.png) no-repeat;
+	background-size: 100% 100%;
 }
 .header{
 	z-index: 15;
@@ -88,6 +90,16 @@ a,a:hover,a:link{
 }
 
 /***********************for tab  和  tabContent  end******** */
+@media only screen and (max-width: 1365px) {
+	html {
+		font-size:12px !important;
+	}
+}
+@media only screen and (min-width: 1366px) {
+	html {
+		font-size:14px !important;
+	}
+}
 @media only screen and (min-width: 1920px) {
 	html {
 		font-size:20px !important;

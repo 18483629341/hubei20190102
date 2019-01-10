@@ -15,7 +15,11 @@ var H=null;
 
 function autoFit(){
 	W=window.innerWidth;
-	H=window.innerHeight;
+	if(window.innerHeight>parseInt(W*2160/3840)){
+		H=window.innerHeight;
+	}else{
+		H=parseInt(W*2160/3840);
+	}
 	var BackDiv=document.querySelector(".BackDiv");
 	BackDiv.style.width=parseInt(W*3526/3840)+"px";
 	var H1=parseInt(W*323/3840);
@@ -88,7 +92,8 @@ function autoFitContent(){
 	var MapBoxs= document.querySelectorAll(".MapBox");
 	for(var i=0;i<MapBoxs.length;i++){
 		var element=MapBoxs[i];
-		element.style.height=parseInt(W*3526/3840)+"px";
+		element.style.width=parseInt(W*3526/3840)+"px";
+		console.log(H,H-W*323/3840);
 		element.style.height=parseInt(H-W*323/3840)+"px";
 	}
 }

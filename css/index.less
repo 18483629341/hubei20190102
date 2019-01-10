@@ -2,28 +2,23 @@
 
 .map1{
 	background: url(../img/map1.png) no-repeat;
-	background-size:cover;
-	background-position:center; 
+	background-size:100% 100%;
 }
 .map2{
 	background: url(../img/map1.png) no-repeat;
-	background-size:cover;
-	background-position:center; 
+	background-size:100% 100%; 
 }
 .map3{
 	background: url(../img/map1.png) no-repeat;
-	background-size:cover;
-	background-position:center; 
+	background-size:100% 100%; 
 }
 .map4{
 	background: url(../img/map1.png) no-repeat;
-	background-size:cover;
-	background-position:center; 
+	background-size:100% 100%;
 }
 .map5{
 	background: url(../img/map1.png) no-repeat;
-	background-size:cover;
-	background-position:center; 
+	background-size:100% 100%;
 }
 
 .LeftSummary{
@@ -359,13 +354,14 @@
 /*************part2  part  end  ******************  ***/
 /*************part3  part  end  ******************  ***/
 .P3LeftSummary{
-	width: 20.225rem;
-	height: 41.15rem; 
+	width: 21.225rem;
+	height: initial;
+	overflow: hidden;
 	background: url(../img/part3_div.png) no-repeat;
 	background-size:100% 100%;
 }
 .P3LeftContent{
-	padding:.65rem  1.43rem 0 1.45rem;
+	padding:.65rem  1.4rem 0.8rem 1.45rem;
 }
 .showContent{
 	height:7.5rem;
@@ -377,23 +373,52 @@
 	height: 100%;
 	background: url(../img/szjc_bing.png) no-repeat;
 	background-size:100% 100%;
+	position: relative;
+}
+.CompRateCanvas{
+	width: 100%;
+	height: 100%;
+}
+.imageDom{
+	width: 5rem;
+	height:5rem;
+	position: absolute;
+	top:1.25rem;
+	left:1.25rem; 
+	// visibility: hidden;
+}
+.CompRate{
+	width: 3.23rem;
+	height:1.2rem;
+	position: absolute;
+	top:3.15rem;
+	left:2.135rem;
+	.rem10{
+		font-size: 1.2rem;
+	}
+	.rem08{
+		font-size: .8rem;
+	} 
 }
 .rightBox{
 	display: inline-block;
 	float: right;
-	width: 9rem;
+	width: 10.7rem;
 	height: 100%;
-	.LeftConTitle{
+	.rightConTitleBox{
+		height:3rem;
+		margin-top:0.28rem;
+	}
+	.rightConTitle{
 		text-align: right;
 		font-size: 0.73rem;
-		margin-top:0.28rem;
-		margin-bottom:2.23rem;
 	}
 }
 .RArrow{
 	display: inline-block;
 	width:2.05rem;
 	height:.45rem;
+	margin-left: .7rem;
 	background: url(../img/szjc_arrow.png) no-repeat;
 	background-size:100% 100%;
 	
@@ -427,9 +452,7 @@
 	.ListTitle{
 		font-size: 1rem;
 		padding:0.5rem 0;
-
 	}
-	
 	.table{
 		min-width: 100%;
 		margin-top: 0.08rem;
@@ -458,7 +481,9 @@
 		height:1.8rem;
 		font-size: 0.8rem;
 		text-align: left;
+		
 	}
+	
 	.tbodyTr>td:nth-child(1){
 		padding-left:.13rem;
 		width: 3.75rem;
@@ -489,6 +514,13 @@
 			background: transparent;//滚动条里面轨道的背景
 	}
 }
+@media only screen and (max-width: 1920px) {
+	.unstandSecList{
+		.tbodyTr{
+			height: 1.6rem; 
+		}
+	}
+}
 /*************part3  part  end  ******************  ***/
 /*************part5  part  end  ******************  ***/
 .P5LeftSummary{
@@ -496,5 +528,30 @@
 	height: 41.15rem; 
 	background: url(../img/part3_div.png) no-repeat;
 	background-size:100% 100%;
+}
+.unstandCanvasBox{
+	margin-top:.5rem;
+	width:17.8rem;
+	height:26rem; 
+}
+.unstandSecList{
+	position: relative;
+}
+.rightMountBox{
+	position: absolute;
+	width:4rem;
+	height:26rem; 
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	
+	right: 0;
+	top:2.85rem;
+	.MountLi{
+    	text-align: right;
+		flex: 1;
+	   	font-size: .7rem;
+	   	color: #00d2ff;
+	}
 }
 /*************part5  part  end  ******************  ***/
