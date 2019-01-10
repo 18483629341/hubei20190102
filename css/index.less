@@ -1,23 +1,44 @@
 /***********************    LeftSummary         start******** */
-
+.MapBox{
+	display: none;
+}
+.MapBox.active{
+	display: block;
+}
 .map1{
 	background: url(../img/map1.png) no-repeat;
+	background-size:100% 100%;
+}
+.map11{
+	background: url(../img/map1_1.png) no-repeat;
 	background-size:100% 100%;
 }
 .map2{
 	background: url(../img/map1.png) no-repeat;
 	background-size:100% 100%; 
+	display: block;
 }
 .map3{
 	background: url(../img/map1.png) no-repeat;
 	background-size:100% 100%; 
+	display: block;
 }
 .map4{
 	background: url(../img/map1.png) no-repeat;
 	background-size:100% 100%;
+	display: block;
 }
 .map5{
 	background: url(../img/map1.png) no-repeat;
+	background-size:100% 100%;
+	display: block;
+}
+.map6{
+	background: url(../img/map1.png) no-repeat;
+	background-size:100% 100%;
+}
+.map61{
+	background: url(../img/map1_1.png) no-repeat;
 	background-size:100% 100%;
 }
 
@@ -555,3 +576,176 @@
 	}
 }
 /*************part5  part  end  ******************  ***/
+/*************part6 blueSky  end  ******************  ***/
+.P6LeftSummary,.P6RightSummary{
+	top:0;
+	position: absolute;
+	width: 21.075rem;
+	height: 41.875rem; 
+	background: url(../img/part_air_div.png) no-repeat;
+	background-size:100% 100%;
+	.LeftHeader {
+		height: 3.3rem;
+		padding-top: 1.9rem;
+	}
+	font-size:.75rem;
+}
+.P6LeftSummary{
+	left: 0;
+	.LeftHeader {
+		text-align: right;
+		padding-right: 2.3rem;
+	}
+}
+.P6RightSummary{
+	right: 0;
+}
+.P6LeftContent{
+	padding:.4rem  1.98rem 2.2rem 1.95rem;
+}
+.showContentLi{
+	height:6.9rem;
+}
+.showContentLi:nth-child(1){
+	padding:.35rem 0 0 0;
+}
+.P6CompRateBox{
+	display: inline-block;
+	width: 5.45rem;
+	height:5.45rem;
+	margin-right:1.2rem;
+	position: relative;
+}
+.P6imageDom{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	left: 0;
+}
+.P6CompRateCanvas{
+	width: 100%;
+	height: 100%;
+}
+.canvasAbso{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.P6CompRate{
+	width: 2.5rem;
+	height:0.92rem;
+	position: absolute;
+	top:2.26rem;
+	left:1.475rem;
+}
+.rem092{
+	font-size: .9rem;
+}
+.rem061{
+	font-size: .6rem;
+} 
+.P6rightBox{
+	display: inline-block;
+	width: 10rem;
+	height: 100%;
+	.P6rightConTitleBox{
+		text-align:justify;
+		text-justify:inter-word;
+		position: relative;
+		right: 0;
+		height:2.15rem;
+		padding-top:.68rem;
+	}
+	.rightMount{
+        float: right;
+	}
+	.downItem{
+   		color: #f7823c;
+	}
+	.upItem{
+		color:#72e75e;
+	}
+}
+
+.scale05{
+	transform: scale(0.5);
+}
+.icon{
+	display: inline-block;
+}
+.downIcon,.upIcon{
+	width: .55rem;
+	height: .65rem;	
+	background: url(../img/yyl_down.png) no-repeat;
+	background-size:100% 100%;
+}
+.upIcon{
+	background: url(../img/yyl_up.png) no-repeat;
+	background-size:100% 100%;
+}
+.desBox{
+	padding-top:.35rem;
+	.description{
+		text-align: left;
+		line-height: 1.2rem;
+		font-size:.75rem;
+		color: #bbd4ff;
+	}
+}
+.rem09{
+	font-size: .92rem;
+}
+.rem06{
+	font-size: .61rem;
+}
+.showContentLi:nth-child(2){
+	padding:.63rem 0 0 0;
+	margin-bottom:.88rem;
+}
+.P6CompRateBox2{
+	width: 5.3rem;
+    height: 4.65rem;
+    margin-top: .43rem;
+	margin:.43rem 1.25rem 0 .23rem;
+    float: left;
+    padding: .23rem;
+	border: 1px solid #00d1ff;
+	border-radius:.6rem; 
+	text-align: center;
+}
+
+.P6CompRate2{
+   width: 100%;
+   height:100%;
+   border: 1px dashed #00d1ff;
+   border-radius:.4rem;
+   text-align: center;
+   padding-top: 1.08rem;
+}
+.GisTabs{
+	position: absolute;
+	right: 6rem;
+}
+@media only screen and (max-width: 1920px) {
+	.P6LeftSummary,.P6RightSummary{
+		width: 24rem;
+		height: 44rem; 
+	}
+
+	.P6RightSummary{
+		right: 0;
+	}
+	.P6LeftContent{
+		padding:.4rem  1.5rem 2.2rem 1.95rem;
+	}
+	.P6rightBox{
+		display: inline-block;
+		position: relative;
+		right: 0;
+		width: 13rem;
+	}
+	.P6CompRate2{
+		padding-top: .8rem;
+	 }
+}
+/*************part5  blueSky  end  ******************  ***/

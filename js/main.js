@@ -119,15 +119,11 @@ function mapToggle(){
 		$(this).siblings('.P1tabLi').removeClass('active');
 		$(this).addClass('active');
 	    if($(this).attr("data-map")=="GIS"){
-			$('.map1').css({
-				'background': 'url(./img/map1_1.png) no-repeat',
-				'backgroundSize':'cover'
-			});
+			$('.map11').removeClass('active');
+			$('.map1').addClass('active');
 		}else{
-			$('.map1').css({
-				'background': 'url(./img/map1.png) no-repeat',
-				'backgroundSize':'cover'
-			});
+			$('.map1').removeClass('active');
+			$('.map11').addClass('active');
 		}
 	})
 }
