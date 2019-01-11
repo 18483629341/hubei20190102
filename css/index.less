@@ -409,7 +409,7 @@
 	// visibility: hidden;
 }
 .CompRate{
-	width: 3.23rem;
+	width: 3rem;
 	height:1.2rem;
 	position: absolute;
 	top:3.15rem;
@@ -474,12 +474,12 @@
 		font-size: 1rem;
 		padding:0.5rem 0;
 	}
-	.table{
-		min-width: 100%;
-		margin-top: 0.08rem;
-		td{
-			white-space: nowrap;
-		}
+}
+.table{
+	min-width: 100%;
+	margin-top: 0.08rem;
+	td{
+		white-space: nowrap;
 	}
 	.theadTr{
 		font-size: 0.8rem;
@@ -514,26 +514,27 @@
 		padding:0.5rem 0;
 		text-align: center;
 	}
-	/*滚动条样式*/
-	.tableContanier::-webkit-scrollbar {/*滚动条整体样式*/
-		width:4px;     /*高宽分别对应横竖滚动条的尺寸*/
-		height: 4px;
-		background:transparent;
-	}
-	.tableContanier::-webkit-scrollbar-thumb {/*滚动条里面轨道 */
-			border-radius: 6px;
-			/*  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
-			background: yellow;//滑块里面轨道的背景
-			/*color:#2ebdff;*/
+}
 
-	}
-	.tableContanier::-webkit-scrollbar-track {
-		/*滚动条里面滑块*/
-	
-			/*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
-			border-radius: 3px;
-			background: transparent;//滚动条里面轨道的背景
-	}
+/*滚动条样式*/
+.tableContanier::-webkit-scrollbar {/*滚动条整体样式*/
+	width:4px;     /*高宽分别对应横竖滚动条的尺寸*/
+	height: 4px;
+	background:transparent;
+}
+.tableContanier::-webkit-scrollbar-thumb {/*滚动条里面轨道 */
+		border-radius: 6px;
+		/*  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+		background: yellow;//滑块里面轨道的背景
+		/*color:#2ebdff;*/
+
+}
+.tableContanier::-webkit-scrollbar-track {
+	/*滚动条里面滑块*/
+
+		/*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
+		border-radius: 3px;
+		background: transparent;//滚动条里面轨道的背景
 }
 @media only screen and (max-width: 1920px) {
 	.unstandSecList{
@@ -577,6 +578,43 @@
 }
 /*************part5  part  end  ******************  ***/
 /*************part6 blueSky  end  ******************  ***/
+.blueSky {
+    position: relative;
+    top: -2.5rem;
+}
+.RightBox2{
+	position: absolute;
+	top: 3.25rem;
+	left: 50%;
+	margin-left: -6.1rem;
+	width:12.1rem;
+	height:2.1rem;
+	.GisTabs{
+		width: 100%;
+		height:100%;
+	}
+	.P6tabLi{
+		flex: 1;
+		position: relative;
+		font-size: .75rem; 	
+		padding:.7rem 0;
+		cursor: pointer;
+	}
+	.P6tabLi.active{
+		color:#00e4ff;
+		background-color: rgba(4, 46, 79, 0.5);
+	}
+	.P6tabLi.active:before{
+		position: absolute;
+		content: '';
+		top: -0.45rem;
+		left: -0.2rem;
+		width:6.45rem;
+		height: 3rem;
+		background: url(../img/map_tabback_hover.png) no-repeat;
+		background-size:100% 100%;
+	}
+}
 .P6LeftSummary,.P6RightSummary{
 	top:0;
 	position: absolute;
@@ -589,7 +627,9 @@
 		padding-top: 1.9rem;
 	}
 	font-size:.75rem;
+	
 }
+
 .P6LeftSummary{
 	left: 0;
 	.LeftHeader {
@@ -598,13 +638,14 @@
 	}
 }
 .P6RightSummary{
-	right: 0;
+	right: 2.5rem;
 }
 .P6LeftContent{
 	padding:.4rem  1.98rem 2.2rem 1.95rem;
 }
 .showContentLi{
 	height:6.9rem;
+	display: flex;
 }
 .showContentLi:nth-child(1){
 	padding:.35rem 0 0 0;
@@ -632,7 +673,6 @@
 	top: 0;
 }
 .P6CompRate{
-	width: 2.5rem;
 	height:0.92rem;
 	position: absolute;
 	top:2.26rem;
@@ -645,8 +685,8 @@
 	font-size: .6rem;
 } 
 .P6rightBox{
-	display: inline-block;
-	width: 10rem;
+    //width: 13rem;
+    flex: 1;
 	height: 100%;
 	.P6rightConTitleBox{
 		text-align:justify;
@@ -669,6 +709,9 @@
 
 .scale05{
 	transform: scale(0.5);
+}
+.scale03{
+	transform: scale(0.3);
 }
 .icon{
 	display: inline-block;
@@ -722,30 +765,223 @@
    text-align: center;
    padding-top: 1.08rem;
 }
-.GisTabs{
+.P6RightContent{
+	padding:.6rem 1.85rem 1.7rem 2.08rem;
+	.ListTitle2{
+		font-size: .75rem;
+		line-height: .75rem;
+		color:#8297bd;
+		padding:.43rem 0;
+		text-align: left;
+	}
+}
+.RightBox3{
+	margin:.93rem 0 0.6rem 0;
+	width:100%;
+	height:2.1rem;
+	background: url(../img/tab2_back.png) no-repeat;
+		background-size:100% 100%;
+	.GisTabs3{
+		width: 100%;
+		height:100%;
+		display: flex;
+	}
+	.P6tabLi3{
+		position: relative;
+		font-size: .75rem; 	
+		padding:.7rem 0 0 0;
+		cursor: pointer;
+	}
+	.P6tabLi3:nth-child(1){
+		width: 36.16%;
+	}
+    .P6tabLi3:nth-child(2){
+		width: 35.86%;
+	}
+    .P6tabLi3:nth-child(3){
+	    flex: 1;
+	}
+	.P6tabLi3.active{
+		color:#00e4ff;
+		background-color: rgba(4, 46, 79, 0.5);
+	}
+	.P6tabLi3.active:before{
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 3rem;
+		transform: translate(-50%,-50%);
+		background: url(../img/map_tabback_hover.png) no-repeat;
+		background-size:100% 100%;
+	}
+}
+.tableContanier2{
+	width:17rem;
+	margin:0 auto;
+}
+.table2{
+	margin-top: 0.45rem;
+	.theadTr{
+		height: 1.33rem;
+		padding: .25rem 0;
+		font-size: .8rem;
+	}td{
+		white-space: nowrap;
+	}
+	.td1{
+		width: 4rem;
+	}
+	.td2{
+		min-width: 5.43rem;
+	}
+	.tbodyTr{
+		height: 1.2rem;
+		padding: .2rem 0 0 0;
+		font-size: .8rem;
+		line-height: .7rem;
+		.td1{
+			width: 4rem;
+			text-indent:.73rem;
+		}
+	}
+}
+
+.TableIconBox{
+	display: inline-block;
+	width:1rem;
+	height:.8rem;
+	position: relative;
+	left: -.5rem;
+	top: .25rem;
+	cursor: pointer;
+}
+/*向上*/
+.triangle_border_up{
+	width:0;
+	height:0;
+	border-width:0 .25rem .25rem;
+	border-style:solid;
+	border-color:transparent transparent #fff;/*透明 透明  灰*/
+	margin:1px auto;
+	position:relative;
+}
+/*向下*/
+.triangle_border_down{
+	width:0;
+	height:0;
+	border-width:.25rem .25rem 0;
+	border-style:solid;
+	border-color:#fff transparent transparent;/*灰 透明 透明 */
+	margin:1px auto;
+	position:relative;
+}
+.triangle_border_up.active{
+	border-color:transparent transparent #00cffc;/*透明 透明  灰*/
+}
+.triangle_border_down.active{
+	border-color:#00cffc transparent transparent;/*灰 透明 透明 */
+}
+.legendBox2{
 	position: absolute;
-	right: 6rem;
+	right: 24.875rem;
+	top: 4.4rem;
+	.LegendContent{
+		width: 100%;
+		text-align: left;
+		padding: .35rem .4rem .4rem .48rem;
+		.LegendLi{
+			height: .9rem;
+			font-size: .48rem;
+			line-height: .48rem;
+			padding: .21rem;
+		}
+		
+	}
+	.WaterQulLine{
+		width: .43rem;
+		height:.25rem;
+		margin-right: .23rem;
+	}
+	.OneLevel{
+		background-color: #1ad91a;
+	}
+	.TwoLevel{
+		background-color: #ffff1a;
+	}
+	.ThreeLevel{
+		background-color: #ff8c1a;
+	}
+	.FourLevel{
+		background-color: #ff1a1a;
+	}
+	.FiveLevel{
+		background-color: #b51663;
+	}
+	.SixLevel{
+		background-color: #a3062b;
+	}
 }
 @media only screen and (max-width: 1920px) {
+	.RightBox2{
+		margin-left: -9.2rem;
+		width:18.15rem;
+		height:3.15rem;
+		.P6tabLi{
+			font-size: .75rem; 	
+			padding:1rem 0;
+		}
+	}
 	.P6LeftSummary,.P6RightSummary{
 		width: 24rem;
 		height: 44rem; 
-	}
-
-	.P6RightSummary{
-		right: 0;
+		.XuanLine {
+			width: 22rem;
+			position: relative;
+			top:.2rem;
+			left:1rem;
+		}
 	}
 	.P6LeftContent{
 		padding:.4rem  1.5rem 2.2rem 1.95rem;
 	}
 	.P6rightBox{
 		display: inline-block;
-		position: relative;
-		right: 0;
 		width: 13rem;
 	}
 	.P6CompRate2{
 		padding-top: .8rem;
-	 }
+	}
+	.TableIconBox{
+		top:0.2rem;
+	}
+	.triangle_border_up{
+		border-width:0 .35rem .35rem;
+	}
+	/*向下*/
+	.triangle_border_down{
+		border-width:.35rem .35rem 0;
+	}
+	.legendBox2{
+		right: 27.8rem;
+		.LegendContent{
+			.LegendLi{
+				height: 1.4rem;
+				font-size: .48rem;
+				line-height: .48rem;
+				padding: .21rem;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1365px) {
+	.TableIconBox{
+		top:0;
+	}
+	.P6tabLi3:nth-child(2){
+		display: inline-block;
+	}
 }
 /*************part5  blueSky  end  ******************  ***/
