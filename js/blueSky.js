@@ -107,5 +107,38 @@ function RankToggle(){
 		$(this).addClass('active');
 	})
 }
-
+var option3 = {
+    legend: {
+        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'line',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    grid: {
+        top:'16%',
+        left: '0%',
+        right: '4%',
+        bottom: '0%',
+        containLabel: true,
+        show:false
+    },
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [820, 932, 901, 934, 1290, 1330, 1320],
+        type: 'line',
+        smooth: true
+    }]
+};
 
