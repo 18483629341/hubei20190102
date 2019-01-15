@@ -1,5 +1,6 @@
 /***********************    LeftSummary         start******** */
 .MapBox {
+  width: 100%;
   display: none;
 }
 .MapBox.active {
@@ -43,14 +44,15 @@
 }
 .LeftSummary {
   position: absolute;
-  width: 20rem;
-  height: 23.5rem;
-  background: url(../img/part1_div.png) no-repeat;
+  width: 21.08rem;
+  height: 24.55rem;
+  background: url(../img/water_2_div.png) no-repeat;
   background-size: 100% 100%;
 }
 .LeftHeader {
-  height: 2.8rem;
-  padding-top: 1.5rem;
+  height: 3.4rem;
+  padding-top: 2rem;
+  padding-left: .5rem;
 }
 .LeftHeader .LeftHeaderTitle {
   font-size: 1rem;
@@ -68,11 +70,35 @@
   text-align: left;
   padding: 1rem  .2rem  0 1.5rem;
 }
+.LeftConBox {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+.conTheme {
+  display: inline-block;
+  color: #00e3ff;
+  font-size: 1.0rem;
+  line-height: 1.0rem;
+  margin: .75rem 0 .88rem 0;
+}
+.iconPoi {
+  width: .85rem;
+  height: .85rem;
+  background: url(../img/water_list.png) no-repeat;
+  background-size: 100% 100%;
+}
 .LeftConTitle {
   font-size: .75rem;
   line-height: .75rem;
   color: #9fb7e0;
   margin-bottom: .6rem;
+  flex: 1;
+}
+.alignRight {
+  text-align: right;
 }
 .contentList .contentLi {
   height: 3rem;
@@ -120,13 +146,14 @@
 }
 /***********************    LeftSummary         end******** */
 /***********************    Right      start      ******** */
-.flexBlock {
-  display: flex;
-}
-.RightBox {
+.RightBoxCon {
   position: absolute;
-  width: 10.6rem;
   right: 1.5rem;
+  width: 13rem;
+  top: 0;
+}
+.titleTd {
+  text-align: left;
 }
 .GisTabs {
   width: 100%;
@@ -155,13 +182,29 @@
   background: url(../img/map_tabback_hover.png) no-repeat;
   background-size: 100% 100%;
 }
+.RightBox {
+  margin-top: 2.58rem;
+  border: 1px solid #00d2ff;
+  border-collapse: separate;
+  border-radius: .26rem;
+  float: right;
+}
+.RightBox tr > td:first-child {
+  padding-left: .6rem;
+  text-align: left;
+}
+.RightBox tr > td:last-child {
+  padding-right: .6rem;
+}
+.RightBox td {
+  vertical-align: middle;
+  text-align: center;
+}
+.P2RightBox {
+  margin-top: 0;
+}
 .IconListBox {
   float: right;
-  display: table;
-  margin-top: 2.5rem;
-  padding: 0 0.6rem .4rem .6rem;
-  border: 1px solid #00d2ff;
-  border-radius: 3px;
   text-align: left;
 }
 .IconListBox .IconLi {
@@ -169,42 +212,100 @@
   height: 1.2rem;
   display: block;
 }
+.IconListBox .IconLi .checkBoxInput {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: .65rem;
+  height: .65rem;
+  background: url(../img/box_normal.png) no-repeat;
+  background-size: 100% 100%;
+  margin-left: 0!important;
+  margin-right: .43rem;
+}
+.IconListBox .IconLi .canPointer {
+  cursor: pointer;
+}
+.IconListBox .IconLi .checkBoxInput:checked {
+  background: url(../img/box_checked.png) no-repeat;
+  background-size: 100% 100%;
+}
+.RightBox.hidden {
+  min-width: 6rem;
+}
+.RightBox.hidden .LegendHeader td {
+  border-bottom: none;
+}
+.RightBox.hidden .IconListBox {
+  display: none;
+}
+.LegendHeader {
+  text-align: center;
+  font-size: 0.7rem;
+}
+.LegendHeader td {
+  height: 1.3rem;
+  border-bottom: 1px solid #00d2ff;
+  white-space: nowrap;
+}
+.LegendHeader .tableIcon {
+  display: inline-block;
+  float: right;
+  position: relative;
+  top: .2rem;
+  width: .7rem;
+  height: .45rem;
+  background: url(../img/tc_zk.png) no-repeat;
+  background-size: 50% 50%;
+  background-position: 50% 50%;
+  cursor: pointer;
+}
+.LegendHeader .rotate180 {
+  transform: rotate(180deg);
+  transform-origin: center;
+}
 .RemarkIcon {
   display: inline-block;
-  width: 1.05rem;
-  height: 0.85rem;
-  margin-right: .03rem;
-  position: relative;
-  top: 0.1rem;
-}
-.RemarkName {
-  font-size: 0.5rem;
-  color: #f4fbff;
-}
-@media only screen and (max-width: 2880px) {
-  .IconListBox {
-    margin-top: 3.75rem;
-  }
-  .IconListBox .IconLi {
-    height: 1.8rem;
-  }
-  .RemarkIcon {
-    width: 1.575rem;
-    height: 1.275rem;
-    margin-right: .05rem;
-    top: 0.4rem;
-  }
-  .RemarkName {
-    font-size: .7rem;
-  }
+  width: .9rem;
+  height: .9rem;
+  margin-right: .53rem;
 }
 .RiversRemark {
   background: url(../img/icon_remark1.png) no-repeat;
   background-size: 100% 100%;
 }
 .LakesRemark {
+  width: 1.05rem;
+  height: 0.85rem;
   background: url(../img/icon_remark2.png) no-repeat;
   background-size: 100% 100%;
+}
+.RemarkName {
+  font-size: 0.5rem;
+  line-height: 1.2rem;
+  color: #f4fbff;
+  white-space: nowrap;
+}
+.RemarkName2 {
+  font-size: 0.63rem;
+  color: #f4fbff;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 2880px) {
+  .IconListBox .IconLi {
+    height: 1.8rem;
+  }
+  .RemarkIcon {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+  .LakesRemark {
+    width: 1.575rem;
+    height: 1.275rem;
+  }
+  .RemarkName {
+    font-size: .7rem;
+  }
 }
 .ProBouRemark {
   background: url(../img/icon_remark3.png) no-repeat;
@@ -215,7 +316,7 @@
   background-size: 100% 100%;
 }
 .CroBridgeRemark {
-  background: url(../img/icon_remark5.png) no-repeat;
+  background: url(../img/icon_remark0.png) no-repeat;
   background-size: 100% 100%;
 }
 .KeyProRemark {
@@ -272,12 +373,12 @@
 }
 .P2ContentList .contentLi {
   clear: both;
-  height: 3rem;
+  height: 2.4rem;
 }
 .P2ContentList .contentLiFont {
   width: 13.5rem;
   float: left;
-  padding: 1rem 0;
+  padding: .7rem 0;
   font-size: 1rem;
 }
 .P2ContentList .contentLiMount {
@@ -302,13 +403,6 @@
   border: 1px solid #00c4ff;
   border-radius: .6rem;
 }
-.legend .LegendHeader {
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid #00c4ff;
-  font-size: 0.45rem;
-  padding: 0.33rem 0;
-}
 .LegendContent {
   width: 100%;
   text-align: left;
@@ -322,6 +416,20 @@
   width: .75rem;
   height: .2rem;
   margin-right: .48rem;
+}
+.legendBar {
+  position: fixed;
+  bottom: 2.7rem;
+  right: 3rem;
+}
+.legendBar td {
+  min-width: 1.8rem;
+}
+.legendBar .firstTr td {
+  padding-bottom: .23rem;
+}
+.legendBar .secondTr td {
+  height: .4rem;
 }
 @media only screen and (max-width: 2880px) {
   .legendBox {
@@ -360,8 +468,7 @@
 /*************part3  part  end  ******************  ***/
 .P3LeftSummary {
   width: 21.225rem;
-  height: initial;
-  overflow: hidden;
+  height: 46.15rem;
   background: url(../img/part3_div.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -371,6 +478,11 @@
 .showContent {
   height: 7.5rem;
   margin-bottom: 0.6rem;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 .CompRateBox {
   display: inline-block;
@@ -392,7 +504,7 @@
   left: 1.25rem;
 }
 .CompRate {
-  width: 3rem;
+  width: 4rem;
   height: 1.2rem;
   position: absolute;
   top: 3.15rem;
@@ -403,35 +515,42 @@
 }
 .CompRate .rem08 {
   font-size: .8rem;
+  margin-left: -0.3rem;
 }
 .rightBox {
   display: inline-block;
   float: right;
-  width: 10.7rem;
+  flex: 1;
   height: 100%;
 }
 .rightBox .rightConTitleBox {
-  height: 3rem;
-  margin-top: 0.28rem;
+  height: 4.15rem;
 }
 .rightBox .rightConTitle {
   text-align: right;
   font-size: 0.73rem;
+  line-height: 1rem;
+  color: #9fb7e0;
 }
 .RArrow {
   display: inline-block;
   width: 2.05rem;
   height: .45rem;
-  margin-left: .7rem;
+  margin-left: 15%;
   background: url(../img/szjc_arrow.png) no-repeat;
   background-size: 100% 100%;
+  position: relative;
+  top: -0.7rem;
 }
 .KeyBox {
   height: 1.05rem;
 }
 .keyWord {
   font-size: 1.05rem;
-  float: right;
+  position: relative;
+  top: -1.6rem;
+  right: 0;
+  text-align: right;
 }
 .P3ContentList {
   width: 100%;
@@ -468,11 +587,6 @@
   height: 1.3rem;
   text-align: left;
 }
-.table .theadTr {
-  font-size: 0.8rem;
-  color: #00d2ff;
-  height: 1.3rem;
-}
 .table .theadTr > td:nth-child(3) {
   text-align: center;
 }
@@ -481,39 +595,97 @@
 }
 .table .tbodyTr {
   height: 1.8rem;
+  line-height: 1.8rem;
   font-size: 0.8rem;
   text-align: left;
 }
 .table .tbodyTr > td:nth-child(1) {
-  padding-left: .13rem;
   width: 3.75rem;
+  padding-left: .5%;
 }
 .table .tbodyTr > td:nth-child(3),
 .table .tbodyTr > td:nth-child(4) {
   font-size: 0.8rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0 0;
   text-align: center;
+}
+.tableContanier1 {
+  width: 100%;
+  height: 21rem;
+  overflow-y: scroll;
 }
 /*滚动条样式*/
 .tableContanier::-webkit-scrollbar {
   /*滚动条整体样式*/
   width: 4px;
-  /*高宽分别对应横竖滚动条的尺寸*/
   height: 4px;
   background: transparent;
 }
 .tableContanier::-webkit-scrollbar-thumb {
   /*滚动条里面轨道 */
   border-radius: 6px;
-  /*  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
   background: yellow;
-  /*color:#2ebdff;*/
 }
 .tableContanier::-webkit-scrollbar-track {
   /*滚动条里面滑块*/
-  /*-webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);*/
   border-radius: 3px;
   background: transparent;
+}
+.tableContanier::-moz-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+.tableContanier::-moz-scrollbar-thumb {
+  /*滚动条里面轨道 */
+  border-radius: 6px;
+  background: yellow;
+}
+.tableContanier::-moz-scrollbar-track {
+  /*滚动条里面滑块*/
+  border-radius: 3px;
+  background: transparent;
+}
+.tableContanier::scrollbar {
+  /*滚动条整体样式*/
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+.tableContanier::scrollbar-thumb {
+  /*滚动条里面轨道 */
+  border-radius: 6px;
+  background: yellow;
+}
+.tableContanier::scrollbar-track {
+  /*滚动条里面滑块*/
+  border-radius: 3px;
+  background: transparent;
+}
+/*滚动条*/
+.tableContanier::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+.tableContanier::-webkit-scrollbar-button {
+  background-color: #f8f8f8;
+}
+.tableContanier::-webkit-scrollbar-track {
+  background: #f8f8f8;
+}
+.tableContanier::-webkit-scrollbar-track-piece {
+  background: #f8f8f8;
+}
+.tableContanier::-webkit-scrollbar-thumb {
+  background: #dcdcdc;
+  border-radius: 4px;
+}
+.tableContanier::-webkit-scrollbar-corner {
+  background: #f8f8f8;
+}
+.tableContanier::-webkit-scrollbar-resizer {
+  background: #f8f8f8;
 }
 @media only screen and (max-width: 1920px) {
   .unstandSecList .tbodyTr {
@@ -541,6 +713,9 @@
   width: 4rem;
   height: 26rem;
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
   flex-direction: column;
   right: 0;
@@ -622,6 +797,10 @@
 .showContentLi {
   height: 6.9rem;
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 .showContentLi:nth-child(1) {
   padding: .35rem 0 0 0;
@@ -694,10 +873,20 @@
 .upIcon {
   width: .55rem;
   height: .65rem;
+}
+.firstLine .downIcon {
   background: url(../img/yyl_down.png) no-repeat;
   background-size: 100% 100%;
 }
-.upIcon {
+.firstLine .upIcon {
+  background: url(../img/ndb_up.png) no-repeat;
+  background-size: 100% 100%;
+}
+.secondLine .downIcon {
+  background: url(../img/ndb_down.png) no-repeat;
+  background-size: 100% 100%;
+}
+.secondLine .upIcon {
   background: url(../img/yyl_up.png) no-repeat;
   background-size: 100% 100%;
 }
@@ -760,6 +949,10 @@
   width: 100%;
   height: 100%;
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
 }
 .RightBox3 .P6tabLi3 {
   position: relative;
@@ -813,7 +1006,7 @@
   min-width: 5.43rem;
 }
 .table2 .tbodyTr {
-  height: 1.2rem;
+  height: 1.6rem;
   padding: .2rem 0 0 0;
   font-size: .8rem;
   line-height: .7rem;
@@ -863,7 +1056,6 @@
 }
 .legendBox2 {
   position: absolute;
-  right: 24.875rem;
   top: 4.4rem;
 }
 .legendBox2 .LegendContent {
@@ -900,7 +1092,178 @@
 .legendBox2 .SixLevel {
   background-color: #a3062b;
 }
-@media only screen and (max-width: 1920px) {
+.GoAwayWuhan,
+.P6GoAwayWuhan,
+.legendBox2 {
+  right: 24.875rem;
+}
+.bottomBox {
+  padding-top: 1.3rem;
+}
+.goodWeatherCanvas {
+  position: relative;
+  margin-top: .6rem;
+  width: 100%;
+  height: 16.5rem;
+}
+.legend2 .LegendList {
+  padding-top: 1rem;
+  display: block;
+}
+.LegendLi2 {
+  display: inline-block;
+  font-size: .5rem;
+}
+.LegendLi2 .WaterQulLine {
+  position: relative;
+  top: -0.27rem;
+}
+.LegendLi2 .OneLevel {
+  background-color: #72e75e;
+}
+.LegendLi2 .TwoLevel {
+  background-color: #00e4ff;
+}
+.LegendLi2 .ThreeLevel {
+  background-color: #f7823c;
+}
+.goWuhan {
+  width: 6rem;
+  height: 2rem;
+  position: relative;
+  left: 70%;
+  cursor: pointer;
+  top: 60%;
+  background: rgba(1, 39, 76, 0.5);
+  border: 1px solid #3b0303;
+}
+.P6RightBox,
+.P6RightSummary1,
+.P6RightSummary2,
+.P6legendBox1,
+.P6legendBox2,
+.p6GoAwayWuhan,
+.goWuhan {
+  display: none;
+}
+.P6RightBox.show,
+.P6RightSummary1.show,
+.P6RightSummary2.show,
+.P6legendBox1.show,
+.P6legendBox2.show,
+.p6GoAwayWuhan.show,
+.goWuhan.show {
+  display: block;
+}
+.P6RightSummary2 {
+  background: url(../img/air_div.png) no-repeat;
+  background-size: 100% 100%;
+  height: 45rem;
+}
+.P6RightSummary2 .P6RightContent {
+  padding-top: 0;
+  padding-bottom: .5rem;
+}
+.P6RightSummary2 .LeftHeader {
+  padding-top: 2.3rem;
+}
+.P6RightSummary2 .LeftHeader .LeftHeader .LeftHeaderTitle {
+  text-align: left;
+  text-indent: 19%;
+}
+.P6RightSummary2 .SecondHeader {
+  height: 1.4rem;
+  padding-top: .5rem;
+}
+.P6RightSummary2 .SecondHeader .XuanLine {
+  top: -0.5rem;
+}
+.P6RightSummary2 .theadTr .td2 {
+  text-align: center;
+}
+.P6legendBox2 {
+  top: 37rem;
+}
+.P6legendBox2 .legend {
+  padding: .5rem;
+  background: rgba(1, 39, 76, 0.5);
+  border-radius: 5px;
+}
+.P6legendBox2 .LegendLi td {
+  vertical-align: middle;
+  height: 1rem;
+  padding: 0 .3rem 0 0;
+}
+.P6legendBox2 .blueIcon {
+  display: inline-block;
+  width: 1.15rem;
+  height: 1.15rem;
+}
+.P6legendBox2 .OneLevel {
+  background: url(../img/u14635.png) no-repeat;
+  background-size: 100% 100%;
+}
+.P6legendBox2 .TwoLevel {
+  background: url(../img/u14636.png) no-repeat;
+  background-size: 100% 100%;
+}
+.P6legendBox2 .ThreeLevel {
+  background: url(../img/u14637.png) no-repeat;
+  background-size: 100% 100%;
+}
+.P6legendBox2 .FourLevel {
+  background: url(../img/u14638.png) no-repeat;
+  background-size: 100% 100%;
+}
+.P6legendBox2 .FiveLevel {
+  background: url(../img/u14639.png) no-repeat;
+  background-size: 100% 100%;
+}
+.P6legendBox2 .SixLevel {
+  background: url(../img/u14634.png) no-repeat;
+  background-size: 100% 100%;
+}
+.P6legendBox2 .SevenLevel {
+  background: url(../img/u14640.png) no-repeat;
+  background-size: 100% 100%;
+}
+.GoAwayWuhan {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.25rem;
+  background: url(../img/u14648.png) no-repeat;
+  background-size: 100% 100%;
+  top: 1rem;
+}
+.PopUpBox {
+  position: absolute;
+  width: 13rem;
+  top: 34%;
+  left: 34%;
+  z-index: 100;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1919px) {
+  .table2 .tbodyTr {
+    height: 1.75rem;
+  }
+  .rightBox {
+    width: 10.7rem;
+  }
+  .rightBox .rightConTitleBox {
+    height: 3.75rem;
+  }
+  .LegendHeader {
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  .LegendHeader td {
+    height: 1.8rem;
+    border-bottom: 1px solid #00d2ff;
+  }
+  .LegendHeader .tableDownIcon {
+    top: .45rem;
+  }
   .RightBox2 {
     margin-left: -9.2rem;
     width: 18.15rem;
@@ -909,6 +1272,12 @@
   .RightBox2 .P6tabLi {
     font-size: .75rem;
     padding: 1rem 0;
+  }
+  .RightBox2 .P6tabLi.active::before {
+    top: -0.7rem;
+    left: 1.4rem;
+    width: 6.45rem;
+    height: 4.5rem;
   }
   .P6LeftSummary,
   .P6RightSummary {
@@ -921,6 +1290,9 @@
     position: relative;
     top: .2rem;
     left: 1rem;
+  }
+  .P6RightSummary2 {
+    height: 45rem;
   }
   .P6LeftContent {
     padding: .4rem  1.5rem 2.2rem 1.95rem;
@@ -942,14 +1314,19 @@
   .triangle_border_down {
     border-width: .35rem .35rem 0;
   }
-  .legendBox2 {
-    right: 27.8rem;
+  .legend2 {
+    border: none;
   }
   .legendBox2 .LegendContent .LegendLi {
     height: 1.4rem;
     font-size: .48rem;
     line-height: .48rem;
     padding: .21rem;
+  }
+  .GoAwayWuhan,
+  .P6GoAwayWuhan,
+  .legendBox2 {
+    right: 27.8rem;
   }
 }
 @media only screen and (max-width: 1365px) {
@@ -960,4 +1337,4 @@
     display: inline-block;
   }
 }
-/*************part5  blueSky  end  ******************  ***/
+/*************part6  blueSky  end  ******************  ***/

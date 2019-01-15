@@ -15,6 +15,9 @@ var H=null;
 
 function autoFit(){
 	W=window.innerWidth;
+	if(W<1366){
+		W=1366;
+	}
 	if(window.innerHeight>parseInt(W*2160/3840)){
 		H=window.innerHeight;
 	}else{
@@ -92,7 +95,7 @@ function autoFitContent(){
 	var MapBoxs= document.querySelectorAll(".MapBox");
 	for(var i=0;i<MapBoxs.length;i++){
 		var element=MapBoxs[i];
-		element.style.width=parseInt(W*3526/3840)+"px";
+		//element.style.width=parseInt(W*3526/3840)+"px";
 		console.log(H,H-W*323/3840);
 		element.style.height=parseInt(H-W*323/3840)+"px";
 	}
@@ -125,6 +128,20 @@ function mapToggle(){
 			$('.map1').removeClass('active');
 			$('.map11').addClass('active');
 		}
+	})
+}
+var flag=false;
+function listToggle(){
+    $("body").on('click','.tableIcon',function(){
+		$(this).toggleClass('rotate180');
+		if(!flag){
+			var w=$('.RightBox').outerWidth();
+			flag=true;
+		}
+		//console.log(w);
+		$('.RightBox').toggleClass('hidden');
+		$('.RightBox').outerWidth(w+2);
+		$('.RightBox').width(w+2);
 	})
 }
 

@@ -96,53 +96,122 @@
 						</ul>
 					</div>
 				</div>
-				<div class="RightBox">
+				<div class="RightBoxCon">
 					<div class="GisTabs flexBlock">
 						<div class="P1tabLi GisLeftTab active" data-map="概要">概要图</div>
 						<div class="P1tabLi GisRightTab " data-map="GIS">GIS图</div>
 					</div>
-					<div class="IconListBox">
-						<ul class="IconList">
-							<li class="IconLi">
-								<span class="RemarkIcon RiversRemark"></span>
-								<span class="RemarkName">河流</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon LakesRemark"></span>
-								<span class="RemarkName">主要湖库</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon ProBouRemark"></span>
-								<span class="RemarkName">省界断面</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon CityBouRemark"></span>
-								<span class="RemarkName">市界断面</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon CroBridgeRemark"></span>
-								<span class="RemarkName">跨江大桥</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon KeyProRemark"></span>
-								<span class="RemarkName">重点工程</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon KeyPortRemark"></span>
-								<span class="RemarkName">重点港口</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon RivIndRemark"></span>
-								<span class="RemarkName">沿江工业园区</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon NatResRemark"></span>
-								<span class="RemarkName">自然保护区</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-
+					<table class="RightBox">
+						<thead class="LegendHeader ">
+							<tr>
+								<td colspan="3" class="titleTd">图例
+									<i class="tableIcon"></i>
+								</td>
+							</tr>
+						</thead>
+						<tbody class="IconListBox ">
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput" type="checkbox" name="河流" value="河流" checked disabled>
+								</td>
+								<td>
+									<span class="RemarkIcon RiversRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">河流</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput" type="checkbox" name="主要湖库" value="主要湖库" checked disabled>
+								</td>
+								<td>
+									<span class="RemarkIcon LakesRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">主要湖库</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="省界断面" value="省界断面" checked >
+								</td>
+								<td>
+									<span class="RemarkIcon ProBouRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">省界断面</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="市界断面" value="市界断面">
+								</td>
+								<td>
+									<span class="RemarkIcon CityBouRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">市界断面</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="跨江大桥" value="跨江大桥">
+								</td>
+								<td>
+									<span class="RemarkIcon CroBridgeRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">跨江大桥</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点工程" value="重点工程">
+								</td>
+								<td>
+									<span class="RemarkIcon KeyProRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">重点工程</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点港口" value="重点港口">
+								</td>
+								<td>
+									<span class="RemarkIcon KeyPortRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">重点港口</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="沿江工业园区" value="沿江工业园区">
+								</td>
+								<td>
+									<span class="RemarkIcon RivIndRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">沿江工业园区</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="自然保护区" value="自然保护区">
+								</td>
+								<td>
+									<span class="RemarkIcon NatResRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">自然保护区</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+                </div>
 
 			</div>
 		</section>

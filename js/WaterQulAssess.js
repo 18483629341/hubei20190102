@@ -7,7 +7,8 @@ $(document).ready(function () {
 		autoFitNav();
 		autoFitContent();
 		//tabToggle();
-		//mapToggle();
+        //mapToggle();
+        listToggle();
 		// 使用刚指定的配置项和数据显示图表。
          myChart.setOption(option);
 	});
@@ -16,7 +17,9 @@ $(document).ready(function () {
 window.onresize=function(){
 	autoFit();
 	autoFitNav();
-	autoFitContent();
+    autoFitContent();
+    //使用resize()主动的去绑定这个事件
+    myChart.resize();//根据窗口的大小变动图表 --- 重点 
 }
 
 /*************
@@ -25,7 +28,7 @@ window.onresize=function(){
  * 
  * */
 var myChart = echarts.init(document.getElementById('CompRateCanvas01'));
-var array=[74.5,25.5]; //达标的数据和不达标的数据组成的数组                                 //需要后台引入的数据
+var array=[25.5,74.5]; //达标的数据和不达标的数据组成的数组                                 //需要后台引入的数据
 // 指定饼状图的配置项和数据
 var option = {
     color: ['#081039'], //调色板，这里为圆环的底色
@@ -34,7 +37,7 @@ var option = {
         type: 'pie',
 		clockWise: true,
 		startAngle:0,//圆环的绘画的起始角度
-        radius: [0, '66%'],//圆环的半径比例
+        radius: [0, '69%'],//圆环的半径比例
         itemStyle: {
             normal: {
                 label: {

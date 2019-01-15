@@ -23,10 +23,14 @@
 					<div class="LeftNav">
 						<ul>
 							<li class="tabli " data-index="0">
-								<a href="index.html"> <div class="TabLiContent">水环境概况</div></a>
+								<a href="index.html">
+									<div class="TabLiContent">水环境概况</div>
+								</a>
 							</li>
 							<li class="tabli " data-index="1">
-								<a href="WaterQulMonitor.html"> <div class="TabLiContent">水质监测</div></a>
+								<a href="WaterQulMonitor.html">
+									<div class="TabLiContent">水质监测</div>
+								</a>
 							</li>
 							<li class="tabli active" data-index="2">
 								<div class="TabLiContent">水质考核</div>
@@ -36,10 +40,14 @@
 					<div class="RightNav">
 						<ul>
 							<li class="tabli" data-index="3">
-								<a href="PolluDisSituation.html"><div class="TabLiContent">排污情况</div></a>
+								<a href="PolluDisSituation.html">
+									<div class="TabLiContent">排污情况</div>
+								</a>
 							</li>
 							<li class="tabli " data-index="4">
-								<a href="LawEnfSituation.html"><div class="TabLiContent">执法情况</div></a>
+								<a href="LawEnfSituation.html">
+									<div class="TabLiContent">执法情况</div>
+								</a>
 							</li>
 							<li class="tabli" style="visibility:hidden">
 								<div class="TabLiContent">1</div>
@@ -61,21 +69,22 @@
 					<div class="XuanLine"></div>
 					<div class="LeftContent  P3LeftContent">
 						<div class="showContent">
-							<div class="CompRateBox" >
-								<img class="imageDom" src='./img/r.png'/>
+							<div class="CompRateBox">
+								<img class="imageDom" src='./img/r.png' />
 								<div class="CompRateCanvas" id="CompRateCanvas01">
 								</div>
 								<div class="CompRate">
-									<span class="rem10">74.5</span><span class="rem08">%</span>
+									<span class="rem10">25.5</span>
+									<span class="rem08">%</span>
 								</div>
 							</div>
 							<div class="rightBox">
 								<div class="rightConTitleBox">
 									<p class="rightConTitle">统计时间:2018年11月</p>
-							    </div>
+								</div>
 								<div class="KeyBox">
 									<span class="RArrow"></span>
-									<span class="keyWord">整体达标率</span>
+									<p class="keyWord">整体达标率</p>
 								</div>
 							</div>
 						</div>
@@ -103,7 +112,7 @@
 						<div class="splitLine"></div>
 						<div class="unstandSecList">
 							<div class="ListTitle">不达标断面列表</div>
-							<div class="tableContanier">
+							<div class="tableContanier tableContanier1">
 								<table class="table">
 									<thead>
 										<tr class="theadTr">
@@ -113,7 +122,13 @@
 											<td>超标倍数</td>
 										</tr>
 									</thead>
-									<tbody>
+									<tbody class="tbodyContainer">
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
 										<tr class="tbodyTr">
 											<td>武汉市</td>
 											<td>荆江口</td>
@@ -174,46 +189,121 @@
 						</div>
 					</div>
 				</div>
-				<div class="RightBox P2RightBox">
-					<div class="IconListBox">
-						<ul class="IconList">
-							<li class="IconLi">
-								<span class="RemarkIcon RiversRemark"></span>
-								<span class="RemarkName">河流</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon LakesRemark"></span>
-								<span class="RemarkName">主要湖库</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon CroBridgeRemark"></span>
-								<span class="RemarkName">跨江大桥</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon KeyProRemark"></span>
-								<span class="RemarkName">重点工程</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon KeyPortRemark"></span>
-								<span class="RemarkName">重点港口</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon RivCheRemark"></span>
-								<span class="RemarkName">沿江化工企业</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon SewTreatRemark"></span>
-								<span class="RemarkName">沿江污水处理厂</span>
-							</li>
-							<li class="IconLi">
-								<span class="RemarkIcon SewOutsRemark"></span>
-								<span class="RemarkName">沿江排污口</span>
-							</li>
-						</ul>
-					</div>
+				<div class="RightBoxCon">
+					<table class="RightBox P2RightBox">
+						<thead class="LegendHeader ">
+							<tr>
+								<td colspan="2" class="titleTd">图例
+									<i class="tableIcon"></i>
+								</td>
+							</tr>
+						</thead>
+						<tbody class="IconListBox ">
+							<!-- <tr class="IconLi">
+								<td>
+									<input class="checkBoxInput" type="checkbox" name="河流" value="河流" checked disabled>
+								</td>
+								<td>
+									<span class="RemarkIcon RiversRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">河流</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput" type="checkbox" name="主要湖库" value="主要湖库" checked disabled>
+								</td>
+								<td>
+									<span class="RemarkIcon LakesRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">主要湖库</span>
+								</td>
+							</tr> -->
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="跨江大桥" value="跨江大桥"/>
+								</td>
+								<td>
+									<span class="RemarkIcon CroBridgeRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">跨江大桥</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点工程" value="重点工程">
+								</td>
+								<td>
+									<span class="RemarkIcon KeyProRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">重点工程</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点港口" value="重点港口">
+								</td>
+								<td>
+									<span class="RemarkIcon KeyPortRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">重点港口</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="自然保护区" value="自然保护区">
+								</td>
+								<td>
+									<span class="RemarkIcon NatResRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">自然保护区</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="沿江排污口" value="沿江排污口">
+								</td>
+								<td>
+									<span class="RemarkIcon SewOutsRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">沿江排污口</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="沿江化工企业" value="沿江化工企业">
+								</td>
+								<td>
+									<span class="RemarkIcon RivCheRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">沿江化工企业</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="沿江污水处理厂" value="沿江污水处理厂">
+								</td>
+								<td>
+									<span class="RemarkIcon SewTreatRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">沿江污水处理厂</span>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
 				</div>
 			</div>
-			
+
 		</section>
 	</div>
 </body>

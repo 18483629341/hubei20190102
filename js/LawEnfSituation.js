@@ -6,6 +6,7 @@ $(document).ready(function () {
         autoFitContent();
         //tabToggle();
         //mapToggle();
+        listToggle();
         myChart.setOption(option);
     });
 });
@@ -13,7 +14,8 @@ $(document).ready(function () {
 window.onresize = function () {
     autoFit();
     autoFitNav();
-    autoFitContent()
+    autoFitContent();
+    myChart.resize();//根据窗口的大小变动图表 --- 重点 
 }
 
 

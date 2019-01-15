@@ -22,24 +22,32 @@
 				<nav class="nav">
 					<div class="LeftNav">
 						<ul>
-							<li class="tabli  " data-index="0">
-								<a href="index.html"> <div class="TabLiContent">水环境概况</div></a>
+							<li class="tabli " data-index="0">
+								<a href="index.html">
+									<div class="TabLiContent">水环境概况</div>
+								</a>
 							</li>
 							<li class="tabli " data-index="1">
-								<a href="WaterQulMonitor.html"> <div class="TabLiContent">水质监测</div></a>
+								<a href="WaterQulMonitor.html">
+									<div class="TabLiContent">水质监测</div>
+								</a>
 							</li>
 							<li class="tabli " data-index="2">
-								<a href="WaterQulAssess.html"><div class="TabLiContent">水质考核</div></a>
+								<div class="TabLiContent">水质考核</div>
 							</li>
 						</ul>
 					</div>
 					<div class="RightNav">
 						<ul>
 							<li class="tabli active" data-index="3">
-								<div class="TabLiContent">排污情况</div>
+								<a href="PolluDisSituation.html">
+									<div class="TabLiContent">排污情况</div>
+								</a>
 							</li>
 							<li class="tabli " data-index="4">
-								<a href="LawEnfSituation.html"><div class="TabLiContent">执法情况</div></a>
+								<a href="LawEnfSituation.html">
+									<div class="TabLiContent">执法情况</div>
+								</a>
 							</li>
 							<li class="tabli" style="visibility:hidden">
 								<div class="TabLiContent">1</div>
@@ -51,15 +59,154 @@
 
 		</header>
 		<section class="section">
-			
-			<!--排污情况   pollution discharge situation  box-->
-			<div class="TabContent PolluDisSituation" id='PolluDisSituation' data-index="3">PolluDisSituation</div>
-			
+			<!--水质考核   water quality assessment box-->
+			<div class="TabContent  WaterQulAssess" id='WaterQulAssess' data-index="2">
+				<div class="MapBox map4"></div>
+			    <div class="LeftSummary">
+					<div class="LeftHeader">
+						<p class="LeftHeaderTitle">长江湖北段排污情况</p>
+					</div>
+					<div class="XuanLine"></div>
+					<div class="LeftContent">
+						<p class="LeftConTitle">统计时间:2018年</p>
+						<ul class="contentList">
+							<li class="contentLi">
+								<span class="GenIcon lengthIcon"></span>
+								<span class="contentLiFont">沿江入河排污口</span>
+								<span class="contentLiMount">
+									<b>45</b>个</span>
+							</li>
+							<li class="contentLi">
+								<span class="GenIcon waterIcon"></span>
+								<span class="contentLiFont">沿江化工企业</span>
+								<span class="contentLiMount">
+									<b>200</b>家</span>
+							</li>
+							<li class="contentLi">
+								<span class="GenIcon FlowThrIcon"></span>
+								<span class="contentLiFont">沿江污水处理企业</span>
+								<span class="contentLiMount">
+									<b>200</b>家</span>
+							</li>
+							<li class="contentLi">
+								<span class="GenIcon ProSecIcon"></span>
+								<span class="contentLiFont">沿江工业园区</span>
+								<span class="contentLiMount">
+									<b>400</b>家</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="RightBoxCon">
+						<table class="RightBox P2RightBox">
+							<thead class="LegendHeader ">
+								<tr>
+									<td colspan="2" class="titleTd">图例
+										<i class="tableIcon"></i>
+									</td>
+								</tr>
+							</thead>
+							<tbody class="IconListBox ">
+								<tr class="IconLi">
+									<td>
+										<input class="checkBoxInput " type="checkbox" name="沿江排污口" value="沿江排污口"  checked disabled>
+									</td>
+									<td>
+										<span class="RemarkIcon SewOutsRemark"></span>
+									</td>
+									<td>
+										<span class="RemarkName">入河排污口</span>
+									</td>
+								</tr>
+								<tr class="IconLi">
+									<td>
+										<input class="checkBoxInput " type="checkbox" name="沿江化工企业" value="沿江化工企业"  checked disabled>
+									</td>
+									<td>
+										<span class="RemarkIcon RivCheRemark"></span>
+									</td>
+									<td>
+										<span class="RemarkName">沿江化工企业</span>
+									</td>
+								</tr>
+								<tr class="IconLi">
+									<td>
+										<input class="checkBoxInput " type="checkbox" name="沿江污水处理厂" value="沿江污水处理厂"  checked disabled>
+									</td>
+									<td>
+										<span class="RemarkIcon SewTreatRemark"></span>
+									</td>
+									<td>
+										<span class="RemarkName">沿江污水处理厂</span>
+									</td>
+								</tr>
+								<tr class="IconLi">
+									<td>
+										<input class="checkBoxInput " type="checkbox" name="沿江工业园区" value="沿江工业园区"  checked disabled>
+									</td>
+									<td>
+										<span class="RemarkIcon RivIndRemark"></span>
+									</td>
+									<td>
+										<span class="RemarkName">沿江工业园区</span>
+									</td>
+								</tr>
+								<tr class="IconLi">
+									<td>
+										<input class="checkBoxInput canPointer" type="checkbox" name="跨江大桥" value="跨江大桥">
+									</td>
+									<td>
+										<span class="RemarkIcon CroBridgeRemark"></span>
+									</td>
+									<td>
+										<span class="RemarkName">跨江大桥</span>
+									</td>
+								</tr>
+								<tr class="IconLi">
+									<td>
+										<input class="checkBoxInput canPointer" type="checkbox" name="重点工程" value="重点工程">
+									</td>
+									<td>
+										<span class="RemarkIcon KeyProRemark"></span>
+									</td>
+									<td>
+										<span class="RemarkName">重点工程</span>
+									</td>
+								</tr>
+								<tr class="IconLi">
+									<td>
+										<input class="checkBoxInput canPointer" type="checkbox" name="重点港口" value="重点港口">
+									</td>
+									<td>
+										<span class="RemarkIcon KeyPortRemark"></span>
+									</td>
+									<td>
+										<span class="RemarkName">重点港口</span>
+									</td>
+								</tr>
+								<tr class="IconLi">
+									<td>
+										<input class="checkBoxInput canPointer" type="checkbox" name="自然保护区" value="自然保护区">
+									</td>
+									<td>
+										<span class="RemarkIcon NatResRemark"></span>
+									</td>
+									<td>
+										<span class="RemarkName">自然保护区</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+			</div>
+
 		</section>
 	</div>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/echarts.min.js"></script>
 <script src="./js/main.js"></script>
-<script src="./js/index.js"></script>
+<script src="./js/PolluDisSituation.js"></script>
+
 
 </html>

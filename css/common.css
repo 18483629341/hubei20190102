@@ -56,4 +56,20 @@ li {
 	padding: 0;
 	margin: 0;
 }
+table{
+	border-collapse: collapse;
+}
+.flexBlock{
+	display: flex;
+	display: -webkit-box; 
+   display: -moz-box;  
+   display: -ms-flexbox; 
+   display: -webkit-flex; 
+}
+.flex1{
+   flex: 1
+}
+.inlineBlock{
+	display: inline-block;
+}
 
