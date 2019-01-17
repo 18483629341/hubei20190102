@@ -95,8 +95,7 @@ function autoFitContent(){
 	var MapBoxs= document.querySelectorAll(".MapBox");
 	for(var i=0;i<MapBoxs.length;i++){
 		var element=MapBoxs[i];
-		//element.style.width=parseInt(W*3526/3840)+"px";
-		console.log(H,H-W*323/3840);
+		//console.log(H,H-W*323/3840);
 		element.style.height=parseInt(H-W*323/3840)+"px";
 	}
 }
@@ -115,21 +114,7 @@ function tabToggle(){
 	//tab切换时也要做样式自适应的控制
 	autoFitContent();
 }*/
-    //GIS图和概要图的标签切换 
-function mapToggle(){
-	//P1tabLi
-	$("body").on('click','.P1tabLi',function(){
-		$(this).siblings('.P1tabLi').removeClass('active');
-		$(this).addClass('active');
-	    if($(this).attr("data-map")=="GIS"){
-			$('.map11').removeClass('active');
-			$('.map1').addClass('active');
-		}else{
-			$('.map1').removeClass('active');
-			$('.map11').addClass('active');
-		}
-	})
-}
+
 var flag=false;
 function listToggle(){
     $("body").on('click','.tableIcon',function(){
@@ -144,4 +129,213 @@ function listToggle(){
 		$('.RightBox').width(w+2);
 	})
 }
+
+/**************弹窗显示/隐藏控制****** */
+
+function popContorl(){
+    $(document).mouseup(function(e){
+        var _con = $('.PopUpBox '); // 设置目标区域 
+       if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
+           // Mark 1 some code... // 功能代码
+           $('.PopUpBox').removeClass('show');
+          // console.log('');
+    }});
+    $("body").on('click','.PopUpclose',function(){
+        $('.PopUpBox').removeClass('show');
+    })
+    $("body").on('click','.ax_default',function(){
+        $('.PopUpBox').toggleClass('show');
+    })
+}
+function hasActive(str){
+    var reg=/active*/;
+    return reg.test(str);
+}
+var radio=1;
+function setRadio(){
+    radio=parseFloat(W/3840); 
+}
+/*  主页面和市区页面交替   */
+function moduleToggle(Prodiv) {
+	$("body").on('click', '.goWuhan', function () {
+		intoggle();
+		$(Prodiv).removeClass('active');
+		
+	})
+	$("body").on('click', '.GoAwayWuhan', function () {
+		intoggle();
+		$(Prodiv).addClass('active');
+	})
+
+	function intoggle() {
+		$('.goWuhan').toggleClass('show');
+		$('.GoAwayWuhan').toggleClass('show');
+		$('.mapWuhan').toggleClass('active');
+	}
+}
+/************scroll bar 封装方法******* */
+function autoScrollFun(element){//参数为需要滚动的容器
+		
+	var content=$(element),autoScrollTimer=8000,autoScrollTimerAdjust,autoScroll;
+	
+	content.mCustomScrollbar({
+		scrollButtons:{enable:false},
+		callbacks:{
+			whileScrolling:function(){
+				autoScrollTimerAdjust=autoScrollTimer*this.mcs.topPct/100;
+			},
+			onScroll:function(){ 
+				if($(this).data("mCS").trigger==="internal"){AutoScrollOff();}
+			}
+		}
+	});
+	
+	content.addClass("auto-scrolling-on auto-scrolling-to-bottom");
+	AutoScrollOn("bottom");
+	
+	$(".auto-scrolling-toggle").click(function(e){
+		e.preventDefault();
+		if(content.hasClass("auto-scrolling-on")){
+			AutoScrollOff();
+		}else{
+			if(content.hasClass("auto-scrolling-to-top")){
+				AutoScrollOn("top",autoScrollTimerAdjust);
+			}else{
+				AutoScrollOn("bottom",autoScrollTimer-autoScrollTimerAdjust);
+			}
+		}
+	});
+	
+	function AutoScrollOn(to,timer){
+		if(!timer){timer=autoScrollTimer;}
+		content.addClass("auto-scrolling-on").mCustomScrollbar("scrollTo",to,{scrollInertia:timer,scrollEasing:"easeInOutSmooth"});
+		autoScroll=setTimeout(function(){
+			if(content.hasClass("auto-scrolling-to-top")){
+				AutoScrollOn("bottom",autoScrollTimer-autoScrollTimerAdjust);
+				content.removeClass("auto-scrolling-to-top").addClass("auto-scrolling-to-bottom");
+			}else{
+				AutoScrollOn("top",autoScrollTimerAdjust);
+				content.removeClass("auto-scrolling-to-bottom").addClass("auto-scrolling-to-top");
+			}
+		},timer);
+	}
+	
+	function AutoScrollOff(){
+		clearTimeout(autoScroll);
+		content.removeClass("auto-scrolling-on").mCustomScrollbar("stop");
+	}
+}
+var arrMonth4=['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月']  //!!!!!!!需要后台引入的数据
+
+function InitPopCanvas(obj){
+	this.elementId=obj.elementId;
+	this.colorArr=obj.colorArr;
+	this.seriesArr=obj.seriesArr;
+	this.Yname=obj.Yname;
+	this.popUpChart=echarts.init(document.getElementById(obj.elementId));
+	this.tabSpanS=obj.tabSpanS;
+	this.initCanvas=function(){
+		//console.log(tabSpanS);
+		let _colors=[];
+		let _series=[];
+		for(let i=0;i<this.tabSpanS.length;i++){
+			var item=this.tabSpanS[i];
+			//if(item.className.)
+		   if(hasActive(item.className)){
+				_colors.push(obj.colorArr[i]);
+				_series.push(obj.seriesArr[i]);
+		   }
+			//if(item.className.)
+		}
+		console.log(this.tabSpanS);
+		var newOption=this.getPopOption(_colors,_series);
+		this.popUpChart.setOption(newOption,{
+			notMerge: true,
+		});
+	}
+	this.getPopOption=function(colorP,seriesP){
+		var option = {
+			color:colorP,//调色板
+			tooltip : {
+				//show:false,
+				trigger: 'axis',
+				axisPointer: {
+					type: 'line',
+					label: {
+						backgroundColor: '#6a7985'
+					}
+				},
+				//formatter:obj.Yvalue||'{a}{}{c}'
+			},
+			grid: {
+				top:parseInt(100*radio),
+				left: '0%',
+				right: '0%',
+				bottom: 0,
+				containLabel: true,
+				show:false
+			},
+			xAxis: {
+				type: 'category',
+				onZero:true,
+				axisLine: {//X轴线的设置
+					show: false,
+					lineStyle:{
+						color:"#fff",
+						type:'dashed'
+					}
+				},
+				axisTick: {
+					show: false
+				},
+				axisLabel: {        
+					show: true,
+					textStyle: {
+						color: '#fff',
+					   // fontSize:parseInt(12*radio)
+					}
+				},
+				data: arrMonth4,
+				boundaryGap:false
+			},
+			yAxis: {
+				type: 'value',
+				name:obj.Yname,
+				nameLocation:'end',
+				nameTextStyle:{
+					color:'#fff',
+					align:'left',
+					padding: [0,0,10*radio,0]
+				},
+				axisLabel: {        
+					show: true,
+					textStyle: {
+						color: '#fff',
+						//fontSize:parseInt(15*radio)
+					},
+					formatter:obj.Ylabel||'{value}'
+				},
+				axisLine: {//Y轴线的设置
+					show: false,
+				},
+				axisTick: {
+					show: false
+				},
+				splitLine: {//Y轴线的设置
+					show: true,
+					lineStyle:{
+						color:["#fff"],
+						type:'dashed'
+					}
+				},
+				max:obj.max,
+				min:0,
+				boundaryGap:['0%','0%']
+			},
+			series: seriesP
+		};
+		return option;
+	}
+}
+
 

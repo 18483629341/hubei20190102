@@ -61,7 +61,20 @@
 		<section class="section">
 			<!--水质监测   water quality monitoring  box-->
 			<div class="TabContent WaterQulMonitor" id='WaterQulMonitor' data-index="1">
-				<div class="MapBox  map2"></div>
+				<div class="MapBox  map2 active">
+					<div id="u14643" class="ax_default ax_default_shou" data-name="shou">
+						<img id="u14643_img" class="img " src="./img/icon_remark13.png">
+					</div>
+					<div id="u14643" class="ax_default ax_default_zi" data-name="zi">
+						<img id="u14643_img" class="img " src="./img/icon_remark14.png">
+					</div>
+					<div class="goWuhan show">进入市区</div>
+				</div>
+				<div class="MapBox mapWuhan ">
+					<div id="u14643" class="ax_default">
+						<img id="u14643_img" class="img " src="./img/icon_remark13.png">
+					</div>
+				</div>
 				<div class="LeftSummary">
 					<div class="LeftHeader">
 						<p class="LeftHeaderTitle">长江湖北段水环境质量</p>
@@ -71,7 +84,7 @@
 						<div class="LeftConBox">
 							<p class="conTheme">
 								<i class="icon iconPoi"></i> 手工断面统计</p>
-							<p class="LeftConTitle alignRight inlineBlock">2018年11月</p>
+							<p class="LeftConTitle LeftConTitle2 alignRight inlineBlock">2018年11月</p>
 						</div>
 
 						<ul class="contentList P2ContentList">
@@ -91,7 +104,7 @@
 						<div class="LeftConBox">
 							<p class="conTheme">
 								<i class="icon iconPoi"></i> 自动监测站统计</p>
-							<p class="LeftConTitle alignRight inlineBlock">2018-11-10 11:00</p>
+							<p class="LeftConTitle LeftConTitle2 alignRight inlineBlock">2018-11-10 11:00</p>
 						</div>
 						<ul class="contentList P2ContentList">
 							<li class="contentLi">
@@ -119,50 +132,6 @@
 							</tr>
 						</thead>
 						<tbody class="IconListBox ">
-							<!-- <tr class="IconLi">
-								<td>
-									<input class="checkBoxInput" type="checkbox" name="河流" value="河流" checked disabled>
-								</td>
-								<td>
-									<span class="RemarkIcon RiversRemark"></span>
-								</td>
-								<td>
-									<span class="RemarkName">河流</span>
-								</td>
-							</tr>
-							<tr class="IconLi">
-								<td>
-									<input class="checkBoxInput" type="checkbox" name="主要湖库" value="主要湖库" checked disabled>
-								</td>
-								<td>
-									<span class="RemarkIcon LakesRemark"></span>
-								</td>
-								<td>
-									<span class="RemarkName">主要湖库</span>
-								</td>
-							</tr> -->
-							<!-- <tr class="IconLi">
-								<td>
-									<input class="checkBoxInput canPointer" type="checkbox" name="省界断面" value="省界断面" checked >
-								</td>
-								<td>
-									<span class="RemarkIcon ProBouRemark"></span>
-								</td>
-								<td>
-									<span class="RemarkName">省界断面</span>
-								</td>
-							</tr>
-							<tr class="IconLi">
-								<td>
-									<input class="checkBoxInput canPointer" type="checkbox" name="市界断面" value="市界断面">
-								</td>
-								<td>
-									<span class="RemarkIcon CityBouRemark"></span>
-								</td>
-								<td>
-									<span class="RemarkName">市界断面</span>
-								</td>
-							</tr> -->
 							<tr class="IconLi">
 								<td>
 									<input class="checkBoxInput " type="checkbox" name="手工断面" value="手工断面" checked disabled>
@@ -176,7 +145,7 @@
 							</tr>
 							<tr class="IconLi">
 								<td>
-									<input class="checkBoxInput " type="checkbox" name="自动站" value="自动站"  checked disabled>
+									<input class="checkBoxInput " type="checkbox" name="自动站" value="自动站" checked disabled>
 								</td>
 								<td>
 									<span class="RemarkIcon AutoStaRemark"></span>
@@ -187,7 +156,7 @@
 							</tr>
 							<tr class="IconLi">
 								<td>
-									<input class="checkBoxInput" type="checkbox" name="跨江大桥" value="跨江大桥" >
+									<input class="checkBoxInput" type="checkbox" name="跨江大桥" value="跨江大桥">
 								</td>
 								<td>
 									<span class="RemarkIcon CroBridgeRemark"></span>
@@ -198,7 +167,7 @@
 							</tr>
 							<tr class="IconLi">
 								<td>
-									<input class="checkBoxInput canPointer" type="checkbox" name="重点工程" value="重点工程"  >
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点工程" value="重点工程">
 								</td>
 								<td>
 									<span class="RemarkIcon KeyProRemark"></span>
@@ -209,7 +178,7 @@
 							</tr>
 							<tr class="IconLi">
 								<td>
-									<input class="checkBoxInput canPointer" type="checkbox" name="重点港口" value="重点港口"  >
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点港口" value="重点港口">
 								</td>
 								<td>
 									<span class="RemarkIcon KeyPortRemark"></span>
@@ -273,37 +242,220 @@
 									<span class="RemarkName">沿江排污口</span>
 								</td>
 							</tr>
-							
-
 						</tbody>
 					</table>
 				</div>
+				<!-- 图例2  end  -->
+				<div class="GoAwayWuhan p6GoAwayWuhan ">
+				</div>
+				<!-- 弹窗1 手工断面沿江化工企业 start -->
+				<div class="PopUpBox  P2PopUpBox PopUpBox_shou" id="PopUpBox_shou">
+					<div class="PopUpHeader">
+						<div class="PaddingContent">
+							<h3>武汉水质净化厂</h3>
+							<span class="inlineBlock PopUpclose"></span>
+						</div>
+					</div>
+					<!-- PopUpHeader end-->
+					<div class="PopUpContent">
+						<div class="PaddingContent">
+							<div class="keyContent keyContent1">
+								<div class="contentList">
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">污染源地址：
+											<span class="leftRowValue">湖北省武汉市江汉区XXX号</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">统一社会信用代码：
+											<span class="leftRowValue">11111111111111111111</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="keyContent">
+								<div class="contentList">
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">管控级别：
+											<span class="leftRowValue"> 国控</span>
+										</div>
+										<div class="leftRow flex1">排水去向：
+											<span class="leftRowValue"> 长江</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">设计处理能力：
+											<span class="leftRowValue"> 15万吨</span>
+										</div>
+										<div class="leftRow flex1">执行排放标准：
+											<span class="leftRowValue"> 一级B</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">主题处理工艺：
+											<span class="leftRowValue"> 改良UCT</span>
+										</div>
+										<div class="leftRow flex1">投运时间：
+											<span class="leftRowValue"> 2016-10</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="canvasTab">
+								<span class="tabSpan active" data-name="goodWeather">氨氮</span>
+								<span class="tabSpan " data-name="pm2.5">高锰酸钾指数</span>
+								<span class="tabSpan " data-name="pm2.5">总磷</span>
+								<div></div>
+							</div>
+							<div class="popUpcanvasBox" id="P2comCanvas">
+							</div>
+							<div class="legend2 Popuplegend">
+								<ol class="LegendList">
+									<li class="LegendLi2">
+										<span class="WaterQulLine  OneLevel"></span>
+										<span class="RemarkName">氨氮</span>
+									</li>
+									<li class="LegendLi2">
+										<span class="WaterQulLine TwoLevel"></span>
+										<span class="RemarkName">高锰酸钾指数</span>
+									</li>
+									<li class="LegendLi2">
+										<span class="WaterQulLine ThreeLevel"></span>
+										<span class="RemarkName">总磷</span>
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpContent end-->
+					<div class="PopUpBottom">
+						<div class="PaddingContent">
+							<div class="hrefDiv">
+								<a href="#" target="_blank">查看详情
+									<span class="inlineBlock rightArrow"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpBottom end-->
+				</div>
+				<!-- 弹窗1 手工断面沿江化工企业 end -->
+				<!-- 弹窗1 手工断面沿江化工企业 start -->
+				<div class="PopUpBox  P2PopUpBox PopUpBox_zi" id="PopUpBox_zi">
+					<div class="PopUpHeader">
+						<div class="PaddingContent">
+							<h3>武汉水质净化厂</h3>
+							<span class="inlineBlock PopUpclose"></span>
+						</div>
+					</div>
+					<!-- PopUpHeader end-->
+					<div class="PopUpContent">
+						<div class="PaddingContent">
+							<p class="ListTitle floatLeft">统计时间:2018-10-11 12:00</p>
+							<p class="ListTitle floatRight">数据来源:湖北检测中心</p>
+							<div class="clear"></div>
+							<div class="keyContent">
+								<div class="contentList">
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">所属流域：
+											<span class="leftRowValue"> 长江干流</span>
+										</div>
+										<div class="rightRow flex1">所属区域：
+											<span class="leftRowValue"> 武汉市</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">控制级别：
+											<span class="leftRowValue"> 国控</span>
+										</div>
+										<div class="rightRow flex1">水质类别：
+											<span class="leftRowValue"> 劣V类</span>
+										</div>
+
+									</div>
+									<div class="splitLineBox">
+										<div class="splitLine"></div>
+									</div>
+
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">氨氮：
+											<span class="leftRowValue"> 2mg/L</span>
+										</div>
+										<div class="centerRow flex1">高锰酸钾指数:
+											<span class="leftRowValue"> 5mg/L</span>
+										</div>
+										<div class="rightRow flex1">总磷:
+											<span class="leftRowValue">5mg/L</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="canvasTab">
+								<span class="tabSpan active" data-name="goodWeather">氨氮</span>
+								<span class="tabSpan " data-name="pm2.5">高锰酸钾指数</span>
+								<span class="tabSpan " data-name="pm2.5">总磷</span>
+								<div></div>
+							</div>
+							<div class="popUpcanvasBox" id="P2ziCanvas">
+							</div>
+							<div class="legend2 Popuplegend">
+								<ol class="LegendList">
+									<li class="LegendLi2">
+										<span class="WaterQulLine  OneLevel"></span>
+										<span class="RemarkName">氨氮</span>
+									</li>
+									<li class="LegendLi2">
+										<span class="WaterQulLine TwoLevel"></span>
+										<span class="RemarkName">高锰酸钾指数</span>
+									</li>
+									<li class="LegendLi2">
+										<span class="WaterQulLine ThreeLevel"></span>
+										<span class="RemarkName">总磷</span>
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpContent end-->
+					<div class="PopUpBottom">
+						<div class="PaddingContent">
+							<div class="hrefDiv">
+								<a href="#" target="_blank">查看详情
+									<span class="inlineBlock rightArrow"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpBottom end-->
+				</div>
+				<!-- 弹窗1 手工断面沿江化工企业 end -->
 			</div>
 
 		</section>
 
 	</div>
-		<table class="legendBar">
-			<tr class="firstTr">
-				<td class="RemarkName2 ">Ⅰ类</td>
-				<td class="RemarkName2">Ⅱ类</td>
-				<td class="RemarkName2">Ⅲ类</td>
-				<td class="RemarkName2">Ⅳ类</td>
-				<td class="RemarkName2">Ⅴ类</td>
-				<td class="RemarkName2">劣Ⅵ类</td>
-			</tr>
-			<tr class="secondTr">
-				<td class="OneLevel"></td>
-				<td class="TwoLevel"></td>
-				<td class="ThreeLevel"></td>
-				<td class="FourLevel"></td>
-				<td class="FiveLevel"></td>
-				<td class="SixLevel"></td>
+	<table class="legendBar">
+		<tr class="firstTr">
+			<td class="RemarkName2 ">Ⅰ类</td>
+			<td class="RemarkName2">Ⅱ类</td>
+			<td class="RemarkName2">Ⅲ类</td>
+			<td class="RemarkName2">Ⅳ类</td>
+			<td class="RemarkName2">Ⅴ类</td>
+			<td class="RemarkName2">劣Ⅵ类</td>
+		</tr>
+		<tr class="secondTr">
+			<td class="OneLevel"></td>
+			<td class="TwoLevel"></td>
+			<td class="ThreeLevel"></td>
+			<td class="FourLevel"></td>
+			<td class="FiveLevel"></td>
+			<td class="SixLevel"></td>
 
-			</tr>
-		</table>
+		</tr>
+	</table>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/echarts.min.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/waterQulMonitor.js"></script>
 

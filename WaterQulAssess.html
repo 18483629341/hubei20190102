@@ -5,7 +5,10 @@
 	<meta charset="UTF-8">
 	<title>长江大保护</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
 	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	<link rel="stylesheet" type="text/css" href="./css/main.css" />
 	<link rel="stylesheet" type="text/css" href="./css/index.css" />
 </head>
@@ -61,7 +64,14 @@
 		<section class="section">
 			<!--水质考核   water quality assessment box-->
 			<div class="TabContent  WaterQulAssess" id='WaterQulAssess' data-index="2">
-				<div class="MapBox map3"></div>
+				<div class="MapBox map3 active">
+					<div class="goWuhan show">进入市区</div>
+				</div>
+				<div class="MapBox mapWuhan ">
+					<div id="u14643" class="ax_default">
+						<img id="u14643_img" class="img " src="./img/u14637.png">
+					</div>
+				</div>
 				<div class="LeftSummary P3LeftSummary">
 					<div class="LeftHeader">
 						<p class="LeftHeaderTitle">长江湖北段水质考核情况</p>
@@ -112,7 +122,7 @@
 						<div class="splitLine"></div>
 						<div class="unstandSecList">
 							<div class="ListTitle">不达标断面列表</div>
-							<div class="tableContanier tableContanier1">
+							<div class="content tableContanier tableContanier1 " id="scrollBox1">
 								<table class="table">
 									<thead>
 										<tr class="theadTr">
@@ -199,31 +209,9 @@
 							</tr>
 						</thead>
 						<tbody class="IconListBox ">
-							<!-- <tr class="IconLi">
-								<td>
-									<input class="checkBoxInput" type="checkbox" name="河流" value="河流" checked disabled>
-								</td>
-								<td>
-									<span class="RemarkIcon RiversRemark"></span>
-								</td>
-								<td>
-									<span class="RemarkName">河流</span>
-								</td>
-							</tr>
 							<tr class="IconLi">
 								<td>
-									<input class="checkBoxInput" type="checkbox" name="主要湖库" value="主要湖库" checked disabled>
-								</td>
-								<td>
-									<span class="RemarkIcon LakesRemark"></span>
-								</td>
-								<td>
-									<span class="RemarkName">主要湖库</span>
-								</td>
-							</tr> -->
-							<tr class="IconLi">
-								<td>
-									<input class="checkBoxInput canPointer" type="checkbox" name="跨江大桥" value="跨江大桥"/>
+									<input class="checkBoxInput canPointer" type="checkbox" name="跨江大桥" value="跨江大桥" />
 								</td>
 								<td>
 									<span class="RemarkIcon CroBridgeRemark"></span>
@@ -298,16 +286,128 @@
 									<span class="RemarkName">沿江污水处理厂</span>
 								</td>
 							</tr>
-							
+
 						</tbody>
 					</table>
 				</div>
+				<!-- 图例2  end  -->
+				<div class="GoAwayWuhan p6GoAwayWuhan ">
+				</div>
+				<!-- 弹窗 start -->
+				<div class="PopUpBox P3PopUpBox ">
+					<div class="PopUpHeader">
+						<div class="PaddingContent">
+							<h3>武汉大学空气测点</h3>
+							<span class="inlineBlock PopUpclose"></span>
+						</div>
+					</div>
+					<!-- PopUpHeader end-->
+					<div class="PopUpContent">
+						<div class="PaddingContent">
+							<p class="ListTitle">统计时间:2018-10-11</p>
+							<div class="flexBlock">
+								<div class="contentItem">
+									<span class="name">AQI：</span>
+									<span class="value">89</span>
+								</div>
+								<div class="contentItem flex1 ">
+									<span class="name">控制级别：</span>
+									<span class="value">国控</span>
+								</div>
+								<div class="contentItem flex1 ">
+									<span class="name">首要污染物：</span>
+									<span class="value">--</span>
+								</div>
+							</div>
+							<div class="keyContent">
+								<div class="contentList">
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">PM
+											<sub>2.5</sub>：
+											<span class="leftRowValue"> 55ug/m
+												<sup>3</sup>
+											</span>
+										</div>
+										<div class="rightRow flex1">PM
+											<sub>10</sub>：
+											<span class="leftRowValue"> 200ug/m
+												<sup>3</sup>
+											</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">SO
+											<sub>2</sub>：
+											<span class="leftRowValue"> 3ug/m
+												<sup>3</sup>
+											</span>
+										</div>
+										<div class="rightRow flex1">CO：
+											<span class="leftRowValue"> .2mg/m
+												<sup>3</sup>
+											</span>
+											</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">NO
+											<sub>2</sub>：
+											<span class="leftRowValue"> 55ug/m
+												<sup>3</sup>
+											</span>
+										</div>
+										<div class="rightRow flex1">O
+											<sub>3</sub>：
+											<span class="leftRowValue"> 200ug/m
+												<sup>3</sup>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="canvasTab">
+								<span class="tabSpan active" data-name="goodWeather">优良天数比例</span>
+								<span class="tabSpan " data-name="pm2.5">PM
+									<sub>2.5</sub>
+								</span>
+							</div>
+							<div class="popUpcanvasBox" id="P6popUpcanvas">
+							</div>
+							<div class="legend2 Popuplegend">
+								<ol class="LegendList">
+									<li class="LegendLi2">
+										<span class="WaterQulLine  OneLevel"></span>
+										<span class="RemarkName">2017年同期优良天数比例</span>
+									</li>
+									<li class="LegendLi2">
+										<span class="WaterQulLine TwoLevel"></span>
+										<span class="RemarkName">累计天数优良比例</span>
+									</li>
+
+								</ol>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpContent end-->
+					<div class="PopUpBottom">
+						<div class="PaddingContent">
+							<div class="hrefDiv">
+								<a href="#" target="_blank">查看详情
+									<span class="inlineBlock rightArrow"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpBottom end-->
+				</div>
+				<!-- 弹窗 end -->
 			</div>
 
 		</section>
 	</div>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="./js/echarts.min.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/WaterQulAssess.js"></script>

@@ -6,6 +6,8 @@
 	<title>蓝天保卫战</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	<link rel="stylesheet" type="text/css" href="./css/main.css" />
 	<link rel="stylesheet" type="text/css" href="./css/index.css" />
 </head>
@@ -19,76 +21,21 @@
 					<div class="TitleImg"></div>
 					<div class="SubTitleP">蓝天保卫战</div>
 				</div>
-
 			</div>
-
 		</header>
 		<section class="section">
 			<!--水质考核   water quality assessment box-->
 			<div class="TabContent  blueSky" id='blueSky' data-index="2">
-				<div class="MapBox active map6 ">
-					<div class="goWuhan show">进入武汉</div>
+				<div class="MapBox  map6 active">
+					<div class="goWuhan show">进入市区</div>
 				</div>
-				<div class="MapBox map61 ">
-					<div class="goWuhan show">进入武汉</div>
+				<div class="MapBox map61 show">
+					<div class="goWuhan ">进入市区</div>
 				</div>
-				<div class="PopUpBox">
-					<div class="PopUpHeader">
-						<h3>武汉大学空气测点</h3>
-						<span class="inlineBlock PopUpclose"></span>
+				<div class="MapBox mapWuhan ">
+					<div id="u14643" class="ax_default">
+						<img id="u14643_img" class="img " src="./img/u14637.png">
 					</div>
-					<div class="PopUpContent">
-						<p class="ListTitle2">统计时间:2018-10-11</p>
-						<div class="flexBlock">
-							<div class="contentItem flex1 ">
-								<span class="name">AQI：</span>
-								<span class="value">89</span>
-							</div>
-							<div class="contentItem flex1 ">
-								<span class="name">控制级别：</span>
-								<span class="value">国控</span>
-							</div>
-							<div class="contentItem flex1 ">
-								<span class="name">首要污染物：</span>
-								<span class="value">--</span>
-							</div>
-						</div>
-						<div class="keyContent">
-							<table class="contentList">
-								<tr class="contentLi">
-									<td class="leftRow">PM：<span class="leftRowValue"> <sub>2.5</sub>55ug/m <sup>3</sup></span> </td>
-									<td class="rightRow">PM：<span class="leftRowValue">  <sub>10</sub>200ug/m <sup>3</sup></span></td>
-								</tr>
-								<tr class="contentLi">
-									<td class="leftRow">SO：<span class="leftRowValue"> <sub>2</sub>3ug/m <sup>3</sup></span> </td>
-									<td class="rightRow">CO：<span class="leftRowValue"> .2mg/m <sup>3</sup></span></span></td>
-								</tr>
-								<tr class="contentLi">
-									<td class="leftRow">NO：<span class="leftRowValue"> <sub>2</sub>55ug/m <sup>3</sup> </span></td>
-									<td class="rightRow">O：<span class="leftRowValue"> <sub>3</sub>200ug/m <sup>3</sup></span></td>
-								</tr>
-							</table>
-						</div>
-						<div class="canvasBox">
-						</div>
-						<div class="legend2 ">
-							<ol class="LegendList">
-								<li class="LegendLi2">
-									<span class="WaterQulLine  OneLevel"></span>
-									<span class="RemarkName">2017年同期优良天数比例</span>
-								</li>
-								<li class="LegendLi2">
-									<span class="WaterQulLine TwoLevel"></span>
-									<span class="RemarkName">累计天数优良比例</span>
-								</li>
-								
-							</ol>
-						</div>
-						<div class="hrefDiv">
-							查看详情>>
-						</div>
-					</div>
-					<div class="PopUpBottom"></div>
 				</div>
 				<div class="P6LeftSummary">
 					<div class="LeftHeader">
@@ -159,7 +106,8 @@
 						</div>
 						<div class="splitLine"></div>
 						<div class="bottomBox">
-							<p class="title">全省2018年累计优良天数比例变化趋势</p>
+							<p class="title">全省2018年PM
+								<sub>2.5</sub>年均浓度变化趋势</p>
 							<div class="goodWeatherCanvas" id="goodWeatherCanvas">
 							</div>
 							<div class=" legend2">
@@ -205,7 +153,7 @@
 							</div>
 						</div>
 						<p class="ListTitle2">统计时间:2018-10-11</p>
-						<div class="tableContanier tableContanier2">
+						<div class="tableContanier tableContanier2 ">
 							<table class="table table2">
 								<thead>
 									<tr class="theadTr">
@@ -375,7 +323,7 @@
 							</div>
 						</div>
 						<p class="ListTitle2">统计时间:2018-10-11</p>
-						<div class="tableContanier tableContanier2">
+						<div class="tableContanier tableContanier2 content" id="scrollBox2">
 							<table class="table table2">
 								<thead>
 									<tr class="theadTr">
@@ -420,6 +368,16 @@
 									</tr>
 									<tr class="tbodyTr">
 										<td class="td1">6</td>
+										<td class="td2">神农架林区</td>
+										<td class="td3">91</td>
+									</tr>
+									<tr class="tbodyTr">
+										<td class="td1">7</td>
+										<td class="td2">神农架林区</td>
+										<td class="td3">91</td>
+									</tr>
+									<tr class="tbodyTr">
+										<td class="td1">8</td>
 										<td class="td2">神农架林区</td>
 										<td class="td3">91</td>
 									</tr>
@@ -442,7 +400,7 @@
 							</div>
 						</div>
 						<p class="ListTitle2">统计时间:2018-10-11</p>
-						<div class="tableContanier tableContanier2">
+						<div class="tableContanier tableContanier2 content" id="scrollBox3">
 							<table class="table table2">
 								<thead>
 									<tr class="theadTr">
@@ -490,11 +448,22 @@
 										<td class="td2">神农架林区</td>
 										<td class="td3">91</td>
 									</tr>
+									<tr class="tbodyTr">
+										<td class="td1">7</td>
+										<td class="td2">神农架林区</td>
+										<td class="td3">91</td>
+									</tr>
+									<tr class="tbodyTr">
+										<td class="td1">8</td>
+										<td class="td2">神农架林区</td>
+										<td class="td3">91</td>
+									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
 				</div>
+				<!-- 图例2 start  -->
 				<div class="legendBox2 P6legendBox2 ">
 					<div class="legend">
 						<table class="LegendContent">
@@ -559,8 +528,115 @@
 						</table>
 					</div>
 				</div>
+				<!-- 图例2  end  -->
 				<div class="GoAwayWuhan p6GoAwayWuhan ">
 				</div>
+				<!-- 弹窗 start -->
+				<div class="PopUpBox P6PopUpBox ">
+					<div class="PopUpHeader">
+						<div class="PaddingContent">
+							<h3>武汉大学空气测点</h3>
+							<span class="inlineBlock PopUpclose"></span>
+						</div>
+					</div>
+					<!-- PopUpHeader end-->
+					<div class="PopUpContent">
+						<div class="PaddingContent">
+							<p class="ListTitle">统计时间:2018-10-11</p>
+							<div class="flexBlock">
+								<div class="contentItem">
+									<span class="name">AQI：</span>
+									<span class="value">89</span>
+								</div>
+								<div class="contentItem flex1 ">
+									<span class="name">控制级别：</span>
+									<span class="value">国控</span>
+								</div>
+								<div class="contentItem flex1 ">
+									<span class="name">首要污染物：</span>
+									<span class="value">--</span>
+								</div>
+							</div>
+							<div class="keyContent">
+								<div class="contentList">
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">PM
+											<sub>2.5</sub>：
+											<span class="leftRowValue"> 55ug/m
+												<sup>3</sup>
+											</span>
+										</div>
+										<div class="centerRow flex1">PM
+											<sub>10</sub>：
+											<span class="leftRowValue"> 200ug/m
+												<sup>3</sup>
+											</span>
+										</div>
+										<div class="rightRow flex1">SO
+											<sub>2</sub>：
+											<span class="leftRowValue"> 3ug/m
+												<sup>3</sup>
+											</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">CO：
+											<span class="leftRowValue"> 0.2mg/m
+												<sup>3</sup>
+											</span>
+											</span>
+										</div>
+										<div class="centerRow flex1">NO
+											<sub>2</sub>：
+											<span class="leftRowValue"> 55ug/m
+												<sup>3</sup>
+											</span>
+										</div>
+										<div class="rightRow flex1">O
+											<sub>3</sub>：
+											<span class="leftRowValue"> 200ug/m
+												<sup>3</sup>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="canvasTab">
+								<span class="tabSpan active" data-name="goodWeather">优良天数比例</span>
+								<span class="tabSpan " data-name="pm2.5">PM
+									<sub>2.5</sub>
+								</span>
+							</div>
+							<div class="popUpcanvasBox" id="P6popUpcanvas">
+							</div>
+							<div class="legend2 Popuplegend">
+								<ol class="LegendList">
+									<li class="LegendLi2">
+										<span class="WaterQulLine  OneLevel"></span>
+										<span class="RemarkName">2017年同期优良天数比例</span>
+									</li>
+									<li class="LegendLi2">
+										<span class="WaterQulLine TwoLevel"></span>
+										<span class="RemarkName">累计天数优良比例</span>
+									</li>
+
+								</ol>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpContent end-->
+					<div class="PopUpBottom">
+						<div class="PaddingContent">
+							<div class="hrefDiv">
+								<a href="#" target="_blank">查看详情
+									<span class="inlineBlock rightArrow"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpBottom end-->
+				</div>
+				<!-- 弹窗 end -->
 				<!-- 点击  gis中的武汉区域内   后显示的模块 end -->
 			</div>
 	</div>
@@ -568,6 +644,7 @@
 	</div>
 </body>
 <script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="./js/echarts.min.js"></script>
 <script src="./js/main.js"></script>
 <script src="./js/blueSky.js"></script>

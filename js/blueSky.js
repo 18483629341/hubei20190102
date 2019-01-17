@@ -9,29 +9,40 @@ $(document).ready(function () {
 		//tabToggle();
         mapToggle2();
         RankToggle();
-        moduleToggle();
-		// 使用刚指定的配置项和数据显示图表。
+        P6moduleToggle();
+        setRadio();
+        autoScrollFun('#scrollBox2');
+        autoScrollFun('#scrollBox3');
+        popContorl();
+        //弹窗上的线图绘制
+        initPopCanvas=new InitPopCanvas(popupObj);
+        initPopCanvas.initCanvas();
+        // 使用刚指定的配置项和数据显示图表。
+        //饼图
          myChart21.setOption(option21);
          myChart22.setOption(option22);
          myChart23.setOption(option23);
          myChart24.setOption(option24);
-         setRadio()
+         //左列表线图
          myChart3.setOption(option3);
          
          
 	});
 });
-
+let initPopCanvas=null;
 window.onresize=function(){
 	autoFit();
     autoFitContent();
     setRadio();
-    myChart21.resize();//根据窗口的大小变动图表 --- 重点 
+    console.log(W,radio);
+   // changeTop()
+    myChart21.resize();//根据窗口的大小 变动图表 --- 重点 
     myChart22.resize();
     myChart23.resize();
     myChart24.resize();
     myChart3.resize();
-    
+    initPopCanvas.popUpChart.resize();
+    initPopCanvas.initCanvas();
 }
 
 /*************
@@ -92,6 +103,8 @@ function setOptionfun(color,radius){
     };
     return option;
 }
+/* 地图div的交互   */
+var mainActive = 'map6'; //主页面活动的模块div
 function mapToggle2(){
 	//P1tabLi
 	$("body").on('click','.P6tabLi',function(){
@@ -99,14 +112,17 @@ function mapToggle2(){
 		$(this).addClass('active');
 	    if($(this).attr("data-map")=="PM1"){
 			$('.map6').removeClass('active');
-			$('.map61').addClass('active');
-		}else{
+            $('.map61').addClass('active');
+            mainActive='map61';
+		}else if($(this).attr("data-map")=="GoodWeath1"){
 			$('.map61').removeClass('active');
-			$('.map6').addClass('active');
+            $('.map6').addClass('active');
+            mainActive='map6';
 		}
     })
 }
 
+/* 排名相关点击交互   */
 function RankToggle(){
     $("body").on('click','.P6tabLi3',function(){
         console.log("2");
@@ -121,12 +137,12 @@ function RankToggle(){
 }
 /*************
  * 
- * 相应页面的线图渲染
+ * 左边列表页面的线图渲染
  * 
  * */
 var myChart3 = echarts.init(document.getElementById('goodWeatherCanvas'));
 var areaBack='rgba(1,53,91,.5)';
-var radio=1;
+
 
 var arrMonth=['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月']
 var arrThisYear=['70', '60','80','90' ,'60','80','90', '60','80','90' ,'60','80'];//!!!!!!!需要后台引入的数据
@@ -136,133 +152,144 @@ var arrIndex=[];
 for(var i=0;i<12;i++){
     arrIndex.push(aIndex);
 }
-var option3 = {
-    color:["#72e75e","#00e4ff","#f7823c"],//调色板
-    tooltip : {
-        //show:false,
-        trigger: 'axis',
-        axisPointer: {
-            type: 'line',
-            label: {
-                backgroundColor: '#6a7985'
-            },
-            //formatter: '{c}  {name|{a}}%',
-        }
-    },
-    grid: {
-        top:'20%',
-        left: '0%',
-        right: '0%',
-        bottom: 0,
-        containLabel: true,
-        show:false
-    },
-    xAxis: {
-        type: 'category',
-        onZero:true,
-        axisLine: {//X轴线的设置
-            show: false,
-            lineStyle:{
-                color:"#fff",
-                type:'dotted'
-            }
-        },
-        axisTick: {
-            show: false
-        },
-        axisLabel: {        
-            show: true,
-            textStyle: {
-                color: '#fff',
-               // fontSize:parseInt(12*radio)
-            }
-        },
-        data: arrMonth,
-        boundaryGap:false
-    },
-    yAxis: {
-        type: 'value',
-        name:"比例",
-        nameLocation:'end',
-        nameTextStyle:{
-            color:'#fff',
-            align:'left',
-            padding: [0,0,4,0]
-        },
-        axisLabel: {        
-            show: true,
-            textStyle: {
-                color: '#fff',
-                //fontSize:parseInt(15*radio)
-            },
-            formatter:'{value}%'
-        },
-        axisLine: {//Y轴线的设置
-            show: false,
-        },
-        axisTick: {
-            show: false
-        },
-        max:'100',
-        boundaryGap:['0%','0%']
-    },
-    series: [
-        {   
-            name:'考核目标',
-            data:arrIndex,
-            type: 'line',
-            lineStyle:{
-               // color:"#72e75e",
-                width:1,
-            },
-            smooth: true,
-            symbol:'none'
-        },
-        {   
-            name:'空气优良天气比例',
-            data: arrThisYear,
-            type: 'line',
-            areaStyle: {normal: {}},
-            smooth: true,
-            lineStyle:{
-              //  color:"#00e4ff",
-                width:2,
-            },
-            areaStyle:{
-                color:areaBack
-            },
-            symbol:'none'
 
+var option3=getOption3();
+function getOption3(){
+    var option= {
+        color:["#72e75e","#00e4ff","#f7823c"],//调色板
+        tooltip : {
+            //show:false,
+            trigger: 'axis',
+            axisPointer: {
+                type: 'line',
+                label: {
+                    backgroundColor: '#6a7985'
+                },
+                //formatter: '{c}  {name|{a}}%',
+            }
         },
-       
-        {
-            name:'2017年同期',
-            type:'line',
-            stack: '总量',
-            areaStyle: {normal: {}},
-            data:arrLastYear,
-            smooth: true,
-            lineStyle:{
-               // color:"#f7823c",
-                width:2,
-            },
-            areaStyle:{
-                color:areaBack
-            },
-            symbol:'none'
+        grid: {
+            top:parseInt(60*radio),
+            left: '0%',
+            right: '0%',
+            bottom: 0,
+            containLabel: true,
+            show:false
         },
-    ]
-};
-function setRadio(){
-    W=window.innerWidth;
-    radio=parseInt(W/3840); 
+        xAxis: {
+            type: 'category',
+            onZero:true,
+           
+            axisTick: {
+                show: false
+            },
+            axisLabel: {        
+                show: true,
+                textStyle: {
+                    color: '#fff',
+                   // fontSize:parseInt(12*radio)
+                }
+            },
+            data: arrMonth,
+            boundaryGap:false
+        },
+        yAxis: {
+            type: 'value',
+            name:"比例",
+            nameLocation:'end',
+            nameTextStyle:{
+                color:'#fff',
+                align:'left',
+                padding: [0,0,10*radio,0]
+            },
+            splitLine: {//Y轴线的设置
+                show: true,
+                lineStyle:{
+                    color:["#fff"],
+                    type:'dashed'
+                }
+            },
+            //nameGap:15,
+            axisLabel: {        
+                show: true,
+                textStyle: {
+                    color: '#fff',
+                    //fontSize:parseInt(15*radio)
+                },
+                formatter:'{value}%'
+            },
+            axisLine: {//Y轴线的设置
+                show: false,
+            },
+            axisTick: {
+                show: false
+            },
+            max:'100',
+            boundaryGap:['0%','0%']
+        },
+        series: [
+            {   
+                name:'考核目标',
+                data:arrIndex,
+                type: 'line',
+                lineStyle:{
+                   // color:"#72e75e",
+                    width:1,
+                },
+                smooth: true,
+                symbol:'none'
+            },
+            {   
+                name:'空气优良天气比例',
+                data: arrThisYear,
+                type: 'line',
+                areaStyle: {normal: {}},
+                smooth: true,
+                lineStyle:{
+                  //  color:"#00e4ff",
+                    width:2,
+                },
+                areaStyle:{
+                    color:areaBack
+                },
+                symbol:'none'
+    
+            },
+           
+            {
+                name:'2017年同期',
+                type:'line',
+                stack: '总量',
+                areaStyle: {normal: {}},
+                data:arrLastYear,
+                smooth: true,
+                lineStyle:{
+                   // color:"#f7823c",
+                    width:2,
+                },
+                areaStyle:{
+                    color:areaBack
+                },
+                symbol:'none'
+            },
+        ]
+    };
+    return option;
 }
-function moduleToggle(){
+
+var mainActive='map61';//主页面活动的模块div
+/* 市区显示和主页面交替   */
+function P6moduleToggle(){
     $("body").on('click','.goWuhan',function(){
         intoggle();
+      
+        $('.map6').removeClass('active') ; 
+        $('.map61').removeClass('active') ;
     })
     $("body").on('click','.GoAwayWuhan',function(){
         intoggle();
+        $('.MapBox').removeClass('active') ; 
+        $('.'+mainActive).addClass('active');
     })
     function intoggle(){
         $('.goWuhan').toggleClass('show');
@@ -271,10 +298,65 @@ function moduleToggle(){
         $('.P6RightSummary2').toggleClass('show');
         $('.P6legendBox1').toggleClass('show');
         $('.P6legendBox2').toggleClass('show');
-        $('.p6GoAwayWuhan').toggleClass('show');
-         
+        $('.GoAwayWuhan').toggleClass('show');
+        $('.mapWuhan').toggleClass('active');   
     }
 }
+/*********popup0   线框图 相关数据对象***** */
+var popupObj={};
+    popupObj.elementId='P6popUpcanvas';
+    popupObj.arrThisYear=[70, 60,80,90 ,60,80,90, 60,80,90 ,60,80];//!!!!!!!需要后台引入的数据
+    popupObj.arrLastYear=[55,55,40,60,55,40,60,55,40,60,55,40,60];//!!!!!!!需要后台引入的数据
+
+    popupObj.colorArr=["#fbe83a","#00cdff"];
+    popupObj.Yname='单位：%';
+    popupObj.max='100';
+    popupObj.tabSpanS=$('.tabSpan');
+    popupObj.seriesArr=[
+        {   
+            name:'空气优良天气比例',
+            type: 'line',
+            data:  popupObj.arrThisYear,
+            smooth: true,
+            lineStyle:{
+                width:1,
+            },
+            symbol:'none'
+
+        },
+        {
+            name:'2017年同期',
+            type:'line',
+            stack: '总量',
+            data: popupObj.arrLastYear,
+            smooth: true,
+            lineStyle:{
+                width:1,
+            },
+            symbol:'none'
+        }
+    ];
+   
+    console.log(popupObj);
+    $("body").on('click','.tabSpan',function(){
+        $(this).toggleClass('active');
+        initPopCanvas.initCanvas();
+    })
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

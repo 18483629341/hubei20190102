@@ -72,4 +72,13 @@ table{
 .inlineBlock{
 	display: inline-block;
 }
+.clear{
+	clear: both;
+}
+.floatLeft{
+	float: left;
+}
+.floatRight{
+	float: right;
+}
 

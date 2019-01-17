@@ -17,22 +17,18 @@
 .map2 {
   background: url(../img/map1.png) no-repeat;
   background-size: 100% 100%;
-  display: block;
 }
 .map3 {
   background: url(../img/map1.png) no-repeat;
   background-size: 100% 100%;
-  display: block;
 }
 .map4 {
   background: url(../img/map1.png) no-repeat;
   background-size: 100% 100%;
-  display: block;
 }
 .map5 {
   background: url(../img/map1.png) no-repeat;
   background-size: 100% 100%;
-  display: block;
 }
 .map6 {
   background: url(../img/map1.png) no-repeat;
@@ -41,6 +37,26 @@
 .map61 {
   background: url(../img/map1_1.png) no-repeat;
   background-size: 100% 100%;
+}
+.mapWuhan {
+  background-image: url(../img/u11849.png);
+  background-size: 100% 100%;
+}
+.ax_default {
+  border-width: 0px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+}
+.ax_default .img {
+  width: 100%;
+  height: 100%;
+}
+.ax_default_zi {
+  left: 45%;
+  top: 60%;
 }
 .LeftSummary {
   position: absolute;
@@ -102,6 +118,12 @@
 }
 .contentList .contentLi {
   height: 3rem;
+}
+.contentList .contentLi .flex1 {
+  color: #cfddfd;
+}
+.contentList .contentLi .leftRowValue {
+  color: #fff;
 }
 .contentList .contentLiFont {
   display: inline-block;
@@ -292,6 +314,10 @@
   white-space: nowrap;
 }
 @media only screen and (max-width: 2880px) {
+  .P6LeftSummary,
+  .P6RightSummary {
+    height: 45rem;
+  }
   .IconListBox .IconLi {
     height: 1.8rem;
   }
@@ -360,7 +386,7 @@
 .P2LeftContent {
   padding: 0 1.4rem 0 1.5rem;
 }
-.LeftConTitle {
+.LeftConTitle2 {
   margin-top: .9rem;
 }
 .splitLine {
@@ -463,6 +489,25 @@
 }
 .SixLevel {
   background-color: #fc0105;
+}
+.P2PopUpBox .Popuplegend .LegendLi2 + .LegendLi2 {
+  margin-left: 1.2rem;
+}
+.P2PopUpBox .Popuplegend .OneLevel {
+  background-color: #fd4800;
+}
+.P2PopUpBox .Popuplegend .TwoLevel {
+  background-color: #f1ec3f;
+}
+.P2PopUpBox .Popuplegend .ThreeLevel {
+  background-color: #72e75e;
+}
+.P2PopUpBox .splitLineBox {
+  padding: 0 .8rem;
+}
+.P2PopUpBox .splitLine {
+  margin: .3rem 0 .4rem 0;
+  border-bottom: 1px dashed #0f5a6d;
 }
 /*************part2  part  end  ******************  ***/
 /*************part3  part  end  ******************  ***/
@@ -612,80 +657,6 @@
 .tableContanier1 {
   width: 100%;
   height: 21rem;
-  overflow-y: scroll;
-}
-/*滚动条样式*/
-.tableContanier::-webkit-scrollbar {
-  /*滚动条整体样式*/
-  width: 4px;
-  height: 4px;
-  background: transparent;
-}
-.tableContanier::-webkit-scrollbar-thumb {
-  /*滚动条里面轨道 */
-  border-radius: 6px;
-  background: yellow;
-}
-.tableContanier::-webkit-scrollbar-track {
-  /*滚动条里面滑块*/
-  border-radius: 3px;
-  background: transparent;
-}
-.tableContanier::-moz-scrollbar {
-  /*滚动条整体样式*/
-  width: 4px;
-  height: 4px;
-  background: transparent;
-}
-.tableContanier::-moz-scrollbar-thumb {
-  /*滚动条里面轨道 */
-  border-radius: 6px;
-  background: yellow;
-}
-.tableContanier::-moz-scrollbar-track {
-  /*滚动条里面滑块*/
-  border-radius: 3px;
-  background: transparent;
-}
-.tableContanier::scrollbar {
-  /*滚动条整体样式*/
-  width: 4px;
-  height: 4px;
-  background: transparent;
-}
-.tableContanier::scrollbar-thumb {
-  /*滚动条里面轨道 */
-  border-radius: 6px;
-  background: yellow;
-}
-.tableContanier::scrollbar-track {
-  /*滚动条里面滑块*/
-  border-radius: 3px;
-  background: transparent;
-}
-/*滚动条*/
-.tableContanier::-webkit-scrollbar {
-  width: 8px;
-  height: 10px;
-}
-.tableContanier::-webkit-scrollbar-button {
-  background-color: #f8f8f8;
-}
-.tableContanier::-webkit-scrollbar-track {
-  background: #f8f8f8;
-}
-.tableContanier::-webkit-scrollbar-track-piece {
-  background: #f8f8f8;
-}
-.tableContanier::-webkit-scrollbar-thumb {
-  background: #dcdcdc;
-  border-radius: 4px;
-}
-.tableContanier::-webkit-scrollbar-corner {
-  background: #f8f8f8;
-}
-.tableContanier::-webkit-scrollbar-resizer {
-  background: #f8f8f8;
 }
 @media only screen and (max-width: 1920px) {
   .unstandSecList .tbodyTr {
@@ -771,7 +742,7 @@
   top: 0;
   position: absolute;
   width: 21.075rem;
-  height: 41.875rem;
+  height: 44rem;
   background: url(../img/part_air_div.png) no-repeat;
   background-size: 100% 100%;
   font-size: .75rem;
@@ -988,6 +959,23 @@
   width: 17rem;
   margin: 0 auto;
 }
+.P6RightSummary2 .tableContanier2 {
+  width: 17.5rem;
+  height: 12rem;
+  margin: initial;
+}
+.P6RightSummary2 .tableContanier2 .theadTr .td3 {
+  padding-right: 20px;
+}
+.P6RightSummary2 .tableContanier2 .td2 {
+  text-align: center;
+}
+.P6RightSummary2 .mCSB_inside > .mCSB_container {
+  margin-right: 0px;
+}
+.P6RightSummary2 .mCSB_scrollTools {
+  right: 0;
+}
 .table2 {
   margin-top: 0.45rem;
 }
@@ -1006,7 +994,7 @@
   min-width: 5.43rem;
 }
 .table2 .tbodyTr {
-  height: 1.6rem;
+  height: 1.7rem;
   padding: .2rem 0 0 0;
   font-size: .8rem;
   line-height: .7rem;
@@ -1102,9 +1090,8 @@
 }
 .goodWeatherCanvas {
   position: relative;
-  margin-top: .6rem;
   width: 100%;
-  height: 16.5rem;
+  height: 17.1rem;
 }
 .legend2 .LegendList {
   padding-top: 1rem;
@@ -1143,7 +1130,8 @@
 .P6legendBox1,
 .P6legendBox2,
 .p6GoAwayWuhan,
-.goWuhan {
+.goWuhan,
+.PopUpBox {
   display: none;
 }
 .P6RightBox.show,
@@ -1152,7 +1140,8 @@
 .P6legendBox1.show,
 .P6legendBox2.show,
 .p6GoAwayWuhan.show,
-.goWuhan.show {
+.goWuhan.show,
+.PopUpBox.show {
   display: block;
 }
 .P6RightSummary2 {
@@ -1229,21 +1218,201 @@
 }
 .GoAwayWuhan {
   position: absolute;
-  width: 2.5rem;
+  width: 2.25rem;
   height: 2.25rem;
-  background: url(../img/u14648.png) no-repeat;
+  background: url(../img/map_return_normal.png) no-repeat;
   background-size: 100% 100%;
   top: 1rem;
+  cursor: pointer;
 }
+.GoAwayWuhan:hover {
+  background: url(../img/map_return_hover.png) no-repeat;
+  background-size: 100% 100%;
+}
+/***popUP  start****/
 .PopUpBox {
   position: absolute;
-  width: 13rem;
+  width: 26rem;
   top: 34%;
   left: 34%;
   z-index: 100;
   overflow: hidden;
 }
+.PaddingContent {
+  padding: 0 1.75rem 0 1.43rem;
+}
+.PopUpHeader {
+  height: 2.75rem;
+  text-align: left;
+  background: url(../img/popup3_top.png) no-repeat;
+  background-size: 100% 100%;
+}
+.PopUpHeader .PaddingContent {
+  padding-top: 1.3rem;
+  position: relative;
+}
+.PopUpHeader h3 {
+  font-size: .88rem;
+  line-height: .88rem;
+  color: #0deff6;
+  border-bottom: 1px solid #01d4ff;
+  height: 1.55rem;
+}
+.PopUpHeader .PopUpclose {
+  position: absolute;
+  width: .5rem;
+  height: .5rem;
+  right: 1.75rem;
+  top: 1.6rem;
+  background: url(../img/off.png) no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+.PopUpContent {
+  background: url(../img/popup3_middle.png) repeat-y;
+  background-size: 100% 5px;
+}
+.PopUpContent .PaddingContent {
+  padding-top: .33rem;
+}
+.PopUpContent .ListTitle {
+  height: 1.45rem;
+  font-size: .57rem;
+  line-height: .57rem;
+  color: #8297bd;
+  padding: .38rem 0 0 0;
+  text-align: left;
+}
+.PopUpContent .contentItem {
+  height: 1.43rem;
+  text-align: left;
+  font-size: .73rem;
+  line-height: .73rem;
+  padding: .33rem 0 0 0;
+}
+.PopUpContent .contentItem .name {
+  color: #bac7e4;
+}
+.PopUpContent .contentItem .value {
+  color: #fff;
+}
+.PopUpContent .contentItem:nth-child(1) {
+  width: 25%;
+}
+.keyContent {
+  padding-top: .4rem;
+  border: 1px dashed #0d7296;
+}
+.keyContent .contentList .contentLi {
+  height: 1.45rem;
+  padding-left: .8rem;
+  padding-right: .8rem;
+}
+.keyContent .leftRow,
+.keyContent .rightRow,
+.keyContent .centerRow {
+  font-size: .57rem;
+  line-height: 1.45rem;
+}
+.keyContent .leftRow {
+  text-align: left;
+}
+.keyContent .centerRow {
+  text-align: center;
+}
+.keyContent .rightRow {
+  text-align: right;
+}
+.keyContent1 {
+  border: none;
+}
+.keyContent1 .contentList .contentLi {
+  padding-left: 0;
+  padding-right: 0;
+}
+.popUpcanvasBox {
+  width: 22.7rem;
+  height: 10rem;
+}
+.Popuplegend .OneLevel {
+  background: #fbe83a;
+}
+.Popuplegend .TwoLevel {
+  background: #00cdff;
+}
+.Popuplegend .LegendList {
+  padding-top: .3rem;
+}
+.hrefDiv {
+  text-align: right;
+}
+.hrefDiv a {
+  font-size: .68rem;
+  line-height: 1rem;
+  color: #10ecff;
+  text-align: right;
+}
+.PopUpBottom {
+  height: 2.52rem;
+  background: url(../img/popup3_bottom.png) no-repeat;
+  background-size: 100% 100%;
+}
+.PopUpBottom .PaddingContent {
+  padding-top: .13rem;
+}
+.canvasTab {
+  height: 2.68rem;
+  padding-top: .6rem;
+  text-align: left;
+}
+.canvasTab .tabSpan {
+  padding: .45rem 0.68rem;
+  font-size: .7rem;
+  line-height: 1.63rem;
+  background: #273b5b;
+  color: #cedffe;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.canvasTab .tabSpan + .tabSpan {
+  margin-left: .5rem;
+}
+.canvasTab .tabSpan.active {
+  background: #00e5ff;
+  color: #0f0920;
+}
+.rightArrow {
+  width: .5rem;
+  height: .495rem;
+  position: relative;
+  margin-left: .3rem;
+  cursor: pointer;
+  background: url(../img/more.png) no-repeat;
+  background-size: 100% 100%;
+}
+/***popUP  end****/
 @media only screen and (max-width: 1919px) {
+  /***popUP  start****/
+  .PopUpBox {
+    width: 30rem;
+  }
+  .P6RightSummary2 .tableContanier2 {
+    width: 19rem;
+    height: 12.5rem;
+  }
+  .P6RightSummary2 .tableContanier2 .theadTr .td3 {
+    padding-right: 20px;
+  }
+  .popUpcanvasBox {
+    width: 26.7rem;
+    height: 12rem;
+  }
+  .canvasTab {
+    height: 2.8rem;
+  }
+  .canvasTab .tabSpan {
+    padding: .3rem 0.45rem;
+  }
   .table2 .tbodyTr {
     height: 1.75rem;
   }
@@ -1327,6 +1496,13 @@
   .P6GoAwayWuhan,
   .legendBox2 {
     right: 27.8rem;
+  }
+  .keyContent .leftRow,
+  .keyContent .rightRow {
+    font-size: .7rem;
+  }
+  .keyContent .contentList .contentLi {
+    height: 2.2rem;
   }
 }
 @media only screen and (max-width: 1365px) {

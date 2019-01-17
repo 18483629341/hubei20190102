@@ -7,11 +7,21 @@ $(document).ready(function () {
 		autoFitNav();
 		autoFitContent();
 		//tabToggle();
-        //mapToggle();
         listToggle();
+        popContorl()
 		// 使用刚指定的配置项和数据显示图表。
          myChart.setOption(option);
-	});
+         /* 主页面和市区页面交替   */
+         moduleToggle('.map3');
+         autoScrollFun('#scrollBox1');
+         //弹窗上的线图绘制
+		let initPopCanvas = new InitPopCanvas(popupObj);
+		initPopCanvas.initCanvas();
+		initPopCanvas.canvasTabToggle();
+        
+    })
+   
+	
 });
 
 window.onresize=function(){
@@ -20,6 +30,8 @@ window.onresize=function(){
     autoFitContent();
     //使用resize()主动的去绑定这个事件
     myChart.resize();//根据窗口的大小变动图表 --- 重点 
+    initPopCanvas.initCanvas();
+	initPopCanvas.popUpChart.resize();
 }
 
 /*************
@@ -70,4 +82,47 @@ var option = {
     }]
 };
 
+
+/*********popup   线框图的相关数据 / 渲染沿江化工企业 ***** */
+let popupObj = {};
+	popupObj.elementId = 'P2comCanvas';
+	popupObj.andanArr = ['70', '60', '80', '90', '60', '80', '90', '60', '80', '90', '60', '80']; //!!!!!!!需要后台引入的数据
+	popupObj.MnArr = ['55', '55', '40', '60', '55', '40', '60', '55', '40', '60', '55', '40', '60']; //!!!!!!!需要后台引入的数据
+	popupObj.PArr = ['88', '66', '50', '60', '55', '40', '60', '70', '40', '60', '55', '60', '56']; //!!!!!!!需要后台引入的数据
+
+	popupObj.colorArr = ["#fbe83a", "#00cdff"];
+	popupObj.Yname = '单位：%';
+	popupObj.seriesArr = [{
+			name: '氨氮',
+			type: 'line',
+			data: popupObj.andanArr,
+			smooth: true,
+			lineStyle: {
+				width: 1,
+			},
+			symbol: 'none'
+		},
+		{
+			name: '高锰酸钾指数',
+			type: 'line',
+			stack: '总量',
+			data: popupObj.MnArr,
+			smooth: true,
+			lineStyle: {
+				width: 1,
+			},
+			symbol: 'none'
+		},{
+			name: '总磷',
+			type: 'line',
+			stack: '总量',
+			data: popupObj.PArr,
+			smooth: true,
+			lineStyle: {
+				width: 1,
+			},
+			symbol: 'none'
+		}
+	];
+console.log('popupObj:', popupObj);
 

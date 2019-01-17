@@ -5,9 +5,14 @@ $(document).ready(function () {
         autoFitNav();
         autoFitContent();
         //tabToggle();
-        //mapToggle();
         listToggle();
+        popContorl();
         myChart.setOption(option);
+        moduleToggle('.map5');
+        //弹窗上的线图绘制
+		let initPopCanvas = new InitPopCanvas(popupObj);
+		initPopCanvas.initCanvas();
+		initPopCanvas.canvasTabToggle();
     });
 });
 
@@ -16,6 +21,8 @@ window.onresize = function () {
     autoFitNav();
     autoFitContent();
     myChart.resize();//根据窗口的大小变动图表 --- 重点 
+    initPopCanvas.initCanvas();
+	initPopCanvas.popUpChart.resize();
 }
 
 
@@ -108,3 +115,36 @@ var option = {
         }
     ]
 };
+
+/*********popup   线框图 相关数据***** */
+let popupObj = {};
+	popupObj.elementId = 'P6popUpcanvas';
+	popupObj.arrThisYear = ['70', '60', '80', '90', '60', '80', '90', '60', '80', '90', '60', '80']; //!!!!!!!需要后台引入的数据
+	popupObj.arrLastYear = ['55', '55', '40', '60', '55', '40', '60', '55', '40', '60', '55', '40', '60']; //!!!!!!!需要后台引入的数据
+
+	popupObj.colorArr = ["#fbe83a", "#00cdff"];
+	popupObj.Yname = '单位：%';
+	popupObj.seriesArr = [{
+			name: '空气优良天气比例',
+			type: 'line',
+			data: popupObj.arrThisYear,
+			smooth: true,
+			lineStyle: {
+				width: 1,
+			},
+			symbol: 'none'
+
+		},
+		{
+			name: '2017年同期',
+			type: 'line',
+			stack: '总量',
+			data: popupObj.arrLastYear,
+			smooth: true,
+			lineStyle: {
+				width: 1,
+			},
+			symbol: 'none'
+		}
+	];
+console.log('popupObj:', popupObj);
