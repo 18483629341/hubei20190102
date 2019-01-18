@@ -73,18 +73,18 @@
 .PopUpBox_pai{
 	width: 14rem!important;
 	// display: inline-block;
-	text-align: left;
-	padding:1rem 2rem 1rem 1rem;
-	background-color: rgba(4, 46, 79, 0.8);
-	h3{
-		color:#00e3ff;
-		font-size: 1.0rem;
-		line-height: 1.6rem;
-		height: 1.6rem;
-	}
-	.contentLi{
-		height: 1.3rem;
-	}
+	// text-align: left;
+	// padding:1rem 2rem 1rem 1rem;
+	// background-color: rgba(4, 46, 79, 0.8);
+	// h3{
+	// 	color:#00e3ff;
+	// 	font-size: 1.0rem;
+	// 	line-height: 1.6rem;
+	// 	height: 1.6rem;
+	// }
+	// .contentLi{
+	// 	height: 1.3rem;
+	// }
 }
 .LeftSummary{
 	position: absolute;
@@ -113,7 +113,7 @@
 }	
 .LeftContent{
 	text-align: left;
-	padding:1rem  .2rem  0 1.5rem;
+	padding:1rem  .2rem  0 2rem;
 }
 .LeftConBox{
 	display: flex;
@@ -158,13 +158,14 @@
 
 		font-size: .9rem;
 		b{
+			font-size: 1rem;
 			margin-right: .4rem;
 			color:#00d2ff;
 		}
 	}
 }
 .contentLi{
-	height:3rem;
+	//height:3rem;
 	.leftRow,.centerRow,.rightRow{
 		color:#cfddfd;
 	}
@@ -273,6 +274,7 @@
 	// margin-top: 2.5rem;
 	// border-right: 1px solid #00d2ff;
 	text-align: left;
+	padding-bottom: .4rem; 
     .IconLi{
 		width: 100%;
 		height: 1.2rem;
@@ -281,8 +283,8 @@
 		   appearance: none;
 		   -moz-appearance: none;
 		   -webkit-appearance: none;
-			width: .65rem;
-			height:.65rem;
+			width: .75rem;
+			height:.75rem;
 		    background: url(../img/box_normal.png) no-repeat;
 			background-size:100% 100%;
 			margin-left: 0!important;
@@ -352,7 +354,7 @@
 	background-size:100% 100%;
 }
 .RemarkName{
-   font-size: 0.5rem;
+   font-size: 0.6rem;
    line-height: 1.2rem;
    color: #f4fbff;
    white-space: nowrap;
@@ -362,16 +364,18 @@
 	color: #f4fbff;
 	white-space: nowrap;
  }
+  /******scroll start*******/
+  .mCSB_scrollTools .mCSB_dragger{
+	.mCSB_dragger_bar {
+		background-color: transparent!important;
+	}
+	 
+ }
 @media only screen and (max-width: 2880px) {
 	.P6LeftSummary,.P6RightSummary{
 		height: 45rem; 
 	}
-	.IconListBox{
 	
-		.IconLi{
-			height: 1.8rem;
-		}
-	}
 	.RemarkIcon{
 		width: 1.35rem;
 		height: 1.35rem;
@@ -381,9 +385,20 @@
 		height: 1.275rem;
 	}
 	.RemarkName{
-	   font-size: .7rem;
+	   font-size: .8rem;
 	//    line-height: 1.2rem;
 	}
+	.IconListBox{
+	   
+		.IconLi{
+			height: 1.4rem;
+		}
+	}
+	.mCSB_scrollTools .mCSB_dragger{
+		.mCSB_dragger_bar {
+			background-color: #13c5eb!important;
+		} 
+	 }
 }
 
 .ProBouRemark{
@@ -437,7 +452,7 @@
 /***********************    Right      end      ******** */
 /*************part2  part  start  *********************/
 .P2LeftContent{
-	padding: 0 1.4rem 0 1.5rem;
+	padding: 0 2rem;
 	
 }
 .LeftConTitle2{
@@ -463,7 +478,7 @@
 	.contentLiMount{
 		float: right;
 		font-size: 0.9rem;
-		padding:1.05rem 0;
+		padding:.75rem 0;
 	}
 }
 .P2RightBox{
@@ -756,7 +771,7 @@
 /*************part3  part  end  ******************  ***/
 .P3LeftSummary{
 	width: 21.225rem;
-	height: 46.15rem;
+	height: 43.15rem;
 	background: url(../img/part3_div.png) no-repeat;
 	background-size:100% 100%;
 }
@@ -866,13 +881,52 @@
 		padding:0.5rem 0;
 	}
 }
+.citheadTr .theadTd{
+	font-size: 0.8rem;
+	color:#00d2ff;
+	height:1.3rem;
+	text-align: left;
+}
+.citheadTr .theadTd:nth-child(1){
+	min-width: 20%;
+}
+.citheadTr .theadTd:nth-child(2){
+	min-width: 24%;
+}
+.P6RightSummary2 .citheadTr .theadTd:nth-child(1){
+	min-width: 18%;
+}
+.P6RightSummary2 .citheadTr .theadTd:nth-child(2){
+	min-width: 20%;
+}
+.citheadTr .theadTd:nth-child(3){
+	min-width: 26%;
+}
+.citheadTr .theadTd:nth-child(4){
+	flex:1;
+}
 .table{
 	min-width: 100%;
 	margin-top: 0.08rem;
-	td{
-		white-space: nowrap;
+	td:nth-child(1){
+		width: 22%;
+	}
+	td:nth-child(2){
+		width: 24%;
+	}
+	td:nth-child(3){
+		width: 26%;
+	}
+	td:nth-child(4){
+		flex:1;
 	}
 	.theadTr{
+		font-size: 0.8rem;
+		color:#00d2ff;
+		height:1.3rem;
+		text-align: left;
+	}
+	.theadTd{
 		font-size: 0.8rem;
 		color:#00d2ff;
 		height:1.3rem;
@@ -893,7 +947,7 @@
 	}
 	
 	.tbodyTr>td:nth-child(1){
-		width: 3.75rem;
+		//width: 3.75rem;
 		padding-left:.5%;
 		
 	}
@@ -905,8 +959,7 @@
 }
 .tableContanier1{
 	width: 100%;
-	height: 21rem;
-	//overflow-y: scroll;
+	height: 17.5rem;
 }
 .warnTheme{
 	color: @SixLevelC;
@@ -964,6 +1017,9 @@
 	   	font-size: .7rem;
 	   	color: #00d2ff;
 	}
+}
+.P5ContentList .contentLiFont{
+	width: 11.5rem;
 }
 /*************part5  part  end  ******************  ***/
 /*************part6 blueSky  end  ******************  ***/
@@ -1237,7 +1293,7 @@
 .P6RightSummary2{
 	.tableContanier2{
 		width:17.5rem;
-		height: 12rem;
+		height: 10.5rem;
 		margin: initial;
 		.theadTr{
 			.td3{
@@ -1264,20 +1320,22 @@
 	}td{
 		white-space: nowrap;
 	}
-	.td1{
-		width: 4rem;
-	}
-	.td2{
-		min-width: 5.43rem;
-	}
+
 	.tbodyTr{
 		height: 1.7rem;
 		padding: .2rem 0 0 0;
 		font-size: .8rem;
 		line-height: .7rem;
 		.td1{
-			width: 4rem;
+			
 			text-indent:.73rem;
+		}
+		.td1{
+			width: 6%;
+		}
+		.td2{
+			width: 8%;
+			text-align: left;
 		}
 	}
 }
@@ -1596,8 +1654,9 @@
 		}
 	}
 	.leftRow,.rightRow,.centerRow{
-		font-size: .57rem;
-		line-height: 1.45rem; 
+		font-size: .73rem;
+		line-height: 1.6rem;
+		height: 1.6rem; 
 	}
 	.leftRow{
 		text-align: left;
@@ -1701,6 +1760,12 @@
 	// 	}
 		
 	// }
+	.IconListBox{
+	   
+		.IconLi{
+			height: 1.6rem;
+		}
+	}
 	.timeTypeBox{
 		width: 4.8rem;
 		height: 1.6rem;
@@ -1713,7 +1778,7 @@
 	.P6RightSummary2{
 		.tableContanier2{
 			width:19rem;
-			height: 12.5rem;
+			height: 10.5rem;
 			.theadTr{
 				.td3{
 					padding-right: 20px;

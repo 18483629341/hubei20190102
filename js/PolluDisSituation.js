@@ -11,6 +11,7 @@ $(document).ready(function () {
 		setRadio();
 		//净化厂弹窗上的线图  的排污口1 绘制
 		initPopupObjByData0=new InitPopupObjByData('.PopUpBox_jing',dataJing);
+		initPopupObjByData0.initTablist();//需要展示选项框，调用此法；
 		popupObj00=initPopupObjByData0.init('P2jingCanvas');
 		initPopCanvas = new InitPopCanvas(popupObj00);
 		initPopCanvas.initCanvas();
@@ -19,6 +20,7 @@ $(document).ready(function () {
 		//企业弹窗上的线图  的排污口1 绘制
 			
 			initPopupObjByData1=new InitPopupObjByData('.PopUpBox_qi',dataQi);
+			initPopupObjByData1.initTablist();//需要展示选项框，调用此法；
 			popupObj10=initPopupObjByData1.init('P2qiCanvas');
 			initPopCanvas1 = new InitPopCanvas(popupObj10);
 			initPopCanvas1.initCanvas();
@@ -33,8 +35,8 @@ window.onresize=function(){
 	setRadio();
 	initPopCanvas.initCanvas();
 	initPopCanvas.popUpChart.resize();
-	// initPopCanvas1.initCanvas();
-	// initPopCanvas1.popUpChart.resize();
+	initPopCanvas1.initCanvas();
+	initPopCanvas1.popUpChart.resize();
 }
 /*********popup   线框图的相关数据 /手工断面沿江化工企业  ***** */
 

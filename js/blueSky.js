@@ -24,7 +24,7 @@ $(document).ready(function () {
          myChart23.setOption(option23);
          myChart24.setOption(option24);
          //左列表线图
-         myChart3.setOption(option3);
+         myChart3.setOption(option31);
          
          
 	});
@@ -114,10 +114,16 @@ function mapToggle2(){
 			$('.map6').removeClass('active');
             $('.map61').addClass('active');
             mainActive='map61';
+            $('js_title').html('全省2018年优良天数比例变化趋势');
+            myChart3.setOption(option32);
+            $('.P6legendBox1').addClass('show');
 		}else if($(this).attr("data-map")=="GoodWeath1"){
 			$('.map61').removeClass('active');
             $('.map6').addClass('active');
             mainActive='map6';
+            $('js_title').html('全省2018年PM<sub>2.5</sub>年均浓度变化趋势');
+            myChart3.setOption(option31);
+            $('.P6legendBox1').removeClass('show');
 		}
     })
 }
@@ -127,7 +133,8 @@ function RankToggle(){
     $("body").on('click','.P6tabLi3',function(){
         console.log("2");
 		$(this).siblings('.P6tabLi3').removeClass('active');
-		$(this).addClass('active');
+        $(this).addClass('active');
+        
     })
     $("body").on('click','.P6ArrowIcon',function(){
         console.log("2");
@@ -143,18 +150,37 @@ function RankToggle(){
 var myChart3 = echarts.init(document.getElementById('goodWeatherCanvas'));
 var areaBack='rgba(1,53,91,.5)';
 
+//!!!!!!!需要后台引入的数据  全省年均值的数据
 
-var arrMonth=['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月']
-var arrThisYear=['70', '60','80','90' ,'60','80','90', '60','80','90' ,'60','80'];//!!!!!!!需要后台引入的数据
-var aIndex='75';                                                                   //!!!!!!!需要后台引入的数据
-var arrLastYear=['55','55','40','60','55','40','60','55','40','60','55','40','60'];//!!!!!!!需要后台引入的数据
-var arrIndex=[];
-for(var i=0;i<12;i++){
-    arrIndex.push(aIndex);
-}
+var goodWheatherData={
+    arrMonth:['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月'],
+    arrThisYear:['70', '60','80','90' ,'60','80','90', '60','80','90' ,'60','80'],
+    aIndex:'75',
+    arrLastYear:['55','55','40','60','55','40','60','55','40','60','55','40','60'],
+    label:'比例',
+    formatter:'{value}%',
+    max:'100',
+} 
+var PMData={
+    arrMonth:['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月'],
+    arrThisYear:['250', '160','240','190' ,'160','80','90', '160','80','90' ,'160','180'],
+    aIndex:'100',
+    arrLastYear:['155','155','140','160','155','140','160','155','140','160','155','140','160'],
+    label:'单位：ug/l',
+    formatter:'{value}',
+    max:function(value){
+        var a=value.max*1.2;
+        return a.toFixed(1);
+    },
+} 
 
-var option3=getOption3();
-function getOption3(){
+var option31=getOption3(goodWheatherData);
+var option32=getOption3(PMData);
+function getOption3(obj){
+    var arrIndex=[];
+    for(var i=0;i<12;i++){
+        arrIndex.push(goodWheatherData.aIndex);
+    }
     var option= {
         color:["#72e75e","#00e4ff","#f7823c"],//调色板
         tooltip : {
@@ -190,12 +216,12 @@ function getOption3(){
                    // fontSize:parseInt(12*radio)
                 }
             },
-            data: arrMonth,
+            data: obj.arrMonth,
             boundaryGap:false
         },
         yAxis: {
             type: 'value',
-            name:"比例",
+            name:obj.label,
             nameLocation:'end',
             nameTextStyle:{
                 color:'#fff',
@@ -216,7 +242,7 @@ function getOption3(){
                     color: '#fff',
                     //fontSize:parseInt(15*radio)
                 },
-                formatter:'{value}%'
+                formatter:obj.formatter
             },
             axisLine: {//Y轴线的设置
                 show: false,
@@ -224,7 +250,8 @@ function getOption3(){
             axisTick: {
                 show: false
             },
-            max:'100',
+            max:obj.max,
+            min:'0',
             boundaryGap:['0%','0%']
         },
         series: [
@@ -241,13 +268,13 @@ function getOption3(){
             },
             {   
                 name:'空气优良天气比例',
-                data: arrThisYear,
+                data: obj.arrThisYear,
                 type: 'line',
                 areaStyle: {normal: {}},
                 smooth: true,
                 lineStyle:{
                   //  color:"#00e4ff",
-                    width:2,
+                    width:1,
                 },
                 areaStyle:{
                     color:areaBack
@@ -261,11 +288,11 @@ function getOption3(){
                 type:'line',
                 stack: '总量',
                 areaStyle: {normal: {}},
-                data:arrLastYear,
+                data:obj.arrLastYear,
                 smooth: true,
                 lineStyle:{
                    // color:"#f7823c",
-                    width:2,
+                    width:1,
                 },
                 areaStyle:{
                     color:areaBack
@@ -303,21 +330,45 @@ function P6moduleToggle(){
     }
 }
 /*********popup0   线框图 相关数据对象***** */
-var popupObj={};
+var popData={
+        goodWheatherData:{
+            arrThisYear:['70', '60','80','90' ,'60','80','90', '60','80','90' ,'60','80'],
+        
+            arrLastYear:['55','55','40','60','55','40','60','55','40','60','55','40','60'],
+            label:'比例',
+            formatter:'{value}%',
+            max:'100',
+        } ,
+        PMData:{
+            arrThisYear:['250', '160','240','190' ,'160','80','90', '160','80','90' ,'160','180'],
+            arrLastYear:['155','155','140','160','155','140','160','155','140','160','155','140','160'],
+            label:'单位：ug/l',
+            formatter:'{value}',
+            max:function(value){
+                var a=value.max*1.2;
+                return a.toFixed(1);
+            }
+            
+        } 
+   }
+var  popupObj=getOption4(popData.goodWheatherData);
+var  popupObj1=getOption4(popData.PMData);
+function getOption4(obj){
+    var popupObj={};
     popupObj.elementId='P6popUpcanvas';
-    popupObj.arrThisYear=[70, 60,80,90 ,60,80,90, 60,80,90 ,60,80];//!!!!!!!需要后台引入的数据
-    popupObj.arrLastYear=[55,55,40,60,55,40,60,55,40,60,55,40,60];//!!!!!!!需要后台引入的数据
+    popupObj.arrThisYear=obj.arrThisYear;//!!!!!!!需要后台引入的数据
+    popupObj.arrLastYear=obj.arrLastYear;//!!!!!!!需要后台引入的数据
 
     popupObj.colorArr=["#fbe83a","#00cdff"];
-    popupObj.Yname='单位：%';
+    popupObj.Yname=obj.label;
     popupObj.min='0';    
-    popupObj.max='100';
+    popupObj.max=obj.label.max;
     popupObj.tabSpanS=$('.tabSpan');
     popupObj.seriesArr=[
         {   
             name:'空气优良天气比例',
             type: 'line',
-            data:  popupObj.arrThisYear,
+            data:  obj.arrThisYear,
             smooth: true,
             lineStyle:{
                 width:1,
@@ -329,7 +380,7 @@ var popupObj={};
             name:'2017年同期',
             type:'line',
             stack: '总量',
-            data: popupObj.arrLastYear,
+            data: obj.arrLastYear,
             smooth: true,
             lineStyle:{
                 width:1,
@@ -337,10 +388,18 @@ var popupObj={};
             symbol:'none'
         }
     ];
-   
-    console.log(popupObj);
+    return popupObj;
+   }
+
+    console.log(popupObj1);
     $("body").on('click','.tabSpan',function(){
-        $(this).toggleClass('active');
+        $('.tabSpan').removeClass('active');
+        $(this).addClass('active');
+        if($(this).attr('data-name')=='goodWeather'){
+            initPopCanvas.setObj(popupObj);
+        }else{
+            initPopCanvas.setObj(popupObj1);
+        }
         initPopCanvas.initCanvas();
     })
 

@@ -64,9 +64,9 @@ function autoFitNav(){
 	for(var i=0;i<tablis.length;i++){
 		var element=tablis[i];
 		element.style.width=parseInt(W*360/3840)+"px";
-		element.style.height=parseInt(W*90/3840)+"px";
+		element.style.lineHeight=element.style.height=parseInt(W*90/3840)+"px";
 		element.style.fontSize=parseInt(W*35/3840)+"px";
-		element.style.paddingTop=parseInt(W*25/3840)+"px";
+		// element.style.paddingTop=parseInt(W*25/3840)+"px";
 	}
 
 	//.TabLiContent内所有元素的宽度控制
@@ -334,7 +334,7 @@ function InitPopCanvas(obj){
 						color: '#fff',
 						//fontSize:parseInt(15*radio)
 					},
-					formatter:this._obj.Ylabel||'{value}'
+					formatter:this._obj.formatter||'{value}'
 				},
 				axisLine: {//Y轴线的设置
 					show: false,
@@ -349,7 +349,7 @@ function InitPopCanvas(obj){
 						type:'dashed'
 					}
 				},
-				max:this._obj.max||100,
+				max:this._obj.max,
 				min:this._obj.min,
 				boundaryGap:['0%','0%']
 			},
@@ -359,75 +359,14 @@ function InitPopCanvas(obj){
 	}
 
 }
-function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图  需要的含数组的对象
+function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针对排污情况P4页面的方法  需要的含数组的对象
 	//elementClass 弹窗的最大容器的独特的类  ,如‘.PopUpBox_jing’
 	this.popUpDataObj={};
 	this.popUpDataObj.elementClass=elementClass,
 	this.popUpDataObj.xData=Obj.xData;
 	this.popUpDataObj.popupObjArr=[];
 	this.dataArr=Obj.dataArr;
-	this.initArr=function(){
-		for(let i=0;i<this.dataArr.length;i++){
-			let obj=this.dataArr[i];
-			let newPopupObj = {};
-			//newPopupObj.elementClass = 'P2jingCanvas';
-			newPopupObj.andanArr = obj.andanArr;
-			newPopupObj.MnArr = obj.MnArr;
-			newPopupObj.PArr = obj.MnArr;
-			newPopupObj.colorArr = ["#fd4800", "#f1ec3f","#72e75e"];
-			newPopupObj.Yname = 'mg/l';
-			newPopupObj.Ylabel = function(value){
-				return value.toFixed(1);
-			};
-			newPopupObj.Yvalue = function(value){
-				return value.toFixed(1);
-			};
-			newPopupObj.min='0';
-			newPopupObj.max=function(value){
-				var a=10.0;
-				if(!value){//如果value的值不为null或undefinded
-					a=value.max*1.2
-				}
-				return a.toFixed(1);
-			};
-			newPopupObj.tabSpanS=$(elementClass+' .tabSpan');
-			newPopupObj.seriesArr = [{
-					name: '氨氮',
-					type: 'line',
-					data: obj.andanArr,
-					smooth: true,
-					lineStyle: {
-						width: 1,
-					},
-					symbol: 'none'
-				},
-				{
-					name: '高锰酸钾指数',
-					type: 'line',
-					stack: '总量',
-					data: obj.MnArr,
-					smooth: true,
-					lineStyle: {
-						width: 1,
-					},
-					symbol: 'none'
-				},{
-					name: '总磷',
-					type: 'line',
-					stack: '总量',
-					data: obj.PArr,
-					smooth: true,
-					lineStyle: {
-						width: 1,
-					},
-					symbol: 'none'
-				}
-			];
-			this.popUpDataObj.popupObjArr.push(newPopupObj);
-		}
-		//console.log('this.popUpDataObj.popupObjArr:', this.popUpDataObj.popupObjArr);
-	}
-	this.initTablist=function(){
+	this.initTablist=function(){//初始化某个弹幕的选框的dom
 		let inhtml='';
 		inhtml='<span class="selectSpan ">'+
 				'<span class="spanInner active" data-index="0" >'+this.dataArr[0].name+'</span>'+
@@ -449,11 +388,9 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图  需
 		$(this.popUpDataObj.elementClass+' .selectLi').html(inhtml);
 	}
 	this.init=function(elementId){
-		this.initArr();         //初始化某个弹幕的所有排污口的数组
-		this.initTablist();     //初始化某个弹幕的选框的dom
 		                    //生成需要渲染第一排污口的线图的 数据  
         console.log(this.popUpDataObj.popupObjArr[0]);
-		let obj=this.setPopupObj(this.popUpDataObj.popupObjArr[0]);
+		let obj=this.setPopupObj(this.dataArr[0]);
 			obj.elementId=elementId;
 			console.log(obj);
 		return obj
@@ -477,13 +414,13 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图  需
 			$(elementClass+' .spanInner').addClass("active");
 			setTimeout(function(){
 				$(elementClass+' .TreeList').removeClass('show');
-				$(elementClass+'.dropIcon.icon').removeClass('rotatel');
+				$(elementClass+' .dropIcon.icon').removeClass('rotatel');
 			},1000);
 			//根据排污口渲染数据；
 			var newPopupObj=null;
 			console.log("newPopupObj");
-			cloneObj(_this.init,newPopupObj);//深度克隆数据
-			newPopupObj=_this.setPopupObj(_this.popUpDataObj.popupObjArr[i]);//根据i值变化数据源
+			//cloneObj(_this.init,newPopupObj);//深度克隆数据
+			newPopupObj=_this.setPopupObj(_this.dataArr[i]);//根据i值变化数据源
 			canvasNo.setObj(newPopupObj);//canvas引入数据源
 			canvasNo.initCanvas();//绘制图形
 		})

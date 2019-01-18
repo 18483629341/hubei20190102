@@ -83,11 +83,6 @@ a:link {
   top: 0;
 }
 /***********************for tab  和  tabContent  end******** */
-/******scroll start*******/
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-  background-color: #10c5ec!important;
-  background-color: rgba(16, 213, 253, 0.75) !important;
-}
 /******scroll end*******/
 @media only screen and (max-width: 1365px) {
   html {
