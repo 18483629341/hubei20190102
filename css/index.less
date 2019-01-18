@@ -1,4 +1,11 @@
 @lightblue:rgba(1, 39, 76, 0.5);
+@OneLevelC: #4ea9ff;
+@TwoLevelC: #0067ff;
+@ThreeLevelC: #00ff00;
+@FourLevelC: #ffff00;
+@FiveLevelC: #ffd700;
+@SixLevelC: #fc0105;
+
 /***********************    LeftSummary         start******** */
 .MapBox{
 	width: 100%;
@@ -55,9 +62,29 @@
 		height: 100%;
 	}
 }
-.ax_default_zi{
+.ax_default_zi,.ax_default_qi{
 	left: 45%;
     top: 60%;
+}
+.ax_default_pai{
+	left:60%;
+    top: 45%;
+}
+.PopUpBox_pai{
+	width: 14rem!important;
+	// display: inline-block;
+	text-align: left;
+	padding:1rem 2rem 1rem 1rem;
+	background-color: rgba(4, 46, 79, 0.8);
+	h3{
+		color:#00e3ff;
+		font-size: 1.0rem;
+		line-height: 1.6rem;
+		height: 1.6rem;
+	}
+	.contentLi{
+		height: 1.3rem;
+	}
 }
 .LeftSummary{
 	position: absolute;
@@ -120,15 +147,7 @@
 	text-align: right;
 }
 .contentList{
-	.contentLi{
-		height:3rem;
-		.flex1{
-			color:#cfddfd;
-		}
-		.leftRowValue{
-			color:#fff;
-		}
-	}
+	
 	.contentLiFont{
 		display: inline-block;
 		font-size: 1rem;
@@ -142,6 +161,15 @@
 			margin-right: .4rem;
 			color:#00d2ff;
 		}
+	}
+}
+.contentLi{
+	height:3rem;
+	.leftRow,.centerRow,.rightRow{
+		color:#cfddfd;
+	}
+	.leftRowValue{
+		color:#fff;
 	}
 }
 .GenIcon{
@@ -553,7 +581,177 @@
 		border-bottom: 1px dashed #0f5a6d;
 	}
 }
+.levelContainer{
+   margin-top: .4rem;
+}
+.flex3{
+	flex: 3;
+}
+.flex2{
+	flex: 2;
+}
+.levelBox{
+   width:3.6rem;
+   height:3.6rem;
+   border-radius:50%; 
+   margin-right: .8rem;
+   padding: .4rem;
+ 
+   .insideBox{
+	width: 100%;
+	height: 100%;
+	border-radius:50%; 
+	font-size: .8rem;
+	line-height: 2.4rem;
+ }
+}
+.levelBox.oneLevel{
+	border: 1px solid @OneLevelC;
+	.insideBox{
+		border:1px dashed @OneLevelC;
+		color: @OneLevelC;
+	}
+}
+.levelBox.twoLevel{
+	border: 1px solid @TwoLevelC;
+	.insideBox{
+		border:1px dashed @TwoLevelC;
+		color: @TwoLevelC;
+	}
+}
+.levelBox.threeLevel{
+	border: 1px solid @ThreeLevelC;
+	.insideBox{
+		border:1px dashed @ThreeLevelC;
+		color: @ThreeLevelC;
+	}
+}
+.levelBox.fourLevel{
+	border: 1px solid @FourLevelC;
+	.insideBox{
+		border:1px dashed @FourLevelC;
+		color: @FourLevelC;
+	}
+}
+.levelBox.fiveLevel{
+	border: 1px solid @FiveLevelC;
+	.insideBox{
+		border:1px dashed @FiveLevelC;
+		color: @FiveLevelC;
+	}
+}
+.levelBox.sixLevel{
+	border: 1px solid @SixLevelC;
+	.insideBox{
+		border:1px dashed @SixLevelC;
+		color: @SixLevelC;
+	}
+ }
+.PopUpBox_sha{
+	.levelContainer{
+		margin-bottom: .5rem;
+	}
+	.keyContent{
+		padding:.3rem .8rem;
+		.contentLi{
+			height: 1.4rem!important;
+			line-height:1.4rem;
+		}
+	}
+	
+}
+.timeTypeBox{
+	float: right;
+	text-align: center;
+	width: 4.53rem;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	border: 1px solid #00d1eb;
+	border-radius:.2rem; 
+	.timeTypeSpan{
+		width: 50%;
+		height: 100%;
+		line-height: 1.3rem;
+		font-size: .7rem;
+		background: #031735;
+		color: #00d1eb;
+		cursor: pointer;
+	}
+	.timeTypeSpan.active{
+		background: #00d1eb;
+		color: #030d2b;
+	}
+}
+.InfoListContent{
+	float: right;
+	width: 7rem;
+	text-align: left;
+	// height: 1.6rem;
 
+	.selectLi{
+		border: 1px solid #00d1eb;
+		border-radius: .2rem;
+		color:#fff;
+		cursor: pointer;
+		font-size: .7rem;
+		width: 100%;
+		height: 1.6rem;
+		line-height: 1.6rem;
+		padding-left: .75rem;
+		position: relative;
+		.spanInner{
+			color:#fff;
+		  }
+		.spanInner.active{
+			color:#00eafc;
+		  }
+		.TreeList{
+			width: 7rem;
+			position: absolute;
+			display: none;
+			z-index: 100;
+			left: -1px;
+			border: 1px solid #00d1eb;
+			border-radius: .2rem;
+			.treeLi{
+				width: 7rem;
+				height: 1.6rem;
+				line-height: 1.6rem;
+				color:#fff;
+				font-size: .7rem;
+				padding-left: .75rem;
+			}
+			.treeLi.active{
+				color:#00eafc;
+		  }
+		}
+		.TreeList.show{
+			display: block;
+		}
+		.dropIcon{
+			float: right;
+			margin-top: .6rem;
+			// background-origin: 50% 50%;
+		}
+	}
+	
+	.dropIcon{
+		margin-left: .75rem;
+		margin-right: .75rem;
+	}
+}
+
+.dropIcon{
+	width:.5rem;
+	height:.25rem;
+	background: url(../img/xlsj.png) no-repeat;
+	background-size: 100% 100%;
+	// background-origin: 50% 50%;
+}
+.rotatel{
+	transform:rotate(180deg);
+	transform-origin: center;
+}	 
 /*************part2  part  end  ******************  ***/
 /*************part3  part  end  ******************  ***/
 .P3LeftSummary{
@@ -710,7 +908,20 @@
 	height: 21rem;
 	//overflow-y: scroll;
 }
-
+.warnTheme{
+	color: @SixLevelC;
+}
+.niceTheme{
+	color: @ThreeLevelC;
+}
+.warnBig>span{
+	font-size: 1rem;
+	height: 1.6rem;
+	line-height: 1.6rem;
+}
+.superLine .leftRowValue{
+	margin-right: .8rem;
+}
 @media only screen and (max-width: 1920px) {
 	.unstandSecList{
 		.tbodyTr{
@@ -1304,9 +1515,10 @@
 .PopUpBox{
 	position: absolute;
 	width: 26rem;
-	top: 34%;
-	left: 34%;
+	top: 40%;
+	left: 50%;
 	z-index: 100;
+	transform: translate(-50%,-50%);
 	overflow: hidden;
 	// background: @lightblue;
 }
@@ -1314,7 +1526,7 @@
 	padding:0 1.75rem 0 1.43rem;
 }
 .PopUpHeader{
-	height: 2.75rem;
+	height: 2.65rem;
 	//padding-top: 1.2rem;
 	text-align: left;
 	background: url(../img/popup3_top.png) no-repeat;
@@ -1378,7 +1590,7 @@
 	border: 1px dashed #0d7296;
 	.contentList{
 		.contentLi{
-			height:1.45rem;
+			min-height:1.45rem;
 			padding-left:  .8rem;
 			padding-right:  .8rem;
 		}
@@ -1436,7 +1648,8 @@
 	}
 }
 .PopUpBottom{
-	height: 2.52rem;
+	margin-top: -2px;
+	height: 3.4rem;
 	background: url(../img/popup3_bottom.png) no-repeat;
 	background-size: 100% 100%;
 	.PaddingContent{
@@ -1477,6 +1690,22 @@
  /***popUP  end****/
 
 @media only screen and (max-width: 1919px) {
+	// .InfoListContent{
+
+	// 	width: 9rem;
+	// 	.TreeList{
+	// 		width: 9rem;
+	// 		.treeLi{
+	// 			width:9rem;
+	// 		}
+	// 	}
+		
+	// }
+	.timeTypeBox{
+		width: 4.8rem;
+		height: 1.6rem;
+		line-height: 1.6rem;
+	}
 	    /***popUP  start****/
 	.PopUpBox{
 		width: 30rem;

@@ -62,17 +62,20 @@
 			<!--水质监测   water quality monitoring  box-->
 			<div class="TabContent WaterQulMonitor" id='WaterQulMonitor' data-index="1">
 				<div class="MapBox  map2 active">
-					<div id="u14643" class="ax_default ax_default_shou" data-name="shou">
-						<img id="u14643_img" class="img " src="./img/icon_remark13.png">
+					<div class="ax_default ax_default_shou" data-name="sha">
+						<img class="img " src="./img/icon_remark13.png">
 					</div>
-					<div id="u14643" class="ax_default ax_default_zi" data-name="zi">
-						<img id="u14643_img" class="img " src="./img/icon_remark14.png">
+					<div class="ax_default ax_default_zi" data-name="zi">
+						<img class="img " src="./img/icon_remark14.png">
 					</div>
 					<div class="goWuhan show">进入市区</div>
 				</div>
 				<div class="MapBox mapWuhan ">
-					<div id="u14643" class="ax_default">
-						<img id="u14643_img" class="img " src="./img/icon_remark13.png">
+					<div class="ax_default ax_default_shou" data-name="sha">
+						<img class="img " src="./img/icon_remark13.png">
+					</div>
+					<div class="ax_default ax_default_zi" data-name="zi">
+						<img class="img " src="./img/icon_remark14.png">
 					</div>
 				</div>
 				<div class="LeftSummary">
@@ -248,55 +251,42 @@
 				<!-- 图例2  end  -->
 				<div class="GoAwayWuhan p6GoAwayWuhan ">
 				</div>
-				<!-- 弹窗1 手工断面沿江化工企业 start -->
-				<div class="PopUpBox  P2PopUpBox PopUpBox_shou" id="PopUpBox_shou">
+				<!-- 弹窗1 纱帽 start -->
+				<div class="PopUpBox  P2PopUpBox PopUpBox_sha" id="PopUpBox_sha">
 					<div class="PopUpHeader">
 						<div class="PaddingContent">
-							<h3>武汉水质净化厂</h3>
+							<h3>纱帽</h3>
 							<span class="inlineBlock PopUpclose"></span>
 						</div>
 					</div>
 					<!-- PopUpHeader end-->
 					<div class="PopUpContent">
 						<div class="PaddingContent">
-							<div class="keyContent keyContent1">
-								<div class="contentList">
-									<div class="contentLi flexBlock">
-										<div class="leftRow flex1">污染源地址：
-											<span class="leftRowValue">湖北省武汉市江汉区XXX号</span>
-										</div>
-									</div>
-									<div class="contentLi flexBlock">
-										<div class="leftRow flex1">统一社会信用代码：
-											<span class="leftRowValue">11111111111111111111</span>
-										</div>
+							<p class="ListTitle ">检测时间:2018-10</p>
+							<div class="flexBlock levelContainer">
+								<div class="inlineBlock  levelBox sixLevel">
+									<!-- 根据等级样式为 Ⅰ类对应样式为 oneLevel twoLevel  ...-->
+									<div class="insideBox">
+										劣Ⅵ
 									</div>
 								</div>
-							</div>
-							<div class="keyContent">
-								<div class="contentList">
-									<div class="contentLi flexBlock">
-										<div class="leftRow flex1">管控级别：
-											<span class="leftRowValue"> 国控</span>
+								<div class="keyContent flex1">
+									<div class="contentList">
+										<div class="contentLi flexBlock">
+											<div class="leftRow flex3">所属流域：
+												<span class="leftRowValue"> 长江干流</span>
+											</div>
+											<div class="leftRow flex2">所属区域：
+												<span class="leftRowValue"> 武汉市</span>
+											</div>
 										</div>
-										<div class="leftRow flex1">排水去向：
-											<span class="leftRowValue"> 长江</span>
-										</div>
-									</div>
-									<div class="contentLi flexBlock">
-										<div class="leftRow flex1">设计处理能力：
-											<span class="leftRowValue"> 15万吨</span>
-										</div>
-										<div class="leftRow flex1">执行排放标准：
-											<span class="leftRowValue"> 一级B</span>
-										</div>
-									</div>
-									<div class="contentLi flexBlock">
-										<div class="leftRow flex1">主题处理工艺：
-											<span class="leftRowValue"> 改良UCT</span>
-										</div>
-										<div class="leftRow flex1">投运时间：
-											<span class="leftRowValue"> 2016-10</span>
+										<div class="contentLi flexBlock">
+											<div class="leftRow flex3">控制级别：
+												<span class="leftRowValue"> 国控</span>
+											</div>
+											<div class="leftRow flex2">水质类别：
+												<span class="leftRowValue"> 劣Ⅵ类</span>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -339,12 +329,12 @@
 					</div>
 					<!-- PopUpBottom end-->
 				</div>
-				<!-- 弹窗1 手工断面沿江化工企业 end -->
-				<!-- 弹窗1 手工断面沿江化工企业 start -->
+				<!-- 弹窗1 纱帽 end -->
+				<!-- 弹窗1 自动站 start -->
 				<div class="PopUpBox  P2PopUpBox PopUpBox_zi" id="PopUpBox_zi">
 					<div class="PopUpHeader">
 						<div class="PaddingContent">
-							<h3>武汉水质净化厂</h3>
+							<h3>姚嘴王岭村水站</h3>
 							<span class="inlineBlock PopUpclose"></span>
 						</div>
 					</div>
@@ -369,7 +359,7 @@
 											<span class="leftRowValue"> 国控</span>
 										</div>
 										<div class="rightRow flex1">水质类别：
-											<span class="leftRowValue"> 劣V类</span>
+											<span class="leftRowValue"> 劣Ⅵ类</span>
 										</div>
 
 									</div>
@@ -394,8 +384,14 @@
 								<span class="tabSpan active" data-name="goodWeather">氨氮</span>
 								<span class="tabSpan " data-name="pm2.5">高锰酸钾指数</span>
 								<span class="tabSpan " data-name="pm2.5">总磷</span>
-								<div></div>
 							</div>
+							<div class="canvasTab alignRight" >
+								<div class="timeTypeBox flexBlock">
+									<div class="timeTypeSpan active flex1" data-name="hour">小时</div>
+									<div class="timeTypeSpan flex1" data-name="date">日</div>
+								</div>
+							</div>
+
 							<div class="popUpcanvasBox" id="P2ziCanvas">
 							</div>
 							<div class="legend2 Popuplegend">
@@ -428,7 +424,7 @@
 					</div>
 					<!-- PopUpBottom end-->
 				</div>
-				<!-- 弹窗1 手工断面沿江化工企业 end -->
+				<!-- 弹窗1 自动站 end -->
 			</div>
 
 		</section>

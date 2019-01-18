@@ -81,4 +81,7 @@ table{
 .floatRight{
 	float: right;
 }
+.alignRight{
+	text-align: right!important;
+}
 

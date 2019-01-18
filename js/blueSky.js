@@ -310,6 +310,7 @@ var popupObj={};
 
     popupObj.colorArr=["#fbe83a","#00cdff"];
     popupObj.Yname='单位：%';
+    popupObj.min='0';    
     popupObj.max='100';
     popupObj.tabSpanS=$('.tabSpan');
     popupObj.seriesArr=[

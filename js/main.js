@@ -147,6 +147,23 @@ function popContorl(){
         $('.PopUpBox').toggleClass('show');
     })
 }
+function P2popContorl(){
+    $(document).mouseup(function(e){
+        var _con = $('.PopUpBox '); // 设置目标区域 
+       if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
+           // Mark 1 some code... // 功能代码
+           $('.PopUpBox').removeClass('show');
+          // console.log('');
+    }});
+    $("body").on('click','.PopUpclose',function(){
+        $('.PopUpBox').removeClass('show');
+    })
+    $("body").on('click','.ax_default',function(){
+		let name=$(this).attr('data-name');
+		$('.PopUpBox').removeClass('show');
+		$(".PopUpBox_"+name).addClass('show');
+    })
+}
 function hasActive(str){
     var reg=/active*/;
     return reg.test(str);
@@ -228,12 +245,16 @@ function autoScrollFun(element){//参数为需要滚动的容器
 var arrMonth4=['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月']  //!!!!!!!需要后台引入的数据
 
 function InitPopCanvas(obj){
-	this.elementId=obj.elementId;
-	this.colorArr=obj.colorArr;
-	this.seriesArr=obj.seriesArr;
-	this.Yname=obj.Yname;
-	this.popUpChart=echarts.init(document.getElementById(obj.elementId));
-	this.tabSpanS=obj.tabSpanS;
+	this._obj=obj
+	this.elementId=this._obj.elementId;
+	this.colorArr=this._obj.colorArr;
+	this.seriesArr=this._obj.seriesArr;
+	this.Yname=this._obj.Yname;
+	this.popUpChart=echarts.init(document.getElementById(this._obj.elementId));
+	this.tabSpanS=this._obj.tabSpanS;
+	this.setObj=function(newObj){
+        this._obj=newObj
+	}
 	this.initCanvas=function(){
 		//console.log(tabSpanS);
 		let _colors=[];
@@ -242,12 +263,12 @@ function InitPopCanvas(obj){
 			var item=this.tabSpanS[i];
 			//if(item.className.)
 		   if(hasActive(item.className)){
-				_colors.push(obj.colorArr[i]);
-				_series.push(obj.seriesArr[i]);
+				_colors.push(this._obj.colorArr[i]);
+				_series.push(this._obj.seriesArr[i]);
 		   }
 			//if(item.className.)
 		}
-		console.log(this.tabSpanS);
+		//console.log(this.tabSpanS);
 		var newOption=this.getPopOption(_colors,_series);
 		this.popUpChart.setOption(newOption,{
 			notMerge: true,
@@ -265,7 +286,7 @@ function InitPopCanvas(obj){
 						backgroundColor: '#6a7985'
 					}
 				},
-				//formatter:obj.Yvalue||'{a}{}{c}'
+				//formatter:this._obj.Yvalue||'{a}{}{c}'
 			},
 			grid: {
 				top:parseInt(100*radio),
@@ -295,12 +316,12 @@ function InitPopCanvas(obj){
 					   // fontSize:parseInt(12*radio)
 					}
 				},
-				data: arrMonth4,
+				data: this._obj.xData||arrMonth4,
 				boundaryGap:false
 			},
 			yAxis: {
 				type: 'value',
-				name:obj.Yname,
+				name:this._obj.Yname,
 				nameLocation:'end',
 				nameTextStyle:{
 					color:'#fff',
@@ -313,7 +334,7 @@ function InitPopCanvas(obj){
 						color: '#fff',
 						//fontSize:parseInt(15*radio)
 					},
-					formatter:obj.Ylabel||'{value}'
+					formatter:this._obj.Ylabel||'{value}'
 				},
 				axisLine: {//Y轴线的设置
 					show: false,
@@ -328,14 +349,30 @@ function InitPopCanvas(obj){
 						type:'dashed'
 					}
 				},
-				max:obj.max,
-				min:0,
+				max:this._obj.max||100,
+				min:this._obj.min,
 				boundaryGap:['0%','0%']
 			},
 			series: seriesP
 		};
 		return option;
 	}
+
 }
 
-
+/* .深度克隆 对象（针对 对象 或 对象数组 或 数组） 经典 */
+ 
+function cloneObj(origin, target) {   
+	console.log()
+	var target = target || {};
+	if (origin instanceof Array) {
+		target = [];
+	} else if (origin == null) {//null或者undefined时
+		target = origin;
+	}
+	for (var key in origin) { //此方法即可遍历对象，也可遍历数组
+		target[key] = typeof val === 'object' ? cloneObj(origin[key], target[key]) : origin[key];
+		//typeof val==='object' 数组和对象以及null
+	}
+	return target;
+}
