@@ -359,7 +359,192 @@ function InitPopCanvas(obj){
 	}
 
 }
-
+function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图  需要的含数组的对象
+	//elementClass 弹窗的最大容器的独特的类  ,如‘.PopUpBox_jing’
+	this.popUpDataObj={};
+	this.popUpDataObj.elementClass=elementClass,
+	this.popUpDataObj.xData=Obj.xData;
+	this.popUpDataObj.popupObjArr=[];
+	this.dataArr=Obj.dataArr;
+	this.initArr=function(){
+		for(let i=0;i<this.dataArr.length;i++){
+			let obj=this.dataArr[i];
+			let newPopupObj = {};
+			//newPopupObj.elementClass = 'P2jingCanvas';
+			newPopupObj.andanArr = obj.andanArr;
+			newPopupObj.MnArr = obj.MnArr;
+			newPopupObj.PArr = obj.MnArr;
+			newPopupObj.colorArr = ["#fd4800", "#f1ec3f","#72e75e"];
+			newPopupObj.Yname = 'mg/l';
+			newPopupObj.Ylabel = function(value){
+				return value.toFixed(1);
+			};
+			newPopupObj.Yvalue = function(value){
+				return value.toFixed(1);
+			};
+			newPopupObj.min='0';
+			newPopupObj.max=function(value){
+				var a=10.0;
+				if(!value){//如果value的值不为null或undefinded
+					a=value.max*1.2
+				}
+				return a.toFixed(1);
+			};
+			newPopupObj.tabSpanS=$(elementClass+' .tabSpan');
+			newPopupObj.seriesArr = [{
+					name: '氨氮',
+					type: 'line',
+					data: obj.andanArr,
+					smooth: true,
+					lineStyle: {
+						width: 1,
+					},
+					symbol: 'none'
+				},
+				{
+					name: '高锰酸钾指数',
+					type: 'line',
+					stack: '总量',
+					data: obj.MnArr,
+					smooth: true,
+					lineStyle: {
+						width: 1,
+					},
+					symbol: 'none'
+				},{
+					name: '总磷',
+					type: 'line',
+					stack: '总量',
+					data: obj.PArr,
+					smooth: true,
+					lineStyle: {
+						width: 1,
+					},
+					symbol: 'none'
+				}
+			];
+			this.popUpDataObj.popupObjArr.push(newPopupObj);
+		}
+		//console.log('this.popUpDataObj.popupObjArr:', this.popUpDataObj.popupObjArr);
+	}
+	this.initTablist=function(){
+		let inhtml='';
+		inhtml='<span class="selectSpan ">'+
+				'<span class="spanInner active" data-index="0" >'+this.dataArr[0].name+'</span>'+
+				 '<i class="icon dropIcon"></i>'+
+			'</span>'+
+			'<ul class="TreeList" >';
+			let listArr='';
+		for(let i=0;i<this.dataArr.length;i++){
+			let lihtml='';
+            if(i==0){
+				lihtml='<li class="treeLi active" data-index="0" >'+this.dataArr[i].name+'</li>'
+			}else{
+				lihtml='<li class="treeLi" data-index="'+i+'">'+this.dataArr[i].name+'</li>'
+			}	
+			listArr+=lihtml;	
+		}
+		inhtml+=listArr;
+		inhtml+='</ul>';
+		$(this.popUpDataObj.elementClass+' .selectLi').html(inhtml);
+	}
+	this.init=function(elementId){
+		this.initArr();         //初始化某个弹幕的所有排污口的数组
+		this.initTablist();     //初始化某个弹幕的选框的dom
+		                    //生成需要渲染第一排污口的线图的 数据  
+        console.log(this.popUpDataObj.popupObjArr[0]);
+		let obj=this.setPopupObj(this.popUpDataObj.popupObjArr[0]);
+			obj.elementId=elementId;
+			console.log(obj);
+		return obj
+	}
+	this.dragToggle=function(canvasNo){
+		let _this=this;
+		let elementClass=_this.popUpDataObj.elementClass;
+		$("body").on('click',elementClass+' .selectLi',function(e){
+			stopBubble(e);
+			$(elementClass+' .TreeList').toggleClass('show');
+			$(elementClass+' .dropIcon.icon').toggleClass('rotatel');
+		})
+		$("body").on('click',elementClass+' .treeLi',function(e){
+			stopBubble(e);
+			var name=$(this).html();
+			var i=$(this).attr('data-index');
+			$(elementClass+' .spanInner').attr('data-index',i);
+			$(elementClass+' .spanInner').html(name);
+			$(elementClass+' .treeLi').removeClass("active");
+			$(this).addClass("active");
+			$(elementClass+' .spanInner').addClass("active");
+			setTimeout(function(){
+				$(elementClass+' .TreeList').removeClass('show');
+				$(elementClass+'.dropIcon.icon').removeClass('rotatel');
+			},1000);
+			//根据排污口渲染数据；
+			var newPopupObj=null;
+			console.log("newPopupObj");
+			cloneObj(_this.init,newPopupObj);//深度克隆数据
+			newPopupObj=_this.setPopupObj(_this.popUpDataObj.popupObjArr[i]);//根据i值变化数据源
+			canvasNo.setObj(newPopupObj);//canvas引入数据源
+			canvasNo.initCanvas();//绘制图形
+		})
+	}
+	this.setPopupObj=function(obj){//初始化或更新数据源
+		console.log(obj);
+		var popupObj2={};
+		popupObj2.xData=Obj.xData;//注意Obj为原型参数
+		popupObj2.colorArr = ["#fd4800", "#f1ec3f","#72e75e"];
+		popupObj2.Yname = 'mg/l';
+	    popupObj2.andanArr = obj.andanArr;
+		popupObj2.MnArr =obj.MnArr;
+		popupObj2.PArr = obj.PArr;
+		popupObj2.Ylabel = function(value){
+			return value.toFixed(1);
+		};
+		popupObj2.Yvalue = function(value){
+			return value.toFixed(1);
+		};
+		popupObj2.min='0';
+		popupObj2.max=function(value){
+			var a=value.max*1.2;
+			return a.toFixed(1);
+		};
+		popupObj2.tabSpanS=$(this.popUpDataObj.elementClass+' .tabSpan');
+		//将三组数组传到   seriesArr数组中
+		popupObj2.seriesArr = [{
+				name: '氨氮',
+				type: 'line',
+				data: obj.andanArr,
+				smooth: true,
+				lineStyle: {
+					width: 1,
+				},
+				symbol: 'none'
+			},
+			{
+				name: '高锰酸钾指数',
+				type: 'line',
+				stack: '总量',
+				data: obj.MnArr,
+				smooth: true,
+				lineStyle: {
+					width: 1,
+				},
+				symbol: 'none'
+			},{
+				name: '总磷',
+				type: 'line',
+				stack: '总量',
+				data: obj.PArr,
+				smooth: true,
+				lineStyle: {
+					width: 1,
+				},
+				symbol: 'none'
+			}
+		];
+		return popupObj2;
+	}
+}
 /* .深度克隆 对象（针对 对象 或 对象数组 或 数组） 经典 */
  
 function cloneObj(origin, target) {   

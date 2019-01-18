@@ -93,6 +93,7 @@ $("body").on('click','.PopUpBox_sha .tabSpan',function(){
 	initPopCanvas.initCanvas();
 })
 /*********popup1   线框图的相关数据 /  自动站 日期类型***** */
+
 let popupObj1 = {};
 	popupObj1.elementId = 'P2ziCanvas';
 	popupObj1.xData=['10-01','10-02','10-03','10-04','10-05','10-06','10-07','10-08','10-09','10-10','10-11','10-12'];
