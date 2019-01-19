@@ -43,6 +43,7 @@ function autoFit(){
 	SubTitleP.style.lineHeight=parseInt(H2*93/230)+"px";
 	SubTitleP.style.fontSize=parseInt(H2*62.5/230)+"px";
 	SubTitleP.style.paddingTop=parseInt(H2*16/230)+"px";
+	setRadio();
 }
 
 
@@ -74,6 +75,7 @@ function autoFitNav(){
 		var element=TabLiContents[i];
 		element.style.width=parseInt(W*338/3840)+"px";
 	}
+	
 }
 //nav部分的全自适应方法
 

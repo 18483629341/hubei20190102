@@ -345,9 +345,6 @@
   .IconListBox .IconLi {
     height: 1.4rem;
   }
-  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    background-color: #13c5eb!important;
-  }
 }
 .ProBouRemark {
   background: url(../img/icon_remark3.png) no-repeat;
@@ -871,7 +868,7 @@
 }
 .tableContanier1 {
   width: 100%;
-  height: 17.5rem;
+  height: 16.5rem;
 }
 .warnTheme {
   color: #fc0105;
@@ -1627,6 +1624,9 @@
 }
 /***popUP  end****/
 @media only screen and (max-width: 1919px) {
+  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #13c5eb!important;
+  }
   .IconListBox .IconLi {
     height: 1.6rem;
   }
