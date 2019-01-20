@@ -31,11 +31,6 @@ a:link {
 .header .HeaderCenter {
   margin: 0 auto;
 }
-.header .HeaderCenter .TitleImg {
-  background-image: url(../img/header_title.png);
-  background-size: cover;
-  background-position: center top;
-}
 /*********************   main.html 的所有样式 end******************/
 /*    ********************** fornav  start**************         */
 .nav {
