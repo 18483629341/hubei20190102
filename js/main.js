@@ -43,7 +43,6 @@ function autoFit(){
 	SubTitleP.style.lineHeight=parseInt(H2*93/230)+"px";
 	SubTitleP.style.fontSize=parseInt(H2*62.5/230)+"px";
 	SubTitleP.style.paddingTop=parseInt(H2*16/230)+"px";
-	setRadio();
 }
 
 
@@ -97,7 +96,6 @@ function autoFitContent(){
 	var MapBoxs= document.querySelectorAll(".MapBox");
 	for(var i=0;i<MapBoxs.length;i++){
 		var element=MapBoxs[i];
-		//console.log(H,H-W*323/3840);
 		element.style.height=parseInt(H-W*323/3840)+"px";
 	}
 }
@@ -109,7 +107,6 @@ function tabToggle(){
 		$('.tabli').removeClass('active');
 		$(this).addClass('active');
 		var v=$(this).attr("data-index");
-		//console.log($(this),v)
 		$('.TabContent').removeClass('show');
 		$('.TabContent[data-index="'+v+'"]').addClass('show');
 	})
@@ -125,7 +122,6 @@ function listToggle(){
 			var w=$('.RightBox').outerWidth();
 			flag=true;
 		}
-		//console.log(w);
 		$('.RightBox').toggleClass('hidden');
 		$('.RightBox').outerWidth(w+2);
 		$('.RightBox').width(w+2);
@@ -140,7 +136,6 @@ function popContorl(){
        if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
            // Mark 1 some code... // 功能代码
            $('.PopUpBox').removeClass('show');
-          // console.log('');
     }});
     $("body").on('click','.PopUpclose',function(){
         $('.PopUpBox').removeClass('show');
@@ -155,7 +150,6 @@ function P2popContorl(){
        if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
            // Mark 1 some code... // 功能代码
            $('.PopUpBox').removeClass('show');
-          // console.log('');
     }});
     $("body").on('click','.PopUpclose',function(){
         $('.PopUpBox').removeClass('show');
@@ -258,19 +252,26 @@ function InitPopCanvas(obj){
         this._obj=newObj
 	}
 	this.initCanvas=function(){
-		//console.log(tabSpanS);
 		let _colors=[];
 		let _series=[];
+		var noActiveN=0;
 		for(let i=0;i<this.tabSpanS.length;i++){
 			var item=this.tabSpanS[i];
 			//if(item.className.)
 		   if(hasActive(item.className)){
 				_colors.push(this._obj.colorArr[i]);
 				_series.push(this._obj.seriesArr[i]);
+		   }else{
+				noActiveN++;
 		   }
+
+		      if(noActiveN==3){//至少显示第一条
+				_colors=this._obj.colorArr[0];
+				_series=this._obj.seriesArr[0];
+				$(this.tabSpanS[0]).addClass('active');
+			  }
 			//if(item.className.)
 		}
-		//console.log(this.tabSpanS);
 		var newOption=this.getPopOption(_colors,_series);
 		this.popUpChart.setOption(newOption,{
 			notMerge: true,
@@ -288,7 +289,6 @@ function InitPopCanvas(obj){
 						backgroundColor: '#6a7985'
 					}
 				},
-				//formatter:this._obj.Yvalue||'{a}{}{c}'
 			},
 			grid: {
 				top:parseInt(100*radio),
@@ -391,10 +391,8 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 	}
 	this.init=function(elementId){
 		                    //生成需要渲染第一排污口的线图的 数据  
-        console.log(this.popUpDataObj.popupObjArr[0]);
 		let obj=this.setPopupObj(this.dataArr[0]);
 			obj.elementId=elementId;
-			console.log(obj);
 		return obj
 	}
 	this.dragToggle=function(canvasNo){
@@ -420,7 +418,6 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 			},1000);
 			//根据排污口渲染数据；
 			var newPopupObj=null;
-			console.log("newPopupObj");
 			//cloneObj(_this.init,newPopupObj);//深度克隆数据
 			newPopupObj=_this.setPopupObj(_this.dataArr[i]);//根据i值变化数据源
 			canvasNo.setObj(newPopupObj);//canvas引入数据源
@@ -428,7 +425,6 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 		})
 	}
 	this.setPopupObj=function(obj){//初始化或更新数据源
-		console.log(obj);
 		var popupObj2={};
 		popupObj2.xData=Obj.xData;//注意Obj为原型参数
 		popupObj2.colorArr = ["#fd4800", "#f1ec3f","#72e75e"];
@@ -487,7 +483,6 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 /* .深度克隆 对象（针对 对象 或 对象数组 或 数组） 经典 */
  
 function cloneObj(origin, target) {   
-	console.log()
 	var target = target || {};
 	if (origin instanceof Array) {
 		target = [];
