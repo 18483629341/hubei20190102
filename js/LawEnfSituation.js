@@ -7,7 +7,8 @@ $(document).ready(function () {
         
         listToggle();
         P2popContorl();
-        fontSize=parseInt(30*radio);
+        setRadio();
+        fontSize=parseInt(64*radio);
         
         myChart.setOption(option);
         moduleToggle('.map5');
@@ -21,7 +22,8 @@ window.onresize = function () {
     autoFit();
     autoFitNav();
     autoFitContent();
-    fontSize=parseInt(30*radio);
+    setRadio();
+    fontSize=parseInt(64*radio);
     myChart.resize();//根据窗口的大小变动图表 --- 重点 
     // initPopCanvas.initCanvas();
 	// initPopCanvas.popUpChart.resize();
@@ -74,7 +76,7 @@ var option = {
         axisLine: {//Y轴线的设置
             // show: true,
             lineStyle:{
-                color:"#017298"
+                color:"#324b75"
             }
         },
         axisTick: {
@@ -85,7 +87,7 @@ var option = {
         axisLabel: {        
             show: true,
             textStyle: {
-                color: '#cfdcfd',
+                color: '#c3d4ff',
                 fontSize:fontSize
             }
         },

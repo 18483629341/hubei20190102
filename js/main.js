@@ -307,7 +307,7 @@ function InitPopCanvas(obj){
 				axisLine: {//X轴线的设置
 					show: false,
 					lineStyle:{
-						color:"#fff",
+						color:"#324b75",
 						type:'dashed'
 					}
 				},
@@ -317,7 +317,7 @@ function InitPopCanvas(obj){
 				axisLabel: {        
 					show: true,
 					textStyle: {
-						color: '#fff',
+						color: '#c3d4ff',
 					   // fontSize:parseInt(12*radio)
 					}
 				},
@@ -329,14 +329,14 @@ function InitPopCanvas(obj){
 				name:this._obj.Yname,
 				nameLocation:'end',
 				nameTextStyle:{
-					color:'#fff',
+					color:'#c3d4ff',
 					align:'left',
 					padding: [0,0,10*radio,0]
 				},
 				axisLabel: {        
 					show: true,
 					textStyle: {
-						color: '#fff',
+						color: '#c3d4ff',
 						//fontSize:parseInt(15*radio)
 					},
 					formatter:this._obj.formatter||'{value}'
@@ -350,7 +350,7 @@ function InitPopCanvas(obj){
 				splitLine: {//Y轴线的设置
 					show: true,
 					lineStyle:{
-						color:["#fff"],
+						color:["#324b75"],
 						type:'dashed'
 					}
 				},

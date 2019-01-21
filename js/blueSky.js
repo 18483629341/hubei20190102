@@ -149,7 +149,7 @@ function RankToggle(){
  * 
  * */
 var myChart3 = echarts.init(document.getElementById('goodWeatherCanvas'));
-var areaBack='rgba(1,53,91,.5)';
+var areaBack='rgba(1,53,91,.3)';
 
 //!!!!!!!需要后台引入的数据  全省年均值的数据
 
@@ -158,8 +158,8 @@ var goodWheatherData={
     arrThisYear:['70', '60','80','90' ,'60','80','90', '60','80','90' ,'60','80'],
     aIndex:'75',
     arrLastYear:['55','55','40','60','55','40','60','55','40','60','55','40','60'],
-    label:'比例',
-    formatter:'{value}%',
+    label:'单位：%',
+    formatter:'{value}',
     max:'100',
 } 
 var PMData={
@@ -213,8 +213,15 @@ function getOption3(obj){
             axisLabel: {        
                 show: true,
                 textStyle: {
-                    color: '#fff',
+                    color: '#c3d4ff',
                    // fontSize:parseInt(12*radio)
+                }
+            },
+            axisLine: {//X轴线的设置
+                show: false,
+                lineStyle:{
+                    color:"#324b75",
+                    type:'dashed'
                 }
             },
             data: obj.arrMonth,
@@ -225,14 +232,14 @@ function getOption3(obj){
             name:obj.label,
             nameLocation:'end',
             nameTextStyle:{
-                color:'#fff',
+                color:'#c3d4ff',
                 align:'left',
                 padding: [0,0,10*radio,0]
             },
             splitLine: {//Y轴线的设置
                 show: true,
                 lineStyle:{
-                    color:["#fff"],
+                    color:["#324b75"],
                     type:'dashed'
                 }
             },
@@ -240,13 +247,20 @@ function getOption3(obj){
             axisLabel: {        
                 show: true,
                 textStyle: {
-                    color: '#fff',
+                    color: '#c3d4ff',
                     //fontSize:parseInt(15*radio)
                 },
                 formatter:obj.formatter
             },
             axisLine: {//Y轴线的设置
                 show: false,
+            },
+            splitLine: {//Y轴线的设置
+                show: true,
+                lineStyle:{
+                    color:["#324b75"],
+                    type:'dashed'
+                }
             },
             axisTick: {
                 show: false
@@ -262,7 +276,7 @@ function getOption3(obj){
                 type: 'line',
                 lineStyle:{
                    // color:"#72e75e",
-                    width:1,
+                    width:2,
                 },
                 smooth: true,
                 symbol:'none'
@@ -275,7 +289,7 @@ function getOption3(obj){
                 smooth: true,
                 lineStyle:{
                   //  color:"#00e4ff",
-                    width:1,
+                    width:2,
                 },
                 areaStyle:{
                     color:areaBack
@@ -293,7 +307,7 @@ function getOption3(obj){
                 smooth: true,
                 lineStyle:{
                    // color:"#f7823c",
-                    width:1,
+                    width:2,
                 },
                 areaStyle:{
                     color:areaBack
@@ -336,7 +350,7 @@ var popData={
             arrThisYear:['70', '60','80','90' ,'60','80','90', '60','80','90' ,'60','80'],
         
             arrLastYear:['55','55','40','60','55','40','60','55','40','60','55','40','60'],
-            label:'比例',
+            label:'单位：%',
             formatter:'{value}%',
             max:'100',
         } ,
@@ -372,7 +386,7 @@ function getOption4(obj){
             data:  obj.arrThisYear,
             smooth: true,
             lineStyle:{
-                width:1,
+                width:2,
             },
             symbol:'none'
 
@@ -384,7 +398,7 @@ function getOption4(obj){
             data: obj.arrLastYear,
             smooth: true,
             lineStyle:{
-                width:1,
+                width:2,
             },
             symbol:'none'
         }

@@ -4,6 +4,7 @@ body {
 	min-height: 1080px;
 	color: #fff;
 	text-align: center;
+	position: relative;
 	//overflow: scroll;
 }
 a,a:hover,a:link{
@@ -11,23 +12,40 @@ a,a:hover,a:link{
 	text-decoration: none;
 }
 .contanier{
-	height:100%;
+	width:100%;
 	height: 100%;
 	padding: 0 1.7% 1% 1.7%;
-	background: url(../img/body_back.png) no-repeat;
-	background-size: 100% 100%;
+	// background: url(../img/body_back.png) no-repeat;
+	// background-size: 100% 100%;
+	
+}
+.backImg{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 .header{
 	z-index: 15;
 	overflow: hidden;
-	
+	position: relative;
 	//border: 1px solid white;
 	.BackDiv{
 		margin: 0 auto;
-		background-image: url(../img/header_back.png) ;
-		background-size: cover;
-		background-position: center top;
+		// background-image: url(../img/header_back.png) ;
+		// background-size: cover;
+		// background-position: center top;
 		padding: 0;
+	}
+	.HeaderBackImg{
+		width:100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
 	}
 	.HeaderCenter{
 		margin: 0 auto;
@@ -108,9 +126,19 @@ a,a:hover,a:link{
 		font-size:20px !important;
 	}
 }
+@media only screen and (min-width: 2160px) {
+	html {
+		font-size:22.5px !important;
+	}
+}
 @media only screen and (min-width: 2400px) {
 	html {
 		font-size:25px !important;
+	}
+}
+@media only screen and (min-width: 2640px) {
+	html {
+		font-size:27.5px !important;
 	}
 }
 @media only screen and (min-width: 2880px) {
@@ -118,9 +146,19 @@ a,a:hover,a:link{
 		font-size: 30px !important;
 	}
 }
+@media only screen and (min-width: 3120px) {
+	html{
+		font-size: 32.5px !important;
+	}
+}
 @media only screen and (min-width: 3360px) {
 	html{
 		font-size: 35px !important;
+	}
+}
+@media only screen and (min-width: 3600px) {
+	html{
+		font-size: 37.5px !important;
 	}
 }
 @media only screen and (min-width: 3840px) {
