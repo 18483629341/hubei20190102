@@ -10,19 +10,22 @@ var tablis=document.querySelectorAll(".tabli");
 var TabLiContents=document.querySelectorAll(".TabLiContent");
 var W=null;
 var H=null;
-
+let minWidth=1920;
+let minHeight=1080;
 //header部分里面的所有元素的宽高全自适应方法
 
 function autoFit(){
-	W=window.innerWidth;
-	if(W<1366){
-		W=1366;
+	W=$(window).width();
+	H=$(window).height();
+	
+	if(W<minWidth){
+		W=minWidth;
 	}
-	if(window.innerHeight>parseInt(W*2160/3840)){
-		H=window.innerHeight;
-	}else{
-		H=parseInt(W*2160/3840);
+	if(H<minHeight){
+		H=minHeight;
 	}
+	$(window).width(W);
+	$(window).height(H);
 	var BackDiv=document.querySelector(".BackDiv");
 	BackDiv.style.width=parseInt(W*3526/3840)+"px";
 	var H1=parseInt(W*323/3840);

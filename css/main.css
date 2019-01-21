@@ -1,8 +1,9 @@
 /*********************   main.html 的所有样式 start******************/
 body {
+  min-width: 1920px;
+  min-height: 1080px;
   color: #fff;
   text-align: center;
-  overflow-y: scroll;
 }
 a,
 a:hover,
@@ -12,7 +13,6 @@ a:link {
 }
 .contanier {
   height: 100%;
-  min-height: 100%;
   padding: 0 1.7% 1% 1.7%;
   background: url(../img/body_back.png) no-repeat;
   background-size: 100% 100%;

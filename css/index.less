@@ -72,19 +72,7 @@
 }
 .PopUpBox_pai{
 	width: 14rem!important;
-	// display: inline-block;
-	// text-align: left;
-	// padding:1rem 2rem 1rem 1rem;
-	// background-color: rgba(4, 46, 79, 0.8);
-	// h3{
-	// 	color:#00e3ff;
-	// 	font-size: 1.0rem;
-	// 	line-height: 1.6rem;
-	// 	height: 1.6rem;
-	// }
-	// .contentLi{
-	// 	height: 1.3rem;
-	// }
+	
 }
 .LeftSummary{
 	position: absolute;
@@ -165,13 +153,16 @@
 	}
 }
 .contentLi{
-	//height:3rem;
+	
 	.leftRow,.centerRow,.rightRow{
 		color:#cfddfd;
 	}
 	.leftRowValue{
 		color:#fff;
 	}
+}
+.contentLi0{
+	height:2.83rem;
 }
 .GenIcon{
 	display: inline-block;
@@ -199,6 +190,22 @@
 }
 .CitySecIcon{
 	background: url(../img/icon5.png) no-repeat;
+	background-size:100% 100%;
+}
+.SewOutsIcon{
+	background: url(../img/icon6.png) no-repeat;
+	background-size:100% 100%;
+}
+.RivCheIcon{
+	background: url(../img/icon7.png) no-repeat;
+	background-size:100% 100%;
+}
+.SewTreatIcon{
+	background: url(../img/icon8.png) no-repeat;
+	background-size:100% 100%;
+}
+.RivIndcIcon{
+	background: url(../img/icon9.png) no-repeat;
 	background-size:100% 100%;
 }
 /***********************    LeftSummary         end******** */
@@ -372,9 +379,9 @@
 	 
  }
 @media only screen and (max-width: 2880px) {
-	.P6LeftSummary,.P6RightSummary{
-		height: 45rem; 
-	}
+	// .P6LeftSummary,.P6RightSummary{
+	// 	height: 40rem; 
+	// }
 	
 	.RemarkIcon{
 		width: 1.35rem;
@@ -767,9 +774,13 @@
 /*************part3  part  end  ******************  ***/
 .P3LeftSummary{
 	width: 21.225rem;
-	height: 43.15rem;
+	height: 33.15rem;
 	background: url(../img/part3_div.png) no-repeat;
 	background-size:100% 100%;
+	.tableContanier1{
+		width: 100%;
+		height: 7.5rem;
+	}
 }
 .P3LeftContent{
 	padding:.65rem  1.4rem 0.8rem 1.45rem;
@@ -904,6 +915,10 @@
 .table{
 	min-width: 100%;
 	margin-top: 0.08rem;
+	td{
+		line-height: 1.8rem;
+		height: 1.8rem;
+	}
 	td:nth-child(1){
 		width: 22%;
 	}
@@ -949,14 +964,11 @@
 	}
 	.tbodyTr>td:nth-child(3),.tbodyTr>td:nth-child(4){
 		font-size: 0.8rem;
-		padding:0.5rem 0 0 0;
+		
 		text-align: center;
 	}
 }
-.tableContanier1{
-	width: 100%;
-	height: 16.5rem;
-}
+
 .warnTheme{
 	color: @SixLevelC;
 }
@@ -982,14 +994,14 @@
 /*************part5  part  end  ******************  ***/
 .P5LeftSummary{
 	width: 20.225rem;
-	height: 41.15rem; 
+	height: 37.6rem; 
 	background: url(../img/part3_div.png) no-repeat;
 	background-size:100% 100%;
 }
 .unstandCanvasBox{
 	margin-top:.5rem;
 	width:17.8rem;
-	height:26rem; 
+	height:24rem; 
 }
 .unstandSecList{
 	position: relative;
@@ -997,7 +1009,7 @@
 .rightMountBox{
 	position: absolute;
 	width:4rem;
-	height:26rem; 
+	height:24rem; 
 	display: flex;
 	display: -webkit-box; 
     display: -moz-box;  
@@ -1056,11 +1068,11 @@
 		background-size:100% 100%;
 	}
 }
-.P6LeftSummary,.P6RightSummary{
+.P6LeftSummary,.P6RightSummary,.P6RightSummary2{
 	top:0;
 	position: absolute;
 	width: 21.075rem;
-	height: 44rem; 
+	height: 40rem; 
 	background: url(../img/part_air_div.png) no-repeat;
 	background-size:100% 100%;
 	.LeftHeader {
@@ -1289,7 +1301,7 @@
 .P6RightSummary2{
 	.tableContanier2{
 		width:17.5rem;
-		height: 10.5rem;
+		height: 8rem;
 		margin: initial;
 		.theadTr{
 			.td3{
@@ -1318,10 +1330,12 @@
 	}
 
 	.tbodyTr{
-		height: 1.7rem;
-		padding: .2rem 0 0 0;
-		font-size: .8rem;
-		line-height: .7rem;
+		
+		td{
+			height: 1.0rem!important;
+			font-size: .8rem;
+			line-height: 1.0rem!important;
+		}
 		.td1{
 			
 			text-indent:.73rem;
@@ -1421,17 +1435,8 @@
 	position: relative;
 	// margin-top: .6rem;
 	width: 100%;
-	height:17.1rem;
+	height:14.1rem;
 	// border: 1px solid yellow;
-}
-.goodWeatherCanvas::after{
-	// position: absolute;
-	// content: '比例';
-	// top: 2px;
-	// left: -11px;
-	// width: 3rem;
-	// font-size: 14px;
-	// //line-height: 15px;
 }
 .legend2 .LegendList{
 	padding-top:1rem;
@@ -1473,10 +1478,19 @@
 .P6legendBox1.show,.P6legendBox2.show,.p6GoAwayWuhan.show,.goWuhan.show,.PopUpBox.show{
     display:block;
 }
+.citheadTr {
+	margin-top: .5rem;
+}
+.P6RightSummary1 {
+	
+	.tableContanier2{
+		height: 25rem;
+   	}
+}
 .P6RightSummary2{
 	background: url(../img/air_div.png) no-repeat;
 	background-size:100% 100%;
-	height: 45rem;
+	//height: 45rem;
 	.P6RightContent{
 		padding-top:0;
 		padding-bottom: .5rem;
@@ -1503,7 +1517,7 @@
 	}
 }
 .P6legendBox2{
-	top: 37rem;
+	top: 30rem;
 	.legend{
 		padding: .5rem;
 		background:@lightblue;
@@ -1755,7 +1769,24 @@
 	// 		}
 	// 	}
 		
+	// }\
+	.P3LeftSummary{
+		height: 38.15rem;
+		.tableContanier1{
+			height: 12.5rem;
+		}
+	}
+	.goodWeatherCanvas{
+		height:17.1rem;
+	}
+	// .P6legendBox2{
+	// 	top: 3rem;
 	// }
+	.P6RightSummary1 {
+		.tableContanier2{
+			height: 29rem;
+		}
+	}
 	.mCSB_scrollTools .mCSB_dragger{
 		.mCSB_dragger_bar {
 			background-color: #13c5eb!important;
@@ -1779,7 +1810,7 @@
 	.P6RightSummary2{
 		.tableContanier2{
 			width:19rem;
-			height: 10.5rem;
+			height: 10rem;
 			.theadTr{
 				.td3{
 					padding-right: 20px;
@@ -1797,9 +1828,9 @@
 			padding:.3rem 0.45rem;
 		}
 	}
-	.table2 .tbodyTr {
-		height: 1.75rem;
-	}
+	// .table2 .tbodyTr {
+	// 	height: 1.5rem!important;
+	// }
 	.rightBox{
 		width: 10.7rem;
 		.rightConTitleBox{
@@ -1834,7 +1865,7 @@
 			height: 4.5rem;
 		}
 	}
-	.P6LeftSummary,.P6RightSummary{
+	.P6LeftSummary,.P6RightSummary,.P6RightSummary2{
 		width: 24rem;
 		height: 44rem; 
 		.XuanLine {
@@ -1844,9 +1875,7 @@
 			left:1rem;
 		}
 	}
-	.P6RightSummary2{
-		height: 45rem;
-	}
+	
 	.P6LeftContent{
 		padding:.4rem  1.5rem 2.2rem 1.95rem;
 	}

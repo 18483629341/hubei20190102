@@ -11,6 +11,7 @@ $(document).ready(function () {
         RankToggle();
         P6moduleToggle();
         setRadio();
+        autoScrollFun('#scrollBox1');
         autoScrollFun('#scrollBox2');
         autoScrollFun('#scrollBox3');
         popContorl();
@@ -114,14 +115,14 @@ function mapToggle2(){
 			$('.map6').removeClass('active');
             $('.map61').addClass('active');
             mainActive='map61';
-            $('js_title').html('全省2018年优良天数比例变化趋势');
+            $('.js_title').html('全省2018年PM<sub>2.5</sub>年均浓度变化趋势');           
             myChart3.setOption(option32);
             $('.P6legendBox1').addClass('show');
 		}else if($(this).attr("data-map")=="GoodWeath1"){
 			$('.map61').removeClass('active');
             $('.map6').addClass('active');
             mainActive='map6';
-            $('js_title').html('全省2018年PM<sub>2.5</sub>年均浓度变化趋势');
+            $('.js_title').html('全省2018年优良天数比例变化趋势');
             myChart3.setOption(option31);
             $('.P6legendBox1').removeClass('show');
 		}
@@ -166,7 +167,7 @@ var PMData={
     arrThisYear:['250', '160','240','190' ,'160','80','90', '160','80','90' ,'160','180'],
     aIndex:'100',
     arrLastYear:['155','155','140','160','155','140','160','155','140','160','155','140','160'],
-    label:'单位：ug/l',
+    label:'ug/m3',
     formatter:'{value}',
     max:function(value){
         var a=value.max*1.2;
@@ -342,7 +343,7 @@ var popData={
         PMData:{
             arrThisYear:['250', '160','240','190' ,'160','80','90', '160','80','90' ,'160','180'],
             arrLastYear:['155','155','140','160','155','140','160','155','140','160','155','140','160'],
-            label:'单位：ug/l',
+            label:'ug/m3',
             formatter:'{value}',
             max:function(value){
                 var a=value.max*1.2;
@@ -396,9 +397,13 @@ function getOption4(obj){
         $('.tabSpan').removeClass('active');
         $(this).addClass('active');
         if($(this).attr('data-name')=='goodWeather'){
+            // $('.js_title').html('全省2018年优良天数比例变化趋势');
             initPopCanvas.setObj(popupObj);
+          
         }else{
+            // $('.js_title').html('全省2018年PM<sub>2.5</sub>变化趋势');
             initPopCanvas.setObj(popupObj1);
+           
         }
         initPopCanvas.initCanvas();
     })
