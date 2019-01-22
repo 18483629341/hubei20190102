@@ -1,7 +1,8 @@
 /*********************   main.html 的所有样式 start******************/
 body {
-  min-width: 1920px;
-  min-height: 1080px;
+  width: 3840px;
+  height: 2160px;
+  background-color: #000d30;
   color: #fff;
   text-align: center;
   position: relative;
@@ -13,7 +14,6 @@ a:link {
   text-decoration: none;
 }
 .contanier {
-  width: 100%;
   height: 100%;
   padding: 0 1.7% 1% 1.7%;
 }
@@ -29,9 +29,12 @@ a:link {
   z-index: 15;
   overflow: hidden;
   position: relative;
+  height: 14.9%;
 }
 .header .BackDiv {
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
   padding: 0;
 }
 .header .HeaderBackImg {
@@ -43,15 +46,34 @@ a:link {
   z-index: -1;
 }
 .header .HeaderCenter {
-  margin: 0 auto;
+  height: 71.8%;
+}
+.header .HeaderCenter .h28 {
+  height: 58.9%;
+}
+.header .HeaderCenter .TitleImg {
+  display: none;
+}
+.header .HeaderCenter .SubTitleP {
+  font-size: 1.55rem;
+  line-height: 1.55rem;
 }
 /*********************   main.html 的所有样式 end******************/
 /*    ********************** fornav  start**************         */
 .nav {
   width: 100%;
+  height: 2.25rem;
+  top: -1rem;
   position: relative;
 }
+.nav ul {
+  height: 100%;
+}
 .nav .tabli {
+  width: 360px;
+  height: 90px;
+  line-height: 90px;
+  font-size: 35px;
   display: inline-block;
   text-align: center;
   cursor: pointer;
@@ -60,7 +82,12 @@ a:link {
   color: #020a1f;
   font-weight: 700;
 }
+.nav .TabLiContent {
+  width: 338px;
+}
 .nav .LeftNav {
+  width: 1150px;
+  height: 100%;
   float: left;
 }
 .nav .LeftNav .tabli {
@@ -72,6 +99,8 @@ a:link {
   background-size: cover;
 }
 .nav .RightNav {
+  width: 1120px;
+  height: 100%;
   float: right;
 }
 .nav .RightNav .tabli {
@@ -86,65 +115,15 @@ a:link {
 /***********************for tab  和  tabContent  start******** */
 .section {
   flex: 1;
+  height: 85.1%;
 }
 .TabContent {
+  height: 100%;
   position: relative;
   top: 0;
 }
 /***********************for tab  和  tabContent  end******** */
 /******scroll end*******/
-@media only screen and (max-width: 1365px) {
-  html {
-    font-size: 12px !important;
-  }
-}
-@media only screen and (min-width: 1366px) {
-  html {
-    font-size: 14px !important;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  html {
-    font-size: 20px !important;
-  }
-}
-@media only screen and (min-width: 2160px) {
-  html {
-    font-size: 22.5px !important;
-  }
-}
-@media only screen and (min-width: 2400px) {
-  html {
-    font-size: 25px !important;
-  }
-}
-@media only screen and (min-width: 2640px) {
-  html {
-    font-size: 27.5px !important;
-  }
-}
-@media only screen and (min-width: 2880px) {
-  html {
-    font-size: 30px !important;
-  }
-}
-@media only screen and (min-width: 3120px) {
-  html {
-    font-size: 32.5px !important;
-  }
-}
-@media only screen and (min-width: 3360px) {
-  html {
-    font-size: 35px !important;
-  }
-}
-@media only screen and (min-width: 3600px) {
-  html {
-    font-size: 37.5px !important;
-  }
-}
-@media only screen and (min-width: 3840px) {
-  html {
-    font-size: 40px !important;
-  }
+html {
+  font-size: 40px !important;
 }

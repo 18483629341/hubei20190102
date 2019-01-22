@@ -1,6 +1,7 @@
 /***********************    LeftSummary         start******** */
 .MapBox {
   width: 100%;
+  height: 100%;
   display: none;
 }
 .MapBox.active {
@@ -67,6 +68,7 @@
   width: 14rem!important;
 }
 .LeftSummary {
+  top: 54px;
   position: absolute;
   width: 21.08rem;
   height: 24.55rem;
@@ -309,9 +311,11 @@
   background-size: 50% 50%;
   background-position: 50% 50%;
   cursor: pointer;
+  transform: rotate(180deg);
+  transform-origin: center;
 }
 .LegendHeader .rotate180 {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
   transform-origin: center;
 }
 .RemarkIcon {
@@ -344,22 +348,6 @@
 /******scroll start*******/
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   background-color: transparent!important;
-}
-@media only screen and (max-width: 2880px) {
-  .RemarkIcon {
-    width: 1.35rem;
-    height: 1.35rem;
-  }
-  .LakesRemark {
-    width: 1.575rem;
-    height: 1.275rem;
-  }
-  .RemarkName {
-    font-size: .8rem;
-  }
-  .IconListBox .IconLi {
-    height: 1.4rem;
-  }
 }
 .ProBouRemark {
   background: url(../img/icon_remark3.png) no-repeat;
@@ -452,10 +440,10 @@
   text-align: right;
 }
 .legend {
-  width: 100%;
   overflow: hidden;
   border: 1px solid #00c4ff;
   border-radius: .6rem;
+  display: table;
 }
 .LegendContent {
   width: 100%;
@@ -486,19 +474,6 @@
   height: .4rem;
 }
 @media only screen and (max-width: 2880px) {
-  .legendBox {
-    min-width: 8.6rem;
-  }
-  .legend .LegendHeader {
-    font-size: 0.6rem;
-    padding: 0.5rem 0;
-  }
-  .LegendContent {
-    padding: .23rem .75rem .3rem 1.17rem;
-  }
-  .LegendContent .LegendLi {
-    height: 1.8rem;
-  }
 }
 .OneLevel {
   background-color: #4ea9ff;
@@ -704,13 +679,12 @@
 /*************part3  part  end  ******************  ***/
 .P3LeftSummary {
   width: 21.225rem;
-  height: 33.15rem;
+  height: 39.5rem;
   background: url(../img/part_air_div.png) no-repeat;
   background-size: 100% 100%;
 }
 .P3LeftSummary .tableContanier1 {
-  width: 100%;
-  height: 7.5rem;
+  height: 12.5rem;
 }
 .P3LeftContent {
   padding: .65rem  1.4rem 0.8rem 1.45rem;
@@ -905,30 +879,28 @@
   margin-right: .8rem;
 }
 @media only screen and (max-width: 1920px) {
-  .unstandSecList .tbodyTr {
-    height: 1.6rem;
-  }
 }
 /*************part3  part  end  ******************  ***/
 /*************part5  part  end  ******************  ***/
 .P5LeftSummary {
   width: 20.225rem;
-  height: 37.6rem;
+  height: 39.5rem;
   background: url(../img/part_air_div.png) no-repeat;
   background-size: 100% 100%;
 }
-.unstandCanvasBox {
+.P5scrollBox {
   margin-top: .5rem;
-  width: 17.8rem;
+  width: 15.8rem;
   height: 24rem;
-}
-.unstandSecList {
   position: relative;
+}
+.unstandCanvasBox {
+  width: 17.8rem;
 }
 .rightMountBox {
   position: absolute;
   width: 4rem;
-  height: 24rem;
+  height: 100%;
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -936,7 +908,7 @@
   display: -webkit-flex;
   flex-direction: column;
   right: 0;
-  top: 2.85rem;
+  top: .5rem;
 }
 .rightMountBox .MountLi {
   text-align: right;
@@ -992,7 +964,7 @@
   top: 0;
   position: absolute;
   width: 21.075rem;
-  height: 40rem;
+  height: 41.5rem;
   background: url(../img/part_air_div.png) no-repeat;
   background-size: 100% 100%;
   font-size: .75rem;
@@ -1011,7 +983,7 @@
   padding-right: 2.3rem;
 }
 .P6RightSummary {
-  right: 2.5rem;
+  right: .8rem;
 }
 .P6LeftContent {
   padding: .4rem  1.98rem 2.2rem 1.95rem;
@@ -1057,6 +1029,10 @@
 }
 .rem092 {
   font-size: .9rem;
+}
+.rem092.scale05 {
+  transform: scale(1);
+  font-size: .65rem;
 }
 .rem061 {
   font-size: .6rem;
@@ -1144,15 +1120,13 @@
   margin: .43rem 1.25rem 0 .23rem;
   float: left;
   padding: .23rem;
-  border: 1px solid #00d1ff;
-  border-radius: .6rem;
   text-align: center;
+  background: url(../img/part_air_div_ndb.png) no-repeat;
+  background-size: 100% 100%;
 }
 .P6CompRate2 {
   width: 100%;
   height: 100%;
-  border: 1px dashed #00d1ff;
-  border-radius: .4rem;
   text-align: center;
   padding-top: 1.08rem;
 }
@@ -1304,13 +1278,12 @@
 .legendBox2 .LegendContent {
   width: 100%;
   text-align: left;
-  padding: .35rem .4rem .4rem .48rem;
+  padding: .35rem .4rem .48rem .4rem;
 }
 .legendBox2 .LegendContent .LegendLi {
   height: .9rem;
   font-size: .48rem;
-  line-height: .48rem;
-  padding: .21rem;
+  line-height: 1rem;
 }
 .legendBox2 .WaterQulLine {
   width: .43rem;
@@ -1347,10 +1320,6 @@
   position: relative;
   width: 100%;
   height: 14.1rem;
-}
-.legend2 {
-  width: 109%;
-  margin-left: -10%;
 }
 .legend2 .LegendList {
   padding-top: 1rem;
@@ -1435,7 +1404,7 @@
   text-align: center;
 }
 .P6legendBox2 {
-  top: 30rem;
+  top: 37rem;
 }
 .P6legendBox2 .legend {
   padding: .5rem;
@@ -1539,6 +1508,7 @@
 }
 .PopUpContent .PaddingContent {
   padding-top: .33rem;
+  text-align: left;
 }
 .PopUpContent .ListTitle {
   height: 1.45rem;
@@ -1565,7 +1535,7 @@
   width: 25%;
 }
 .keyContent {
-  padding-top: .4rem;
+  padding: .4rem 0;
   border: 1px dashed #0d7296;
 }
 .keyContent .contentList .contentLi {
@@ -1577,8 +1547,8 @@
 .keyContent .rightRow,
 .keyContent .centerRow {
   font-size: .73rem;
-  line-height: 1.6rem;
-  height: 1.6rem;
+  line-height: 1.45rem;
+  height: 1.45rem;
 }
 .keyContent .leftRow {
   text-align: left;
@@ -1599,6 +1569,10 @@
 .popUpcanvasBox {
   width: 22.7rem;
   height: 10rem;
+  margin-top: -0.5rem;
+}
+.Popuplegend {
+  text-align: center;
 }
 .Popuplegend .OneLevel {
   background: #fbe83a;
@@ -1608,6 +1582,9 @@
 }
 .Popuplegend .LegendList {
   padding-top: .3rem;
+}
+.Popuplegend .WaterQulLine {
+  top: -0.1rem;
 }
 .hrefDiv {
   text-align: right;
@@ -1629,13 +1606,13 @@
 }
 .canvasTab {
   height: 2.68rem;
-  padding-top: .6rem;
-  text-align: left;
+  margin-top: .6rem;
+  display: inline-block;
 }
 .canvasTab .tabSpan {
-  padding: .45rem 0.68rem;
-  font-size: .7rem;
-  line-height: 1.63rem;
+  padding: 0.3rem 0.68rem;
+  font-size: .75rem;
+  line-height: 1.60rem;
   background: #273b5b;
   color: #cedffe;
   border-radius: 3px;
@@ -1648,155 +1625,18 @@
   background: #00e5ff;
   color: #0f0920;
 }
+.canvasTab.alignRight {
+  float: right;
+  height: 1.6rem;
+}
 .rightArrow {
   width: .5rem;
   height: .495rem;
   position: relative;
-  margin-left: .3rem;
+  margin-left: .1rem;
   cursor: pointer;
   background: url(../img/more.png) no-repeat;
   background-size: 100% 100%;
 }
 /***popUP  end****/
-@media only screen and (max-width: 1919px) {
-  .P3LeftSummary {
-    height: 38.15rem;
-  }
-  .P3LeftSummary .tableContanier1 {
-    height: 12.5rem;
-  }
-  .goodWeatherCanvas {
-    height: 17.1rem;
-  }
-  .P6RightSummary1 .tableContanier2 {
-    height: 29rem;
-  }
-  .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    background-color: #13c5eb!important;
-  }
-  .IconListBox .IconLi {
-    height: 1.6rem;
-  }
-  .timeTypeBox {
-    width: 4.8rem;
-    height: 1.6rem;
-    line-height: 1.6rem;
-  }
-  /***popUP  start****/
-  .PopUpBox {
-    width: 30rem;
-  }
-  .P6RightSummary2 .tableContanier2 {
-    width: 19rem;
-    height: 10rem;
-  }
-  .P6RightSummary2 .tableContanier2 .theadTr .td3 {
-    padding-right: 20px;
-  }
-  .popUpcanvasBox {
-    width: 26.7rem;
-    height: 12rem;
-  }
-  .canvasTab {
-    height: 2.8rem;
-  }
-  .canvasTab .tabSpan {
-    padding: .3rem 0.45rem;
-  }
-  .rightBox {
-    width: 10.7rem;
-  }
-  .rightBox .rightConTitleBox {
-    height: 3.75rem;
-  }
-  .LegendHeader {
-    text-align: center;
-    font-size: 0.7rem;
-  }
-  .LegendHeader td {
-    height: 1.8rem;
-    border-bottom: 1px solid #00d2ff;
-  }
-  .LegendHeader .tableDownIcon {
-    top: .45rem;
-  }
-  .RightBox2 {
-    margin-left: -9.2rem;
-    width: 18.15rem;
-    height: 3.15rem;
-  }
-  .RightBox2 .P6tabLi {
-    font-size: .75rem;
-    padding: 1rem 0;
-  }
-  .RightBox2 .P6tabLi.active::before {
-    top: -0.7rem;
-    left: 1.4rem;
-    width: 6.45rem;
-    height: 4.5rem;
-  }
-  .P6LeftSummary,
-  .P6RightSummary,
-  .P6RightSummary2 {
-    width: 24rem;
-    height: 44rem;
-  }
-  .P6LeftSummary .XuanLine,
-  .P6RightSummary .XuanLine,
-  .P6RightSummary2 .XuanLine {
-    width: 22rem;
-    position: relative;
-    top: .2rem;
-    left: 1rem;
-  }
-  .P6LeftContent {
-    padding: .4rem  1.5rem 2.2rem 1.95rem;
-  }
-  .P6rightBox {
-    display: inline-block;
-    width: 13rem;
-  }
-  .P6CompRate2 {
-    padding-top: .8rem;
-  }
-  .TableIconBox {
-    top: 0.2rem;
-  }
-  .triangle_border_up {
-    border-width: 0 .35rem .35rem;
-  }
-  /*向下*/
-  .triangle_border_down {
-    border-width: .35rem .35rem 0;
-  }
-  .legend2 {
-    border: none;
-  }
-  .legendBox2 .LegendContent .LegendLi {
-    height: 1.4rem;
-    font-size: .48rem;
-    line-height: .48rem;
-    padding: .21rem;
-  }
-  .GoAwayWuhan,
-  .P6GoAwayWuhan,
-  .legendBox2 {
-    right: 27.8rem;
-  }
-  .keyContent .leftRow,
-  .keyContent .rightRow {
-    font-size: .7rem;
-  }
-  .keyContent .contentList .contentLi {
-    height: 2.2rem;
-  }
-}
-@media only screen and (max-width: 1365px) {
-  .TableIconBox {
-    top: 0;
-  }
-  .P6tabLi3:nth-child(2) {
-    display: inline-block;
-  }
-}
 /*************part6  blueSky  end  ******************  ***/

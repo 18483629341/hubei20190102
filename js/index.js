@@ -2,19 +2,16 @@ $(document).ready(function () {
 	//
 	$(window).load(function () {
 		autoFit();
-		autoFitNav();
-		autoFitContent();
 		//tabToggle();
 		mapToggle();
 		listToggle();
 		P1moduleToggle();
+		
 	});
 });
 
 window.onresize = function () {
 	autoFit();
-	autoFitNav();
-	autoFitContent()
 }
 //GIS图和概要图的标签切换 
 var mainActive = 'map1'; //主页面活动的模块div
