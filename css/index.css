@@ -545,6 +545,7 @@
   border-radius: 50%;
   font-size: .8rem;
   line-height: 2.4rem;
+  text-align: center;
 }
 .levelBox.oneLevel {
   border: 2px solid #4ea9ff;

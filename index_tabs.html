@@ -69,6 +69,18 @@
 		autoFit();
 		autoFitNav();
 	}
-
+//tab切换方法
+   //header的标签切换
+function tabToggle(){
+	$("body").on('click','.tabli',function(){
+		$('.tabli').removeClass('active');
+		$(this).addClass('active');
+		var v=$(this).attr("data-index");
+		$('.TabContent').removeClass('show');
+		$('.TabContent[data-index="'+v+'"]').addClass('show');
+	})
+	//tab切换时也要做样式自适应的控制
+	autoFitContent();
+}
 </script>
 </html>

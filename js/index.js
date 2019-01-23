@@ -6,7 +6,7 @@ $(document).ready(function () {
 		mapToggle();
 		listToggle();
 		P1moduleToggle();
-		
+
 	});
 });
 
@@ -23,11 +23,11 @@ function mapToggle() {
 		if ($(this).attr("data-map") == "GIS") {
 			$('.map1').removeClass('active');
 			$('.map11').addClass('active');
-			mainActive='map11';
+			mainActive = 'map11';
 		} else {
 			$('.map11').removeClass('active');
 			$('.map1').addClass('active');
-			mainActive='map1';
+			mainActive = 'map1';
 		}
 	})
 }

@@ -41,19 +41,7 @@ function autoFitNav(){
 function autoFitContent(){
 }
 
-//tab切换方法
- /*   //header的标签切换
-function tabToggle(){
-	$("body").on('click','.tabli',function(){
-		$('.tabli').removeClass('active');
-		$(this).addClass('active');
-		var v=$(this).attr("data-index");
-		$('.TabContent').removeClass('show');
-		$('.TabContent[data-index="'+v+'"]').addClass('show');
-	})
-	//tab切换时也要做样式自适应的控制
-	autoFitContent();
-}*/
+
 
 var flag=false;
 function listToggle(){
@@ -159,47 +147,6 @@ function autoScrollFun(element){//参数为需要滚动的容器
 			marginTop: 0
 		},5000)
 	})
-
-	// var content=$(element),autoScrollTimer=2000,autoScrollTimerAdjust,autoScroll;
-	
-	// content.mCustomScrollbar({
-	// 	scrollButtons:{enable:false},
-	// 	callbacks:{
-	// 		whileScrolling:function(){
-	// 			autoScrollTimerAdjust=autoScrollTimer*this.mcs.topPct/100;
-	// 		},
-	// 		onScroll:function(){ 
-	// 			if($(this).data("mCS").trigger==="internal"){AutoScrollOff();}
-	// 		}
-	// 	}
-	// });
-	
-	// content.addClass("auto-scrolling-on auto-scrolling-to-bottom");
-	// AutoScrollOn("bottom");
-	
-	// function AutoScrollOn(to,timer){
-	// 	if(!timer){timer=autoScrollTimer;}
-	// 	content.addClass("auto-scrolling-on").mCustomScrollbar("scrollTo",to,{scrollInertia:timer,scrollEasing:"easeInOutSmooth"});
-	// 	autoScroll=setTimeout(function(){
-	// 		if(content.hasClass("auto-scrolling-to-bottom")){//滚动至顶部
-	// 			AutoScrollOn("top",autoScrollTimerAdjust);
-	// 			//content.removeClass("auto-scrolling-to-bottom").addClass("auto-scrolling-to-top");
-	// 		}else{
-	// 			AutoScrollOff();
-				
-	// 			setTimeout(function(){
-	// 				$(element+" .mCSB_container").css({'top':0});
-    //                 AutoScrollOn();
-	// 			},500)
-				
-	// 		}
-	// 	},timer);
-	// }
-	
-	// function AutoScrollOff(){
-	// 	clearTimeout(autoScroll);
-	// 	content.removeClass("auto-scrolling-on").mCustomScrollbar("stop");
-	// }
 }
 var arrMonth4=['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月']  //!!!!!!!需要后台引入的数据
 
