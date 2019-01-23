@@ -128,7 +128,7 @@ function autoScrollFun(element){//参数为需要滚动的容器
     }).trigger("mouseleave");
 
     function scrollNews(obj) {
-		console.log($(element).find(".table"));
+		//console.log($(element).find(".table"));
 		if(obj.find(".table").length){
 			var $self = obj.find(".table");
 			var lineHeight = $self.find("tr:first").height(); 
@@ -142,11 +142,6 @@ function autoScrollFun(element){//参数为需要滚动的容器
 		}
     }
 		
-    var goTop=setTimeout(function(){
-		$self.css({
-			marginTop: 0
-		},5000)
-	})
 }
 var arrMonth4=['1月','2月', '3月','4月','5月', '6月','7月','8月', '9月','10月', '11月','12月']  //!!!!!!!需要后台引入的数据
 

@@ -918,7 +918,7 @@
 }
 .P3LeftSummary{
 	.tableContanier {
-	
+	    
 		.tbodyTr{
 			td:nth-child(1){
 				min-width: 20%;
@@ -1875,27 +1875,54 @@
 /*************part6  blueSky  end  ******************  ***/
 /************ 有滚动条的所有div *** ***/
 .P3LeftSummary,.P6RightSummary1,.P6RightSummary2{
-
-	.tableContanier1{
-		width: 100%;
-		overflow-y: scroll;
-	}
-	.tableContanier1::-webkit-scrollbar {
-		display: none;
-	}
+	//background: red;
 	.tableContanier{
 		width: 100%;
-		overflow-y: scroll;
+		overflow-y: hidden;
 	}
 	.tableContanier::-webkit-scrollbar {
-		display: none;
+		display: none!important;
+	
 	}
+	// .tableContanier::-o-scrollbar {
+	// 	display: none!important;
+	// 	visibility: hidden;
+	// }
+	// .tableContanier::-moz-scrollbar {
+	// 	display: none!important;
+	// 	visibility: hidden;
+	// }
+	// //
+	// .tableContanier::-o-scrollbar-button    {
+	// 	background-color:rgba(0,0,0,0);
+	// }
+	// .tableContanier::-o-scrollbar-track     {
+	// 	background-color:rgba(0,0,0,0);
+	// }
+	// .tableContanier::-o-scrollbar-track-piece {
+	// 	background-color:rgba(0,0,0,0);
+	// }
+	// .tableContanier::-o-scrollbar-thumb{
+	// 	background-color:rgba(0,0,0,0);
+	// }
+	// .tableContanier::-o-scrollbar-corner {
+	// 	background-color:rgba(0,0,0,0);
+	// }
+	// .tableContanier::-o-scrollbar-resizer  {
+	// 	background-color:rgba(0,0,0,0);
+	// }
 }
 .P5scrollBox{
 	width: 100%;
-	overflow-y: scroll;
+	overflow-y: hidden;
 }
-.P5scrollBox::-webkit-scrollbar {
-	display: none;
-}
+// .P5scrollBox::-webkit-scrollbar {
+// 	display: none;
+// }
+// .P5scrollBox::-o-scrollbar {
+// 	display: none;
+// }
+// .P5scrollBox::-moz-scrollbar {
+// 	display: none;
+// }
 /************ 有滚动条的所有div *** ***/

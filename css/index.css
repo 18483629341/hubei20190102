@@ -1718,33 +1718,19 @@
 /***popUP  end****/
 /*************part6  blueSky  end  ******************  ***/
 /************ 有滚动条的所有div *** ***/
-.P3LeftSummary .tableContanier1,
-.P6RightSummary1 .tableContanier1,
-.P6RightSummary2 .tableContanier1 {
-  width: 100%;
-  overflow-y: scroll;
-}
-.P3LeftSummary .tableContanier1::-webkit-scrollbar,
-.P6RightSummary1 .tableContanier1::-webkit-scrollbar,
-.P6RightSummary2 .tableContanier1::-webkit-scrollbar {
-  display: none;
-}
 .P3LeftSummary .tableContanier,
 .P6RightSummary1 .tableContanier,
 .P6RightSummary2 .tableContanier {
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 .P3LeftSummary .tableContanier::-webkit-scrollbar,
 .P6RightSummary1 .tableContanier::-webkit-scrollbar,
 .P6RightSummary2 .tableContanier::-webkit-scrollbar {
-  display: none;
+  display: none!important;
 }
 .P5scrollBox {
   width: 100%;
-  overflow-y: scroll;
-}
-.P5scrollBox::-webkit-scrollbar {
-  display: none;
+  overflow-y: hidden;
 }
 /************ 有滚动条的所有div *** ***/
