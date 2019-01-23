@@ -196,7 +196,7 @@ function getOption3(obj){
             }
         },
         grid: {
-            top:parseInt(60*radio),
+            top:130,
             left: '0%',
             right: '0%',
             bottom: 0,
@@ -214,7 +214,7 @@ function getOption3(obj){
                 show: true,
                 textStyle: {
                     color: '#c3d4ff',
-                   // fontSize:parseInt(12*radio)
+                    fontSize:32
                 }
             },
             axisLine: {//X轴线的设置
@@ -234,7 +234,8 @@ function getOption3(obj){
             nameTextStyle:{
                 color:'#c3d4ff',
                 align:'left',
-                padding: [0,0,10*radio,0]
+                fontSize:32,
+                padding: [0,0,50,0]
             },
             splitLine: {//Y轴线的设置
                 show: true,
@@ -248,7 +249,7 @@ function getOption3(obj){
                 show: true,
                 textStyle: {
                     color: '#c3d4ff',
-                    //fontSize:parseInt(15*radio)
+                    fontSize:32
                 },
                 formatter:obj.formatter
             },
@@ -276,7 +277,7 @@ function getOption3(obj){
                 type: 'line',
                 lineStyle:{
                    // color:"#72e75e",
-                    width:2,
+                    width:4,
                 },
                 smooth: true,
                 symbol:'none'
@@ -289,7 +290,7 @@ function getOption3(obj){
                 smooth: true,
                 lineStyle:{
                   //  color:"#00e4ff",
-                    width:2,
+                    width:4,
                 },
                 areaStyle:{
                     color:areaBack
@@ -307,7 +308,7 @@ function getOption3(obj){
                 smooth: true,
                 lineStyle:{
                    // color:"#f7823c",
-                    width:2,
+                    width:4,
                 },
                 areaStyle:{
                     color:areaBack
@@ -386,7 +387,7 @@ function getOption4(obj){
             data:  obj.arrThisYear,
             smooth: true,
             lineStyle:{
-                width:2,
+                width:4,
             },
             symbol:'none'
 
@@ -398,7 +399,7 @@ function getOption4(obj){
             data: obj.arrLastYear,
             smooth: true,
             lineStyle:{
-                width:2,
+                width:4,
             },
             symbol:'none'
         }

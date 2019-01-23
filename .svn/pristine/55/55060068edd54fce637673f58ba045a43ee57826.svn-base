@@ -1,0 +1,196 @@
+/*********************   main.html 的所有样式 start******************/
+body {
+	width: 3840px;
+	height: 2160px;
+	background-color: #000d30; 
+	color: #fff;
+	text-align: center;
+	position: relative;
+	//overflow: scroll;
+}
+a,a:hover,a:link{
+	color: #fff;
+	text-decoration: none;
+}
+.contanier{
+	//width:100%;
+	height: 100%;
+	padding: 0 1.7% 1% 1.7%;
+	// background: url(../img/body_back.png) no-repeat;
+	// background-size: 100% 100%;
+	
+}
+.backImg{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.header{
+	z-index: 15;
+	overflow: hidden;
+	position: relative;
+	height: 14.9%;//323/2160
+	//border: 1px solid white;
+	.BackDiv{
+		margin: 0 auto;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+	}
+	.HeaderBackImg{
+		width:100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+	.HeaderCenter{
+		height: 71.8%;//230/323
+		.h28{
+			height: 58.9%;
+		}
+		.TitleImg{
+			display: none;
+		}
+		.SubTitleP{
+            // /margin-top:5.5% ;//120/2160
+			font-size: 1.55rem;
+			line-height: 1.55rem;
+		}
+	}
+}
+/*********************   main.html 的所有样式 end******************/
+
+/*    ********************** fornav  start**************         */
+.nav{
+	width: 100%;
+	height:2.25rem; 
+	top:-1rem;
+	position: relative;
+	ul{
+		height: 100%;
+	}
+	.tabli{
+		width: 360px;
+		height: 90px;
+		line-height: 90px;
+		font-size: 35px;
+		display: inline-block;
+		text-align: center;
+		cursor: pointer;
+	}
+	.tabli.active{
+		color:#020a1f;
+		font-weight: 700;
+	}
+	.TabLiContent{
+		width: 338px;
+	}
+	.LeftNav{
+		width:1150px;
+		height: 100%;
+		float: left;
+		.tabli{
+			background-image: url(../img/nav_left_normal.png) ;
+			background-size: cover;
+		}
+		.tabli.active{
+			background-image: url(../img/nav_left_hover.png) ;
+			background-size: cover;
+		}
+	}
+	.RightNav{
+		width:1120px;
+		height: 100%;
+		float: right;
+		.tabli{
+			
+			background-image: url(../img/nav_right_normal.png) ;
+			background-size: cover;
+		}
+		.tabli.active{
+			background-image: url(../img/nav_right_hover.png) ;
+			background-size: cover;
+		}
+		
+	}
+	
+}
+/*    ********************** fornav  end**************         */
+/***********************for tab  和  tabContent  start******** */
+.section{
+	flex:1;
+	height: 85.1%;
+}
+.TabContent{
+	height: 100%;
+	position: relative;
+	top: 0;
+}
+
+/***********************for tab  和  tabContent  end******** */
+
+ /******scroll end*******/
+html{
+	font-size: 40px !important;
+}
+// @media only screen and (max-width: 1365px) {
+// 	html {
+// 		font-size:12px !important;
+// 	}
+// }
+// @media only screen and (min-width: 1366px) {
+// 	html {
+// 		font-size:14px !important;
+// 	}
+// }
+// @media only screen and (min-width: 1920px) {
+// 	html {
+// 		font-size:20px !important;
+// 	}
+// }
+// @media only screen and (min-width: 2160px) {
+// 	html {
+// 		font-size:22.5px !important;
+// 	}
+// }
+// @media only screen and (min-width: 2400px) {
+// 	html {
+// 		font-size:25px !important;
+// 	}
+// }
+// @media only screen and (min-width: 2640px) {
+// 	html {
+// 		font-size:27.5px !important;
+// 	}
+// }
+// @media only screen and (min-width: 2880px) {
+// 	html{
+// 		font-size: 30px !important;
+// 	}
+// }
+// @media only screen and (min-width: 3120px) {
+// 	html{
+// 		font-size: 32.5px !important;
+// 	}
+// }
+// @media only screen and (min-width: 3360px) {
+// 	html{
+// 		font-size: 35px !important;
+// 	}
+// }
+// @media only screen and (min-width: 3600px) {
+// 	html{
+// 		font-size: 37.5px !important;
+// 	}
+// }
+// @media only screen and (min-width: 3840px) {
+// 	html{
+// 		font-size: 40px !important;
+// 	}
+// }
+

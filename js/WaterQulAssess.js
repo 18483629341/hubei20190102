@@ -11,7 +11,7 @@ $(document).ready(function () {
 		myChart.setOption(option);
 		/* 主页面和市区页面交替   */
 		moduleToggle('.map3');
-		autoScrollFun('#scrollBox1');
+		//autoScrollFun('#scrollBox1');
 		setRadio();
 		//弹窗上的线图绘制
 		var initPopupObjByData0 = null;

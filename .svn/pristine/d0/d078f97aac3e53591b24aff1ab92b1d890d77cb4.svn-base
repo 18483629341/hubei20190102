@@ -1,0 +1,87 @@
+html,
+body,
+div,
+span,
+a,
+ul,
+li,
+p,
+img,
+iframe,
+sub,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: '微软雅黑','Microsoft YaHei';
+	font-size: 14px;
+	line-height: 1.0;
+	width: 100%;
+	height: 100%;
+	background-color: #f4f4f4;
+	/* transition: all 1000ms linear; */
+	/* min-width: 1366px; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 14px;
+	font-weight: normal;
+	color: inherit;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+table{
+	border-collapse: collapse;
+}
+.flexBlock{
+	display: flex;
+	display: -webkit-box; 
+   display: -moz-box;  
+   display: -ms-flexbox; 
+   display: -webkit-flex; 
+}
+.flex1{
+   flex: 1
+}
+.inlineBlock{
+	display: inline-block;
+}
+.clear{
+	clear: both;
+}
+.floatLeft{
+	float: left;
+}
+.floatRight{
+	float: right;
+}
+.alignRight{
+	text-align: right!important;
+}
+

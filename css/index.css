@@ -75,6 +75,10 @@
   background: url(../img/water_2_div.png) no-repeat;
   background-size: 100% 100%;
 }
+.LeftSummary,
+.P6LeftSummary {
+  left: 1rem;
+}
 .LeftHeader {
   height: 3.4rem;
   padding-top: 2rem;
@@ -139,6 +143,12 @@
   font-size: 1rem;
   margin-right: .4rem;
   color: #00d2ff;
+}
+.WaterQulAssess .contentList .contentLiFont {
+  display: inline-block;
+  font-size: 1rem;
+  width: 10.5rem;
+  text-align: left;
 }
 .contentLi .leftRow,
 .contentLi .centerRow,
@@ -457,7 +467,8 @@
   display: inline-block;
   width: .75rem;
   height: .2rem;
-  margin-right: .48rem;
+  margin-right: .2rem;
+  margin-top: .2rem;
 }
 .legendBar {
   position: fixed;
@@ -687,7 +698,7 @@
   height: 12.5rem;
 }
 .P3LeftContent {
-  padding: .65rem  1.4rem 0.8rem 1.45rem;
+  padding: .65rem  2rem 0.8rem 2rem;
 }
 .showContent {
   height: 7.5rem;
@@ -726,10 +737,11 @@
 }
 .CompRate .rem10 {
   font-size: 1.2rem;
+  font-weight: 700;
 }
 .CompRate .rem08 {
   font-size: .8rem;
-  margin-left: -0.3rem;
+  margin-left: -0.1rem;
 }
 .rightBox {
   display: inline-block;
@@ -765,6 +777,7 @@
   top: -1.6rem;
   right: 0;
   text-align: right;
+  font-weight: 700;
 }
 .P3ContentList {
   width: 100%;
@@ -807,10 +820,38 @@
   min-width: 20%;
 }
 .citheadTr .theadTd:nth-child(3) {
-  min-width: 26%;
+  min-width: 32%;
+  text-align: center;
 }
 .citheadTr .theadTd:nth-child(4) {
   flex: 1;
+}
+.citheadTr .theadTd:last-child {
+  text-align: right;
+}
+.P3LeftSummary .tableContanier .tbodyTr td:nth-child(1) {
+  min-width: 20%;
+}
+.P3LeftSummary .tableContanier .tbodyTr td:nth-child(2) {
+  min-width: 24%;
+}
+.P3LeftSummary .tableContanier .tbodyTr td:nth-child(3) {
+  min-width: 36%;
+}
+.P3LeftSummary .tableContanier .tbodyTr td:nth-child(4) {
+  flex: 1;
+}
+.P3LeftSummary .tableContanier .tbodyTr td:last-child {
+  text-align: center!important;
+}
+.P3LeftSummary .table td:nth-child(1) {
+  width: 20%;
+}
+.P3LeftSummary .table td:nth-child(2) {
+  width: 24%;
+}
+.P3LeftSummary .table td:nth-child(3) {
+  width: 36%;
 }
 .table {
   min-width: 100%;
@@ -856,9 +897,6 @@
   font-size: 0.8rem;
   text-align: left;
 }
-.table .tbodyTr > td:nth-child(1) {
-  padding-left: .5%;
-}
 .table .tbodyTr > td:nth-child(3),
 .table .tbodyTr > td:nth-child(4) {
   font-size: 0.8rem;
@@ -892,15 +930,57 @@
   margin-top: .5rem;
   width: 15.8rem;
   height: 24rem;
+}
+.P5scrollBox .tbodyContainer {
+  font-size: .8rem;
+}
+.P5scrollBox .tbodyContainer tr {
+  height: 1.6rem;
+}
+.P5scrollBox .tbodyContainer td {
+  border-collapse: collapse;
+}
+.P5scrollBox .tbodyContainer .firstTd {
+  width: 25%;
+  text-align: right;
+  color: #c3d4ff;
+  padding-right: .7rem;
+  padding-left: 0;
+}
+.P5scrollBox .tbodyContainer .seconfTd {
+  width: 52%;
+}
+.P5scrollBox .tbodyContainer .seconfTd .inner {
+  width: 100%;
+  height: 100%;
+  border-left: 4px solid #324b75;
+  padding: .53rem 0 .52rem 0;
+}
+.P5scrollBox .tbodyContainer .seconfTd .progressDiv {
+  height: .56rem;
+  background: #008bff;
+  background: linear-gradient(to bottom right, #008bff, #00d1ff);
+  border-radius: .3rem;
+}
+.P5scrollBox .tbodyContainer .threeTd {
+  text-align: right!important;
+  flex: 1;
+  height: 65px;
+  font-size: .7rem;
+  color: #00d2ff;
+  z-index: 5;
+}
+.canvas_mount {
   position: relative;
+  overflow: hidden;
 }
-.unstandCanvasBox {
+.canvas_mount .unstandCanvasBox {
   width: 17.8rem;
+  min-height: 24rem;
 }
-.rightMountBox {
+.canvas_mount .rightMountBox {
   position: absolute;
   width: 4rem;
-  height: 100%;
   display: flex;
   display: -webkit-box;
   display: -moz-box;
@@ -909,12 +989,6 @@
   flex-direction: column;
   right: 0;
   top: .5rem;
-}
-.rightMountBox .MountLi {
-  text-align: right;
-  flex: 1;
-  font-size: .7rem;
-  color: #00d2ff;
 }
 .P5ContentList .contentLiFont {
   width: 11.5rem;
@@ -974,9 +1048,6 @@
 .P6RightSummary2 .LeftHeader {
   height: 3.3rem;
   padding-top: 1.9rem;
-}
-.P6LeftSummary {
-  left: 0;
 }
 .P6LeftSummary .LeftHeader {
   text-align: right;
@@ -1136,6 +1207,7 @@
 .P6RightContent .ListTitle2 {
   font-size: .75rem;
   line-height: .75rem;
+  color: #8297bd;
   padding: .43rem 0;
   text-align: left;
 }
@@ -1191,7 +1263,7 @@
 }
 .P6RightSummary2 .tableContanier2 {
   width: 17.5rem;
-  height: 8rem;
+  height: 8.6rem;
   margin: initial;
 }
 .P6RightSummary2 .tableContanier2 .theadTr .td3 {
@@ -1318,6 +1390,7 @@
 }
 .goodWeatherCanvas {
   position: relative;
+  margin-top: 1rem;
   width: 100%;
   height: 14.1rem;
 }
@@ -1331,7 +1404,7 @@
 }
 .LegendLi2 .WaterQulLine {
   position: relative;
-  top: -0.27rem;
+  top: -0.15rem;
 }
 .LegendLi2 .OneLevel {
   background-color: #72e75e;
@@ -1341,6 +1414,9 @@
 }
 .LegendLi2 .ThreeLevel {
   background-color: #f7823c;
+}
+.LegendLi2 + .LegendLi2 {
+  margin-left: .5rem;
 }
 .goWuhan {
   width: 6rem;
@@ -1376,7 +1452,7 @@
   margin-top: .5rem;
 }
 .P6RightSummary1 .tableContanier2 {
-  height: 25rem;
+  height: 27rem;
 }
 .P6RightSummary2 {
   background: url(../img/air_div.png) no-repeat;
@@ -1640,3 +1716,34 @@
 }
 /***popUP  end****/
 /*************part6  blueSky  end  ******************  ***/
+/************ 有滚动条的所有div *** ***/
+.P3LeftSummary .tableContanier1,
+.P6RightSummary1 .tableContanier1,
+.P6RightSummary2 .tableContanier1 {
+  width: 100%;
+  overflow-y: scroll;
+}
+.P3LeftSummary .tableContanier1::-webkit-scrollbar,
+.P6RightSummary1 .tableContanier1::-webkit-scrollbar,
+.P6RightSummary2 .tableContanier1::-webkit-scrollbar {
+  display: none;
+}
+.P3LeftSummary .tableContanier,
+.P6RightSummary1 .tableContanier,
+.P6RightSummary2 .tableContanier {
+  width: 100%;
+  overflow-y: scroll;
+}
+.P3LeftSummary .tableContanier::-webkit-scrollbar,
+.P6RightSummary1 .tableContanier::-webkit-scrollbar,
+.P6RightSummary2 .tableContanier::-webkit-scrollbar {
+  display: none;
+}
+.P5scrollBox {
+  width: 100%;
+  overflow-y: scroll;
+}
+.P5scrollBox::-webkit-scrollbar {
+  display: none;
+}
+/************ 有滚动条的所有div *** ***/

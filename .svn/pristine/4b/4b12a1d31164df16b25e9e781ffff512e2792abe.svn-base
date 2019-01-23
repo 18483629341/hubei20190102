@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>长江大保护</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./css/main.css" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+</head>
+
+<body>
+	<img class="backImg" src="./img/body_back.png" alt="">
+	<div class="contanier ">
+		<header class="header">
+			<img class="HeaderBackImg" src="./img/header_back.png" alt="">
+			<div class="BackDiv">
+				<div class="HeaderCenter">
+					<div class="h28"></div>
+					<div class="TitleImg"></div>
+					<div class="SubTitleP">长江大保护</div>
+				</div>
+				<nav class="nav">
+					<div class="LeftNav">
+						<ul>
+							<li class="tabli " data-index="0">
+								<a href="index.html">
+									<div class="TabLiContent">水环境概况</div>
+								</a>
+							</li>
+							<li class="tabli " data-index="1">
+								<a href="WaterQulMonitor.html">
+									<div class="TabLiContent">水质监测</div>
+								</a>
+							</li>
+							<li class="tabli active" data-index="2">
+								<div class="TabLiContent">水质考核</div>
+							</li>
+						</ul>
+					</div>
+					<div class="RightNav">
+						<ul>
+							<li class="tabli" data-index="3">
+								<a href="PolluDisSituation.html">
+									<div class="TabLiContent">排污情况</div>
+								</a>
+							</li>
+							<li class="tabli " data-index="4">
+								<a href="LawEnfSituation.html">
+									<div class="TabLiContent">执法情况</div>
+								</a>
+							</li>
+							<li class="tabli" style="visibility:hidden">
+								<div class="TabLiContent">1</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+		</header>
+		<section class="section">
+			<!--水质考核   water quality assessment box-->
+			<div class="TabContent  WaterQulAssess" id='WaterQulAssess' data-index="2">
+				<div class="MapBox map3 active">
+					<div class="ax_default ax_default_da" data-name="da">
+						<img class="img " src="./img/icon_remark4.png">
+					</div>
+					<div class="goWuhan show">进入市区</div>
+				</div>
+				<div class="MapBox mapWuhan ">
+					<div class="ax_default ax_default_da" data-name="da">
+						<img class="img " src="./img/icon_remark4.png">
+					</div>
+				</div>
+				<div class="LeftSummary P3LeftSummary">
+					<div class="LeftHeader">
+						<p class="LeftHeaderTitle">长江湖北段水质考核情况</p>
+					</div>
+					<div class="XuanLine"></div>
+					<div class="LeftContent  P3LeftContent">
+						<div class="showContent">
+							<div class="CompRateBox">
+								<img class="imageDom" src='./img/r.png' />
+								<div class="CompRateCanvas" id="CompRateCanvas01">
+								</div>
+								<div class="CompRate">
+									<span class="rem10">25.5</span>
+									<span class="rem08">%</span>
+								</div>
+							</div>
+							<div class="rightBox">
+								<div class="rightConTitleBox">
+									<p class="rightConTitle">统计时间：2018年11月</p>
+								</div>
+								<div class="KeyBox">
+									<span class="RArrow"></span>
+									<p class="keyWord">整体达标率</p>
+								</div>
+							</div>
+						</div>
+
+						<ul class="contentList P3ContentList">
+							<li class="contentLi">
+								<span class="contentLiFont">全省监测跨界断面</span>
+								<span class="contentLiMount">
+									<b>64</b>个
+								</span>
+							</li>
+							<li class="contentLi">
+								<span class="contentLiFont">达标跨界断面</span>
+								<span class="contentLiMount">
+									<b>55</b>个
+								</span>
+							</li>
+							<li class="contentLi">
+								<span class="contentLiFont">达标跨界断面</span>
+								<span class="contentLiMount">
+									<b>55</b>个
+								</span>
+							</li>
+						</ul>
+						<div class="splitLine"></div>
+						<div class="unstandSecList">
+							<div class="ListTitle">不达标断面列表</div>
+							<div class="citheadTr flexBlock">
+								<div class="inlineBlock theadTd">地市</div>
+								<div class="inlineBlock theadTd">断面名称</div>
+								<div class="inlineBlock theadTd">超标污染物</div>
+								<div class="inlineBlock theadTd">超标倍数</div>
+							</div>
+							<div class="content tableContanier tableContanier1 " id="scrollBox1">
+								<table class="table">
+									<tbody class="tbodyContainer">
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
+										<tr class="tbodyTr">
+											<td>武汉市</td>
+											<td>荆江口</td>
+											<td>氨氮</td>
+											<td>0.3</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="RightBoxCon">
+					<table class="RightBox P2RightBox">
+						<thead class="LegendHeader ">
+							<tr>
+								<td colspan="2" class="titleTd">图例
+									<i class="tableIcon"></i>
+								</td>
+							</tr>
+						</thead>
+						<tbody class="IconListBox ">
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="跨江大桥" value="跨江大桥" />
+								</td>
+								<td>
+									<span class="RemarkIcon CroBridgeRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">跨江大桥</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点工程" value="重点工程">
+								</td>
+								<td>
+									<span class="RemarkIcon KeyProRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">重点工程</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点港口" value="重点港口">
+								</td>
+								<td>
+									<span class="RemarkIcon KeyPortRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">重点港口</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="自然保护区" value="自然保护区">
+								</td>
+								<td>
+									<span class="RemarkIcon NatResRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">自然保护区</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="沿江排污口" value="沿江排污口">
+								</td>
+								<td>
+									<span class="RemarkIcon SewOutsRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">沿江排污口</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="沿江化工企业" value="沿江化工企业">
+								</td>
+								<td>
+									<span class="RemarkIcon RivCheRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">沿江化工企业</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="沿江污水处理厂" value="沿江污水处理厂">
+								</td>
+								<td>
+									<span class="RemarkIcon SewTreatRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">沿江污水处理厂</span>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+				<!-- 图例2  end  -->
+				<div class="GoAwayWuhan p6GoAwayWuhan ">
+				</div>
+				<!-- 弹窗1 跨界断面达标情况 start -->
+				<div class="PopUpBox  P2PopUpBox PopUpBox_da" id="PopUpBox_da">
+					<div class="PopUpHeader">
+						<div class="PaddingContent">
+							<h3>荆江口
+								<span class="warnTheme">（不达标）</span>
+							</h3>
+							<!--  !!!!!!!!!!!! 达标样式为  niceTheme -->
+							<span class="inlineBlock PopUpclose"></span>
+						</div>
+					</div>
+					<!-- PopUpHeader end-->
+					<div class="PopUpContent">
+						<div class="PaddingContent">
+							<p class="ListTitle floatLeft">监测时间:2018-11</p>
+							<p class="ListTitle floatRight">数据来源:监测站</p>
+							<div class="clear"></div>
+							<div class="keyContent">
+								<div class="contentList">
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex2">
+											<span>高锰酸钾指数:</span>
+											<span class="leftRowValue">5mg/L</span>
+										</div>
+										<div class="leftRow flex3">高锰酸钾指数考核目标：
+											<span class="leftRowValue"> 5mg/L</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex2  ">
+											<span> 氨氮：</span>
+											<span class="leftRowValue ">4.151mg/L</span>
+										</div>
+										<div class="leftRow flex3">氨氮考核目标：
+											<span class="leftRowValue"> 3mg/L</span>
+										</div>
+
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex2 ">
+											<span> 总磷</span>
+											<span class="leftRowValue "> 1.1mg/L</span>
+										</div>
+										<div class="leftRow flex3">总磷考核目标：
+											<span class="leftRowValue"> 3mg/L</span>
+										</div>
+
+									</div>
+									<div class="splitLineBox">
+										<div class="splitLine"></div>
+									</div>
+
+									<div class="contentLi flexBlock superLine">
+										<div class="leftRow flex1">超标污染物：
+											<span class="leftRowValue">氨氮（0.2）</span>
+											<span class="leftRowValue">高锰酸钾指数（0.2）</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="canvasTab">
+								<span class="tabSpan active" data-name="goodWeather">氨氮</span>
+								<span class="tabSpan " data-name="pm2.5">高锰酸钾指数</span>
+								<span class="tabSpan " data-name="pm2.5">总磷</span>
+								<div></div>
+							</div>
+							<div class="popUpcanvasBox" id="P2daCanvas">
+							</div>
+							<div class="legend2 Popuplegend">
+								<ol class="LegendList">
+									<li class="LegendLi2">
+										<span class="WaterQulLine OneLevel"></span>
+										<span class="RemarkName">高锰酸钾指数</span>
+									</li>
+									<li class="LegendLi2">
+										<span class="WaterQulLine TwoLevel "></span>
+										<span class="RemarkName">氨氮</span>
+									</li>
+
+									<li class="LegendLi2">
+										<span class="WaterQulLine ThreeLevel"></span>
+										<span class="RemarkName">总磷</span>
+									</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpContent end-->
+					<div class="PopUpBottom">
+						<div class="PaddingContent">
+							<div class="hrefDiv">
+								<a href="#" target="_blank">查看详情
+									<span class="inlineBlock rightArrow"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpBottom end-->
+				</div>
+				<!-- 弹窗1 跨界断面达标情况 end -->
+			</div>
+
+		</section>
+	</div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="./js/echarts.min.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/WaterQulAssess.js"></script>
+
+
+</html>

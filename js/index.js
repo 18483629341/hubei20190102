@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	//
 	$(window).load(function () {
-		autoFit();
+		// autoFit();
 		//tabToggle();
 		mapToggle();
 		listToggle();

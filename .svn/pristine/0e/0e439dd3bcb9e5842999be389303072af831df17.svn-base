@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>长江大保护</title>
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/main.css" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+</head>
+
+<body>
+	<div class="contanier">
+		<header class="header">
+			<div class="BackDiv" >
+				<div class="HeaderCenter">
+					<div class="h28"></div>
+					<div class="TitleImg"></div>
+					<div class="SubTitleP">长江大保护</div>
+					
+				</div>
+				<nav class="nav">
+					<div class="LeftNav">
+						<ul>
+							<li class="tabli" data-index="0"><div class="TabLiContent">水环境概况</div> </li>
+							<li class="tabli active"  data-index="1"><div class="TabLiContent">水质监测</div></li>
+							<li class="tabli" data-index="2"><div class="TabLiContent">水质考核</div></li>		
+						</ul>
+						
+					</div>
+					<div class="RightNav">
+						<ul>
+							<li class="tabli" data-index="3"><div class="TabLiContent">排污情况</div></li>
+							<li class="tabli" data-index="4"><div class="TabLiContent">执法情况</div></li>
+							<li class="tabli" style="visibility:hidden"><div class="TabLiContent" >1</div></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			
+		</header>
+		<section class="section">
+			<!-- 水环境概况   general situation  box-->
+			<div class="TabContent show GenSituation" id='GenSituation' data-index="0">GenSituation</div>
+			<!--水质监测   water quality monitoring  box-->
+			<div class="TabContent WaterQulMonitor" id='WaterQulMonitor'  data-index="1">WaterQulMonitor</div>
+			<!--水质考核   water quality assessment box-->
+			<div class="TabContent WaterQulAssess" id='WaterQulAssess'  data-index="2">WaterQulAssess</div>
+			<!--排污情况   pollution discharge situation  box-->
+			<div class="TabContent PolluDisSituation" id='PolluDisSituation'  data-index="3">PolluDisSituation</div>
+			<!--执法情况   law enforcement situation  box-->
+			<div class="TabContent LawEnfSituation" id='LawEnfSituation'  data-index="4">LawEnfSituation</div>
+		</section>
+	</div>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/main.js"></script> 
+<script >
+	$(document).ready(function () {
+		//
+		$(window).load(function () {
+			autoFit();
+			autoFitNav();
+			tabToggle();
+		});
+	});
+
+	window.onresize=function(){
+		autoFit();
+		autoFitNav();
+	}
+
+</script>
+</html>

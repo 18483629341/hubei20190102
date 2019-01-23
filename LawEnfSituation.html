@@ -10,9 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	<link rel="stylesheet" type="text/css" href="./css/main.css" />
 	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/main.js"></script>
 </head>
 
 <body>
+	<script>
+		autoFit();
+	</script>
 	<img class="backImg" src="./img/body_back.png" alt="">
 	<div class="contanier ">
 		<header class="header">
@@ -91,32 +96,18 @@
 						<div class="splitLine"></div>
 						<div class="unstandSecList">
 							<div class="ListTitle">2018年9月区域执法次数统计分析</div>
-							<div class="P5scrollBox" id="P5scrollBox">
-								<div class="unstandCanvasBox" id="unstandCanvasBox">
-									<!-- 此处添加echarts图表 -->
-								</div>
-								<div class="rightMountBox">
-									<div class="MountLi">3100次</div>
-									<div class="MountLi">2142次</div>
-									<div class="MountLi">1218次</div>
-									<div class="MountLi">631次</div>
-									<div class="MountLi">599次</div>
-									<div class="MountLi">581次</div>
-									<div class="MountLi">581次</div>
-									<div class="MountLi">582次</div>
-									<div class="MountLi">562次</div>
-									<div class="MountLi">482次</div>
-									<div class="MountLi">431次</div>
-									<div class="MountLi">431次</div>
-									<div class="MountLi">383次</div>
-									<div class="MountLi">383次</div>
-									<div class="MountLi">163次</div>
-									<div class="MountLi">163次</div>
-								</div>
+							<div class="content tableContanier tableContanier1 P5scrollBox" id="P5scrollBox">
+								<table class="table">
+									<tbody class="tbodyContainer">
+										<!-- <tr class="tbodyTr">
+											<td>武汉市</td>
+											<td><div class="progressDiv"></div></td>
+											<td>1300次</td>
+										</tr> -->
+									</tbody>
+								</table>
 							</div>
-
 						</div>
-
 					</div>
 				</div>
 				<div class="RightBoxCon">
@@ -276,10 +267,10 @@
 		</section>
 	</div>
 </body>
-<script src="./js/jquery.min.js"></script>
+<!-- <script src="./js/jquery.min.js"></script> -->
 <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="./js/echarts.min.js"></script>
-<script src="./js/main.js"></script>
+<!-- <script src="./js/main.js"></script> -->
 <script src="./js/LawEnfSituation.js"></script>
 
 </html>

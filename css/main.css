@@ -6,6 +6,11 @@ body {
   color: #fff;
   text-align: center;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 a,
 a:hover,
