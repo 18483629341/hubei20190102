@@ -206,7 +206,7 @@ function getOption3(obj){
         xAxis: {
             type: 'category',
             onZero:true,
-           
+            boundaryGap: true,
             axisTick: {
                 show: false
             },
@@ -214,7 +214,8 @@ function getOption3(obj){
                 show: true,
                 textStyle: {
                     color: '#c3d4ff',
-                    fontSize:32
+                    fontSize:26,
+                    align:'right'
                 }
             },
             axisLine: {//X轴线的设置
@@ -234,7 +235,7 @@ function getOption3(obj){
             nameTextStyle:{
                 color:'#c3d4ff',
                 align:'left',
-                fontSize:32,
+                fontSize:28,
                 padding: [0,0,50,0]
             },
             splitLine: {//Y轴线的设置
@@ -249,7 +250,7 @@ function getOption3(obj){
                 show: true,
                 textStyle: {
                     color: '#c3d4ff',
-                    fontSize:32
+                    fontSize:26
                 },
                 formatter:obj.formatter
             },
