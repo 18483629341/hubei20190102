@@ -65,7 +65,7 @@
   top: 45%;
 }
 .PopUpBox_da {
-  width: 29rem!important;
+  width: initial!important;
 }
 .PopUpBox_da .contentLi .leftRow:first-child {
   width: 45%!important;
@@ -1072,6 +1072,9 @@
   text-align: right;
   padding-right: 2.3rem;
 }
+.P6LeftSummary .title {
+  font-size: .8rem;
+}
 .P6RightSummary {
   right: .8rem;
 }
@@ -1140,6 +1143,9 @@
   right: 0;
   height: 2.15rem;
   padding-top: .68rem;
+}
+.P6rightBox .rightConTitle {
+  font-size: .8rem;
 }
 .P6rightBox .rightMount {
   float: right;
@@ -1727,6 +1733,9 @@
 .canvasTab .tabSpan.active {
   background: #00e5ff;
   color: #0f0920;
+}
+.P6PopUpBox {
+  width: initial!important;
 }
 .P6PopUpBox .canvasTab .tabSpan[data-name='pm2.5'] {
   width: 4rem;
