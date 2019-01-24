@@ -103,10 +103,11 @@
 								</div>
 								<div class="desBox">
 									<p class="description">
-										目前未达到考核总目标(
+										目前未达到考核总目标：
+										<br>
 										<span>2018</span>年达到
 										<span>47.62</span>ug/m
-										<sup class="scale05">3</sup>)
+										<sup class="scale05">3</sup>
 									</p>
 								</div>
 							</div>

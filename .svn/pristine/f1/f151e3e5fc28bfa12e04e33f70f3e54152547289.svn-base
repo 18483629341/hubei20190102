@@ -144,7 +144,29 @@
 						<tbody class="IconListBox ">
 							<tr class="IconLi">
 								<td>
-									<input class="checkBoxInput canPointer" type="checkbox" name="跨江大桥" value="跨江大桥">
+									<input class="checkBoxInput " type="checkbox" name="手工断面" value="手工断面" checked disabled>
+								</td>
+								<td>
+									<span class="RemarkIcon ManSecRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">手工断面</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput " type="checkbox" name="自动站" value="自动站" checked disabled>
+								</td>
+								<td>
+									<span class="RemarkIcon AutoStaRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">自动站</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput" type="checkbox" name="跨江大桥" value="跨江大桥">
 								</td>
 								<td>
 									<span class="RemarkIcon CroBridgeRemark"></span>
@@ -230,28 +252,6 @@
 									<span class="RemarkName">沿江排污口</span>
 								</td>
 							</tr>
-							<tr class="IconLi">
-								<td>
-									<input class="checkBoxInput " type="checkbox" name="手工断面" value="手工断面" checked disabled>
-								</td>
-								<td>
-									<span class="RemarkIcon ManSecRemark"></span>
-								</td>
-								<td>
-									<span class="RemarkName">手工断面</span>
-								</td>
-							</tr>
-							<tr class="IconLi">
-								<td>
-									<input class="checkBoxInput " type="checkbox" name="自动站" value="自动站" checked disabled>
-								</td>
-								<td>
-									<span class="RemarkIcon AutoStaRemark"></span>
-								</td>
-								<td>
-									<span class="RemarkName">自动站</span>
-								</td>
-							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -302,7 +302,7 @@
 								<span class="tabSpan active" data-name="goodWeather">氨氮</span>
 								<span class="tabSpan " data-name="pm2.5">高锰酸钾指数</span>
 								<span class="tabSpan " data-name="pm2.5">总磷</span>
-					
+								<div></div>
 							</div>
 							<div class="popUpcanvasBox" id="P2comCanvas">
 							</div>
@@ -378,7 +378,7 @@
 										<div class="leftRow flex1">氨氮：
 											<span class="leftRowValue"> 2mg/L</span>
 										</div>
-										<div class="centerRow " style="flex: initial;">高锰酸钾指数:
+										<div class="centerRow flex1">高锰酸钾指数:
 											<span class="leftRowValue"> 5mg/L</span>
 										</div>
 										<div class="rightRow flex1">总磷:

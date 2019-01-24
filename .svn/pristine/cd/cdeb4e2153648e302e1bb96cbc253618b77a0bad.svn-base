@@ -220,7 +220,7 @@
   position: absolute;
   right: 1.5rem;
   width: 13rem;
-  top: 54px;
+  top: 0;
 }
 .titleTd {
   text-align: left;
@@ -632,15 +632,6 @@
   background: #00d1eb;
   color: #030d2b;
 }
-.PopUpBox_zi .canvasTab.alignRight {
-  float: initial;
-  height: 1.6rem;
-  display: block;
-  margin-top: -0.5rem;
-}
-.PopUpBox_zi .timeTypeBox .timeTypeSpan {
-  line-height: 1.2rem;
-}
 .InfoListContent {
   float: right;
   width: 7rem;
@@ -960,14 +951,14 @@
   border-collapse: collapse;
 }
 .P5scrollBox .tbodyContainer .firstTd {
-  width: 27%;
+  width: 25%;
   text-align: right;
   color: #c3d4ff;
   padding-right: .7rem;
   padding-left: 0;
 }
 .P5scrollBox .tbodyContainer .seconfTd {
-  width: 50%;
+  width: 52%;
 }
 .P5scrollBox .tbodyContainer .seconfTd .inner {
   width: 100%;
@@ -1119,7 +1110,6 @@
 }
 .rem092 {
   font-size: .9rem;
-  font-weight: 700;
 }
 .rem092.scale05 {
   transform: scale(1);
@@ -1370,11 +1360,11 @@
 .legendBox2 .LegendContent {
   width: 100%;
   text-align: left;
-  padding: .1rem .45rem .6rem .45rem;
+  padding: .35rem .4rem .48rem .4rem;
 }
 .legendBox2 .LegendContent .LegendLi {
-  height: 1rem;
-  font-size: .5rem;
+  height: .9rem;
+  font-size: .48rem;
   line-height: 1rem;
 }
 .legendBox2 .WaterQulLine {
@@ -1485,9 +1475,9 @@
 .P6RightSummary2 .LeftHeader {
   padding-top: 2.3rem;
 }
-.P6RightSummary2 .LeftHeader .LeftHeaderTitle {
+.P6RightSummary2 .LeftHeader .LeftHeader .LeftHeaderTitle {
   text-align: left;
-  padding-left: 19%;
+  text-indent: 19%;
 }
 .P6RightSummary2 .SecondHeader {
   height: 1.4rem;
@@ -1500,7 +1490,7 @@
   text-align: center;
 }
 .P6legendBox2 {
-  top: 34rem;
+  top: 37rem;
 }
 .P6legendBox2 .legend {
   padding: .5rem;
@@ -1642,7 +1632,7 @@
 .keyContent .leftRow,
 .keyContent .rightRow,
 .keyContent .centerRow {
-  font-size: .75rem;
+  font-size: .73rem;
   line-height: 1.45rem;
   height: 1.45rem;
 }
@@ -1706,15 +1696,13 @@
   display: inline-block;
 }
 .canvasTab .tabSpan {
-  padding: 0 0.68rem;
+  padding: 0.3rem 0.68rem;
   font-size: .75rem;
-  display: inline-block;
+  line-height: 1.60rem;
   background: #273b5b;
   color: #cedffe;
   border-radius: 3px;
   cursor: pointer;
-  height: 1.63rem;
-  line-height: 1.63rem;
 }
 .canvasTab .tabSpan + .tabSpan {
   margin-left: .5rem;
@@ -1722,9 +1710,6 @@
 .canvasTab .tabSpan.active {
   background: #00e5ff;
   color: #0f0920;
-}
-.P6PopUpBox .canvasTab .tabSpan[data-name='pm2.5'] {
-  width: 4rem;
 }
 .canvasTab.alignRight {
   float: right;

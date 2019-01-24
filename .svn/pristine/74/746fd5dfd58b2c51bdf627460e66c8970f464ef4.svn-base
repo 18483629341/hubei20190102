@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>长江大保护</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<link rel="stylesheet" type="text/css" href="./css/main.css" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+	<!-- <script src="./js/setWH.js"></script> -->
+	<script src="./js/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+	<script>
+		autoFit();
+	</script>
+	<img class="backImg" src="./img/body_back.png" alt="">
+	<div class="contanier">
+		<header class="header">
+			<img class="HeaderBackImg" src="./img/header_back.png" alt="">
+			<div class="BackDiv">
+				<div class="HeaderCenter">
+					<div class="h28"></div>
+					 <div class="TitleImg"></div>
+					<div class="SubTitleP">长江大保护</div>
+				</div>
+				<nav class="nav">
+					<div class="LeftNav">
+						<ul>
+							<li class="tabli  active" data-index="0">
+								<div class="TabLiContent">水环境概况</div>
+							</li>
+							<li class="tabli " data-index="1">
+								<a href="WaterQulMonitor.html">
+									<div class="TabLiContent">水质监测</div>
+								</a>
+							</li>
+							<li class="tabli " data-index="2">
+								<a href="WaterQulAssess.html">
+									<div class="TabLiContent">水质考核</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="RightNav">
+						<ul>
+							<li class="tabli" data-index="3">
+								<a href="PolluDisSituation.html">
+									<div class="TabLiContent">排污情况</div>
+								</a>
+							</li>
+							<li class="tabli " data-index="4">
+								<a href="LawEnfSituation.html">
+									<div class="TabLiContent">执法情况</div>
+								</a>
+							</li>
+							<li class="tabli" style="visibility:hidden">
+								<div class="TabLiContent">1</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+		</header>
+		<section class="section">
+			<!-- 水环境概况   general situation  box-->
+			<div class="TabContent  GenSituation" id='GenSituation' data-index="0">
+				<div class="MapBox active map1">
+					<div class="goWuhan show">进入市区</div>
+				</div>
+				<div class="MapBox map11">
+					<div class="goWuhan show">进入市区</div>
+				</div>
+				<div class="MapBox mapWuhan ">
+				</div>
+				<div class="LeftSummary">
+					<div class="LeftHeader">
+						<p class="LeftHeaderTitle">长江湖北段水环境概况</p>
+					</div>
+					<div class="XuanLine"></div>
+					<div class="LeftContent">
+						<p class="LeftConTitle">统计时间：2018年</p>
+						<ul class="contentList">
+							<li class="contentLi contentLi0">
+								<span class="GenIcon lengthIcon"></span>
+								<span class="contentLiFont">长江湖北段长度</span>
+								<span class="contentLiMount">
+									<b>1060</b>千米</span>
+							</li>
+							<li class="contentLi contentLi0">
+								<span class="GenIcon waterIcon"></span>
+								<span class="contentLiFont">主要支流数量</span>
+								<span class="contentLiMount">
+									<b>20</b>个</span>
+							</li>
+							<li class="contentLi contentLi0">
+								<span class="GenIcon FlowThrIcon"></span>
+								<span class="contentLiFont">流经地市数量</span>
+								<span class="contentLiMount">
+									<b>9</b>个</span>
+							</li>
+							<li class="contentLi contentLi0">
+								<span class="GenIcon ProSecIcon"></span>
+								<span class="contentLiFont">省界断面</span>
+								<span class="contentLiMount">
+									<b>4</b>个</span>
+							</li>
+							<li class="contentLi contentLi0">
+								<span class="GenIcon  CitySecIcon"></span>
+								<span class="contentLiFont">市界断面</span>
+								<span class="contentLiMount">
+									<b>30</b>个</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="RightBoxCon">
+					<div class="GisTabs flexBlock">
+						<div class="P1tabLi GisLeftTab active" data-map="概要">概要图</div>
+						<div class="P1tabLi GisRightTab " data-map="GIS">GIS图</div>
+					</div>
+					<table class="RightBox">
+						<thead class="LegendHeader ">
+							<tr>
+								<td colspan="3" class="titleTd">图例
+									<i class="tableIcon"></i>
+								</td>
+							</tr>
+						</thead>
+						<tbody class="IconListBox ">
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput" type="checkbox" name="河流" value="河流" checked disabled>
+								</td>
+								<td>
+									<span class="RemarkIcon RiversRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">河流</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput" type="checkbox" name="主要湖库" value="主要湖库" checked disabled>
+								</td>
+								<td>
+									<span class="RemarkIcon LakesRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">主要湖库</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="省界断面" value="省界断面" checked>
+								</td>
+								<td>
+									<span class="RemarkIcon ProBouRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">省界断面</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="市界断面" value="市界断面" checked>
+								</td>
+								<td>
+									<span class="RemarkIcon CityBouRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">市界断面</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="跨江大桥" value="跨江大桥">
+								</td>
+								<td>
+									<span class="RemarkIcon CroBridgeRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">跨江大桥</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点工程" value="重点工程">
+								</td>
+								<td>
+									<span class="RemarkIcon KeyProRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">重点工程</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点港口" value="重点港口">
+								</td>
+								<td>
+									<span class="RemarkIcon KeyPortRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">重点港口</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="沿江工业园区" value="沿江工业园区">
+								</td>
+								<td>
+									<span class="RemarkIcon RivIndRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">沿江工业园区</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="自然保护区" value="自然保护区">
+								</td>
+								<td>
+									<span class="RemarkIcon NatResRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">自然保护区</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="GoAwayWuhan p6GoAwayWuhan ">
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+
+<script src="./js/index.js"></script>
+
+</html>

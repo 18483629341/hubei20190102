@@ -192,7 +192,7 @@ function InitPopCanvas(obj){
 					type: 'line',
 					label: {
 						backgroundColor: '#6a7985',
-						fontSize:28
+						fontSize:32
 					}
 				},
 			},
@@ -211,10 +211,7 @@ function InitPopCanvas(obj){
 					show: false,
 					lineStyle:{
 						color:"#324b75",
-						type:'dashed',
-						align:'right',
-						padding: [3, 4, 5, 10]
-						// verticalAlign:'top'
+						type:'dashed'
 					}
 				},
 				axisTick: {
@@ -224,7 +221,7 @@ function InitPopCanvas(obj){
 					show: true,
 					textStyle: {
 						color: '#c3d4ff',
-					   fontSize:26
+					   fontSize:32
 					}
 				},
 				data: this._obj.xData||arrMonth4,
@@ -238,13 +235,13 @@ function InitPopCanvas(obj){
 					color:'#c3d4ff',
 					align:'left',
 					padding: [0,0,20,0],
-					fontSize:28
+					fontSize:32
 				},
 				axisLabel: {        
 					show: true,
 					textStyle: {
 						color: '#c3d4ff',
-						fontSize:26
+						fontSize:32
 					},
 					formatter:this._obj.formatter||'{value}'
 				},
@@ -361,7 +358,7 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 				data: obj.andanArr,
 				smooth: true,
 				lineStyle: {
-					width: 4,
+					width: 2,
 				},
 				symbol: 'none'
 			},
@@ -372,7 +369,7 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 				data: obj.MnArr,
 				smooth: true,
 				lineStyle: {
-					width: 4,
+					width: 2,
 				},
 				symbol: 'none'
 			},{
@@ -382,7 +379,7 @@ function InitPopupObjByData(elementClass,Obj){//将数据库转化为绘图 针�
 				data: obj.PArr,
 				smooth: true,
 				lineStyle: {
-					width: 4,
+					width: 2,
 				},
 				symbol: 'none'
 			}

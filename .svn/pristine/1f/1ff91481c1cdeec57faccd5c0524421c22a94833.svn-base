@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<title>长江大保护</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/common.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="./css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" /> -->
+	<link rel="stylesheet" type="text/css" href="./css/main.css" />
+	<link rel="stylesheet" type="text/css" href="./css/index.css" />
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/main.js"></script>
+</head>
+
+<body>
+	<script>
+		autoFit();
+	</script>
+	<img class="backImg" src="./img/body_back.png" alt="">
+	<div class="contanier ">
+		<header class="header">
+			<img class="HeaderBackImg" src="./img/header_back.png" alt="">
+			<div class="BackDiv">
+				<div class="HeaderCenter">
+					<div class="h28"></div>
+					<div class="TitleImg"></div>
+					<div class="SubTitleP">长江大保护</div>
+				</div>
+				<nav class="nav">
+					<div class="LeftNav">
+						<ul>
+							<li class="tabli " data-index="0">
+								<a href="index.html">
+									<div class="TabLiContent">水环境概况</div>
+								</a>
+							</li>
+							<li class="tabli " data-index="1">
+								<a href="WaterQulMonitor.html">
+									<div class="TabLiContent">水质监测</div>
+								</a>
+							</li>
+							<li class="tabli " data-index="2">
+								<a href="WaterQulAssess.html">
+									<div class="TabLiContent">水质考核</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="RightNav">
+						<ul>
+							<li class="tabli" data-index="3">
+								<a href="PolluDisSituation.html">
+									<div class="TabLiContent">排污情况</div>
+								</a>
+							</li>
+							<li class="tabli active" data-index="4">
+								<div class="TabLiContent">执法情况</div>
+							</li>
+							<li class="tabli" style="visibility:hidden">
+								<div class="TabLiContent">1</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+		</header>
+		<section class="section">
+			<!--执法情况   law enforcement situation  box-->
+			<div class="TabContent LawEnfSituation" id='LawEnfSituation' data-index="4">
+				<div class="MapBox active map5">
+					<div class="goWuhan show">进入市区</div>
+				</div>
+				<div class="MapBox mapWuhan ">
+					<div class="ax_default ax_default_qi" data-name="qi">
+						<img class="img " src="./img/icon_remark10.png">
+					</div>
+				</div>
+				<div class="LeftSummary P2LeftSummary P5LeftSummary">
+					<div class="LeftHeader">
+						<p class="LeftHeaderTitle">湖北省环境执法管辖情况</p>
+					</div>
+					<div class="XuanLine"></div>
+					<div class="LeftContent P2LeftContent">
+						<p class="LeftConTitle">统计时间：2018年11月</p>
+						<ul class="contentList P2ContentList P5ContentList">
+							<li class="contentLi">
+								<span class="contentLiFont">全省当月执法次数</span>
+								<span class="contentLiMount">
+									<b>1770</b>次
+								</span>
+							</li>
+						</ul>
+						<div class="splitLine"></div>
+						<div class="unstandSecList">
+							<div class="ListTitle">2018年9月区域执法次数统计分析</div>
+							<div style="overflow:hidden">
+								<div class="content tableContanier tableContanier1 P5scrollBox" id="P5scrollBox">
+									<table class="table">
+										<tbody class="tbodyContainer">
+											<!-- <tr class="tbodyTr">
+												<td>武汉市</td>
+												<td><div class="progressDiv"></div></td>
+												<td>1300次</td>
+											</tr> -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="RightBoxCon">
+					<table class="RightBox P2RightBox">
+						<thead class="LegendHeader ">
+							<tr>
+								<td colspan="2" class="titleTd">图例
+									<i class="tableIcon"></i>
+								</td>
+							</tr>
+						</thead>
+						<tbody class="IconListBox ">
+							<!-- <tr class="IconLi">
+								<td>
+									<input class="checkBoxInput" type="checkbox" name="河流" value="河流" checked disabled>
+								</td>
+								<td>
+									<span class="RemarkIcon RiversRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">河流</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput" type="checkbox" name="主要湖库" value="主要湖库" checked disabled>
+								</td>
+								<td>
+									<span class="RemarkIcon LakesRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">主要湖库</span>
+								</td>
+							</tr> -->
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="跨江大桥" value="跨江大桥">
+								</td>
+								<td>
+									<span class="RemarkIcon CroBridgeRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">跨江大桥</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点工程" value="重点工程">
+								</td>
+								<td>
+									<span class="RemarkIcon KeyProRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">重点工程</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="重点港口" value="重点港口">
+								</td>
+								<td>
+									<span class="RemarkIcon KeyPortRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">重点港口</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="自然保护区" value="自然保护区">
+								</td>
+								<td>
+									<span class="RemarkIcon NatResRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">自然保护区</span>
+								</td>
+							</tr>
+							<tr class="IconLi">
+								<td>
+									<input class="checkBoxInput canPointer" type="checkbox" name="沿江工业园区" value="沿江工业园区">
+								</td>
+								<td>
+									<span class="RemarkIcon RivIndRemark"></span>
+								</td>
+								<td>
+									<span class="RemarkName">沿江工业园区</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- 弹窗2 手工断面沿江化工企业 start -->
+				<div class="PopUpBox  P2PopUpBox PopUpBox_qi" id="PopUpBox_qi">
+					<div class="PopUpHeader">
+						<div class="PaddingContent">
+							<h3>武汉化工有限公司</h3>
+							<span class="inlineBlock PopUpclose"></span>
+						</div>
+					</div>
+					<!-- PopUpHeader end-->
+					<div class="PopUpContent">
+						<div class="PaddingContent">
+							<div class="keyContent keyContent1">
+								<div class="contentList">
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">污染源地址：
+											<span class="leftRowValue">湖北省武汉市江汉区XXX号</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">统一社会信用代码：
+											<span class="leftRowValue">11111111111111111111</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">污染源类别：
+											<span class="leftRowValue">化工污染源</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">控制类型：
+											<span class="leftRowValue">省控</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">统计时间：
+											<span class="leftRowValue">10-01至10-31</span>
+										</div>
+									</div>
+									<div class="contentLi flexBlock">
+										<div class="leftRow flex1">执法次数：
+											<span class="leftRowValue">3次</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpContent end-->
+					<div class="PopUpBottom">
+						<div class="PaddingContent">
+							<div class="hrefDiv">
+								<a href="#" target="_blank">查看详情
+									<span class="inlineBlock rightArrow"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- PopUpBottom end-->
+				</div>
+				<!-- 弹窗2 手工断面沿江化工企业 end -->
+				<!-- 图例2  end  -->
+				<div class="GoAwayWuhan p6GoAwayWuhan ">
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+<!-- <script src="./js/jquery.min.js"></script> -->
+<!-- <script src="./js/jquery.mCustomScrollbar.concat.min.js"></script> -->
+<script src="./js/echarts.min.js"></script>
+<!-- <script src="./js/main.js"></script> -->
+<script src="./js/LawEnfSituation.js"></script>
+
+</html>

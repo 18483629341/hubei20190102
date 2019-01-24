@@ -96,61 +96,6 @@ var dataZiHour={                                              //！！！！！�
 	]
 }
 
-// let popupObj1 = {};
-	// 	popupObj1.elementId = 'P2ziCanvas';
-	// 	popupObj1.xData=['10-01','10-02','10-03','10-04','10-05','10-06','10-07','10-08','10-09','10-10','10-11','10-12'];
-	// 	popupObj1.andanArr = [7.0, 6.0, 8.0, 9.0, 6.0, 8.0, 9.0, 6.0, 8.0, 9.0, 6.0, 8.0]; //!!!!!!!需要后台引入的数据
-	// 	popupObj1.MnArr = [5.5, 5.5, 4.0, 6.0, 5.5, 4.0, 6.0, 5.5, 4.0, 6.0, 5.5, 4.0, 6.0]; //!!!!!!!需要后台引入的数据
-	// 	popupObj1.PArr = [8.8, 6.6, 5.0, 6.0, 5.5, 4.0, 6.0, 7.0, 4.0, 6.0, 5.5, 6.0, 5.6]; //!!!!!!!需要后台引入的数据
-
-	// 	popupObj1.colorArr = ["#fd4800", "#f1ec3f","#72e75e"];
-	// 	popupObj1.Yname = 'mg/l';
-		
-	// 	popupObj1.Ylabel = function(value){
-	// 		return value.toFixed(1);
-	// 	};
-	// 	popupObj1.Yvalue = function(value){
-	// 		return value.toFixed(1);
-	// 	};
-	// 	popupObj1.min='0';
-	// 	popupObj1.max=function(value){
-	// 		var a=value.max*1.2;
-	//         return a.toFixed(1);
-	// 	};
-	// 	popupObj1.tabSpanS=$('.PopUpBox_zi .tabSpan');
-	// 	popupObj1.seriesArr = [{
-	// 			name: '氨氮',
-	// 			type: 'line',
-	// 			data: popupObj1.andanArr,
-	// 			smooth: true,
-	// 			lineStyle: {
-	// 				width: 1,
-	// 			},
-	// 			symbol: 'none'
-	// 		},
-	// 		{
-	// 			name: '高锰酸钾指数',
-	// 			type: 'line',
-	// 			stack: '总量',
-	// 			data: popupObj1.MnArr,
-	// 			smooth: true,
-	// 			lineStyle: {
-	// 				width: 1,
-	// 			},
-	// 			symbol: 'none'
-	// 		},{
-	// 			name: '总磷',
-	// 			type: 'line',
-	// 			stack: '总量',
-	// 			data: popupObj1.PArr,
-	// 			smooth: true,
-	// 			lineStyle: {
-	// 				width: 1,
-	// 			},
-	// 			symbol: 'none'
-	// 		}
-	// 	];
-	// console.log('popupObj1:', popupObj1);
 $("body").on('click','.PopUpBox_zi .tabSpan',function(){
 	$(this).toggleClass('active');
 	initPopCanvas1.initCanvas();
